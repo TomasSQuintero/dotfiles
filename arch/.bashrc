@@ -14,6 +14,10 @@ alias edit='vim ~/.config/hypr/hyprland.conf'
 alias neofetch='fastfetch'
 alias vvim='vim "$(fzf)"'
 alias editkitty='vim ~/.config/kitty/kitty.conf'
-alias dot='cp -r ~/.config/mpv/ ~/.config/kitty/ ~/.config/hypr/ ~/.config/fastfetch/ ~/.bashrc	~/.config/rofi ~/dotfiles/arch/'
+alias dot='cp -r ~/.config/mpv/ ~/.config/kitty/ ~/.config/hypr/ ~/.config/fastfetch/ ~/.bashrc	~/.config/rofi ~/.config/gtk-3.0/ ~/.config/gtk-4.0/ ~/dotfiles/arch/'
 alias mounthdd='sudo mount /dev/sda2 /mnt/hdd'
 alias conectarssh='eval "$(ssh-agent -s)"; ssh-add ~/.ssh/id_ed25519'
+
+hypredit() {
+  cd ~/.config/hypr && vim "$(fzf)"
+}
