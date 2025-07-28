@@ -1,0 +1,37 @@
+* {
+  /*font-family: JetBrainsMono Nerd Font, monospace;*/
+  font-family: UDEV Gothic, monospace;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+window#waybar {
+  background-color: rgba(30, 30, 30, 0.95);
+  border-bottom: 1px solid #444;
+}
+
+#clock {
+  padding: 0 10px;
+}
+
+#workspaces {
+  padding: 0 5px;
+}
+
+#workspaces button {
+  padding: 0 10px;
+  color: #888;
+  background: transparent;
+  border: none;
+}
+
+#workspaces button.active {
+  color: #ffffff;
+  background: transparent;
+  border-bottom: 3px solid #5e81ac;
+  border-radius: 0;
+}
+
+#workspaces button:hover {
+  background: rgba(255, 255, 255, 0.05);
+}

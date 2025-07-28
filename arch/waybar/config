@@ -1,0 +1,19 @@
+{
+  "layer": "top",
+  "position": "top",
+  "modules-left": ["hyprland/workspaces"],
+  "modules-right": ["clock"],
+
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "on-click": "activate",
+  },
+
+  "clock": {
+    "timezone": "America/Argentina/Buenos_Aires",
+    "format": "{:%H:%M}",
+    "tooltip-format": "{:%A, %d %B %Y}",
+    "interval": 60
+  }
+}
+
