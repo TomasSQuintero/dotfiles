@@ -10,20 +10,33 @@ alias ls='ls --color=auto --group-directories-first'
 alias grep='grep --color=auto'
 PS1='\w > '
 
-# cambiar al dir de musica y abrir un directorio de produndidad 2 con mpv
+# abrir un directorio de profundidad 2 con mpv
 # --------------------------------------------------------------------------
 disco() {
-  cd ~/Music || return
+  #cd ~/Music || return
   dir=$(find . -mindepth 2 -maxdepth 2 -type d | fzf)
   [ -n "$dir" ] && mpv "$dir"
 }
 
+headlessdisco() {
+  dir=$(find . -mindepth 2 -maxdepth 2 -type d | fzf)
+  [ -n "$dir" ] && mpv --audio-display=no "$dir"
+}
+
+serie() {
+  dir=$(find . -mindepth 1 -maxdepth 2 -type d | fzf)
+  [ -n "$dir" ] && mpv "$dir"
+}
+
+# rename fastfetch
+# --------------------------------------------------------------------------
 alias neofetch='fastfetch'
 
 # fzf and open 
 # --------------------------------------------------------------------------
 alias vvim='vim "$(fzf)"'
 alias mmpv='mpv "$(fzf)"'
+alias headlessmmpv='mpv --audio-display=no "$(fzf)"'
 
 # copy dotfiles to repo directory
 # --------------------------------------------------------------------------
@@ -54,10 +67,12 @@ alias hdd='cd /mnt/hdd'
 # --------------------------------------------------------------------------
 alias conectarssh='eval "$(ssh-agent -s)"; ssh-add ~/.ssh/id_ed25519'
 
-# change to hyprland config directory and edit with vim
+# edit with vim
 # --------------------------------------------------------------------------
 hypredit() {
   cd ~/.config/hypr && vim "$(fzf)"
 }
+
+alias bedit='vim ~/.bashrc'
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

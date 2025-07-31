@@ -6,12 +6,16 @@
 }
 
 window#waybar {
-  background-color: rgba(30, 30, 30, 0.95);
-  border-bottom: 1px solid #444;
+  background-color: rgba(30, 30, 30, 0.3);
 }
 
-#clock {
+#custom-wlogout {
+  padding: 1px 10px 0px 10px;
+}
+
+#mpris {
   padding: 0 10px;
+  color: #eeeeee;
 }
 
 #workspaces {
@@ -28,7 +32,7 @@ window#waybar {
 #workspaces button.active {
   color: #ffffff;
   background: transparent;
-  border-bottom: 3px solid #5e81ac;
+  border-bottom: 2px solid #dddddd;
   border-radius: 0;
 }
 

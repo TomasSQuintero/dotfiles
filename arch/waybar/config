@@ -2,18 +2,49 @@
   "layer": "top",
   "position": "top",
   "modules-left": ["hyprland/workspaces"],
-  "modules-right": ["clock"],
+  "modules-center": [],
+  "modules-right": ["mpris","clock", "custom/wlogout"],
 
   "hyprland/workspaces": {
-    "format": "{name}",
+    "format": "{icon}",
     "on-click": "activate",
+    "format-icons": {
+      "1": "一",
+      "2": "二",
+      "3": "三",
+      "4": "四",
+      "5": "五",
+      "6": "六",
+      "7": "七",
+      "8": "八",
+      "9": "九",
+      "10": "十"
+    },
+    "sort-by-number": true,
+    "active-only": false
+  },
+
+"mpris": {
+    "format": "{title} - {artist}",
+    "format-paused": "⏸ {title} - {artist}",
+    "format-stopped": "",
+    "max-length": 50,
+    "interval": 1,
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous"
   },
 
   "clock": {
     "timezone": "America/Argentina/Buenos_Aires",
-    "format": "{:%H:%M}",
+    "format": "[ {:%H:%M} ]",
     "tooltip-format": "{:%A, %d %B %Y}",
     "interval": 60
+  },
+
+  "custom/wlogout": {
+    "format": "[  ]",
+    "tooltip": "Logout",
+    "on-click": "wlogout"
   }
 }
-
