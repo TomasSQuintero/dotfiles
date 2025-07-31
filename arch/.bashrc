@@ -42,6 +42,7 @@ alias headlessmmpv='mpv --audio-display=no "$(fzf)"'
 # --------------------------------------------------------------------------
 dotdirs=(
 	~/.bashrc
+	~/.vimrc
 	~/.config/mpv/
 	~/.config/kitty/
 	~/.config/hypr/

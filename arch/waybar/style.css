@@ -10,11 +10,18 @@ window#waybar {
 }
 
 #custom-wlogout {
-  padding: 1px 10px 0px 10px;
+  padding: 0px 0px 0px 10px;
+}
+
+#pulseaudio {
+  padding: 0px 10px 0px 10px;
+}
+
+#clock {
+  padding: 0px 10px 0px 10px;
 }
 
 #mpris {
-  padding: 0 10px;
   color: #eeeeee;
 }
 
@@ -37,5 +44,9 @@ window#waybar {
 }
 
 #workspaces button:hover {
-  background: rgba(255, 255, 255, 0.05);
+  box-shadow: none;
+  text-shadow: none;
+  background: inherit;
+  border-top: none;
+  background: rgb(65, 69, 89);
 }
