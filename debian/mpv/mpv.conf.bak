@@ -1,0 +1,12 @@
+sub-ass-override=force
+sub-font="JetBrains Mono"
+#sub-font="Swiss Compressed"
+sub-font-size=30
+sub-color="#FFFF00"      # sets the subtitle text to yellow
+sub-back-color="#BF000000"
+sub-border-size=0
+
+
+
+
+
