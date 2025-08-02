@@ -78,3 +78,21 @@ hypredit() {
 alias bedit='vim ~/.bashrc'
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# git add, commit, push. takes input for commit message
+# --------------------------------------------------------------------------
+gacp() {
+  if [ -z "$1" ]; then
+    echo "❌ Commit message required."
+    echo "Usage: gacp \"your commit message\""
+    return 1
+  fi
+
+  git add .
+  git commit -m "$1"
+  git push
+}
+
+# clipboard
+# --------------------------------------------------------------------------
+alias clip='wl-copy'
