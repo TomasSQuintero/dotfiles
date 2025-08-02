@@ -29,3 +29,6 @@ set mouse=a
 " Customize line number colors
 highlight LineNr ctermfg=white ctermbg=NONE
 highlight CursorLineNr ctermfg=white ctermbg=NONE cterm=bold
+
+" Set space as leader key
+let mapleader = " "

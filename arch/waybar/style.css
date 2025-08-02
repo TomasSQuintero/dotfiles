@@ -13,18 +13,6 @@ window#waybar {
   padding: 0px 0px 0px 10px;
 }
 
-#pulseaudio {
-  padding: 0px 10px 0px 10px;
-}
-
-#clock {
-  padding: 0px 10px 0px 10px;
-}
-
-#mpris {
-  color: #eeeeee;
-}
-
 #workspaces {
   padding: 0 5px;
 }
@@ -49,4 +37,16 @@ window#waybar {
   background: inherit;
   border-top: none;
   background: rgb(65, 69, 89);
+}
+
+#mpris {
+  color: #eeeeee;
+}
+
+#pulseaudio {
+  padding: 0px 10px 0px 10px;
+}
+
+#clock {
+  padding: 0px 10px 0px 10px;
 }

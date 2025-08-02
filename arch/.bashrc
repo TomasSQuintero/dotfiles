@@ -44,6 +44,7 @@ dotdirs=(
 	~/.bashrc
 	~/.vimrc
 	~/.config/mpv/
+	~/.config/nvim/
 	~/.config/kitty/
 	~/.config/hypr/
 	~/.config/waybar/
