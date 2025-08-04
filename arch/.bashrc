@@ -35,7 +35,6 @@ alias neofetch='fastfetch'
 # fzf
 # --------------------------------------------------------------------------
 eval "$(fzf --bash)"
-#export FZF_DEFAULT_OPTS='--color=fg:#c6d0f5,bg:#303446,hl:#f2d5cf,fg+:#c6d0f5,bg+:#414559,hl+:#f2d5cf,prompt:#8caaee,info:#e5c890,pointer:#f2d5cf,marker:#a6d189,spinner:#f4b8e4 -m --style full'
 export FZF_DEFAULT_OPTS='-m --style full --bind 'ctrl-space:accept''
 alias ffzf='fzf -m --preview "bat --style=numbers --color=always {}" --layout reverse'
 alias nv='nvim "$(fzf -m --preview "bat --style=numbers --color=always {} | head -n 100" --layout reverse)"'
