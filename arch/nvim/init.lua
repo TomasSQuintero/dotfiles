@@ -12,17 +12,18 @@ vim.cmd [[highlight Pmenu ctermbg=none guibg=none]]
 vim.cmd [[highlight StatusLine ctermbg=none guibg=none]]
 vim.cmd("syntax on")
 
--- Line numbers
+-- line numbers
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.cursorline = true
 
--- Tabs and indentation
+-- tabs and indentation
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 
--- Search
+-- search
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.incsearch = true

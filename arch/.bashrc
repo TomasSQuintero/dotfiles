@@ -32,11 +32,17 @@ serie() {
 # --------------------------------------------------------------------------
 alias neofetch='fastfetch'
 
-# fzf and open 
+# fzf
 # --------------------------------------------------------------------------
+eval "$(fzf --bash)"
+#export FZF_DEFAULT_OPTS='--color=fg:#c6d0f5,bg:#303446,hl:#f2d5cf,fg+:#c6d0f5,bg+:#414559,hl+:#f2d5cf,prompt:#8caaee,info:#e5c890,pointer:#f2d5cf,marker:#a6d189,spinner:#f4b8e4 -m --style full'
+export FZF_DEFAULT_OPTS='-m --style full --bind 'ctrl-space:accept''
+alias ffzf='fzf -m --preview "bat --style=numbers --color=always {}" --layout reverse'
+alias nv='nvim "$(fzf -m --preview "bat --style=numbers --color=always {} | head -n 100" --layout reverse)"'
 alias vvim='vim "$(fzf)"'
-alias mmpv='mpv "$(fzf)"'
+alias mmpv='mpv "$(fzf --query ".mp4$ | .mkv$ " --layout reverse)"'
 alias headlessmmpv='mpv --audio-display=no "$(fzf)"'
+alias rmm='rm -rf "$(fzf -m)'
 
 # copy dotfiles to repo directory
 # --------------------------------------------------------------------------
@@ -44,6 +50,7 @@ dotdirs=(
 	~/.bashrc
 	~/.vimrc
 	~/.config/mpv/
+	~/.config/bat/
 	~/.config/nvim/
 	~/.config/kitty/
 	~/.config/hypr/
@@ -75,7 +82,7 @@ hypredit() {
   cd ~/.config/hypr && vim "$(fzf)"
 }
 
-alias bedit='vim ~/.bashrc'
+alias bedit='nvim ~/.bashrc'
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
@@ -96,3 +103,11 @@ gacp() {
 # clipboard
 # --------------------------------------------------------------------------
 alias clip='wl-copy'
+
+# misc
+# --------------------------------------------------------------------------
+# direcories size
+alias dirsize='du -h --max-depth=1 | sort -h'
+# restart hyprpaper
+alias restarthyprpaper='nohup hyprpaper > /dev/null 2>&1 &'
+
