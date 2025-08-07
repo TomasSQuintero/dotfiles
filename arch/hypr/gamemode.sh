@@ -4,7 +4,8 @@ if [ "$HYPRGAMEMODE" = 1 ] ; then
     hyprctl --batch "\
         keyword animations:enabled 0;\
         keyword general:gaps_in 0;\
-        keyword general:gaps_out 0"
+        keyword general:gaps_out 0;\
+        keyword decoration:rounding 0"
     exit
 fi
 hyprctl reload
