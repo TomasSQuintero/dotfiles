@@ -128,3 +128,9 @@ alias restarthyprpaper='nohup hyprpaper > /dev/null 2>&1 &'
 alias age="echo \$(( ( \$(date +%s) - \$(date -d '2025-07-21' +%s) ) / 86400 )) days"
 # zoxide setup, con alias a cd
 eval "$(zoxide init --cmd cd bash)"
+# opening pdf, cbr, cbz, etc
+open() {
+  local file
+  file=$(fzf)
+  [ -n "$file" ] && nohup evince "$file" >/dev/null 2>&1 &
+}
