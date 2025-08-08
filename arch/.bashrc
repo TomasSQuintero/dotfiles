@@ -61,8 +61,23 @@ dotdirs=(
 	)
 
 dots() {
+  local target=~/dotfiles/arch/
+
+  # Remove old directory safely
+  if [ -d "$target" ]; then
+    rm -rf "$target"
+  fi
+
+  # Recreate target directory
+  mkdir -p "$target"
+
+  # Copy each dotdir
   for dir in "${dotdirs[@]}"; do
-    cp -r "$dir" ~/dotfiles/arch/
+    if [ -e "$dir" ]; then
+      cp -r "$dir" "$target"
+    else
+      echo "Warning: '$dir' does not exist or is not a directory"
+    fi
   done
 }
 
