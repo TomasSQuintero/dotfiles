@@ -111,4 +111,5 @@ alias dirsize='du -h --max-depth=1 | sort -h'
 alias restarthyprpaper='nohup hyprpaper > /dev/null 2>&1 &'
 # te tira la edad de la install, requiere cambiar manual la fecha
 alias age="echo \$(( ( \$(date +%s) - \$(date -d '2025-07-21' +%s) ) / 86400 )) days"
-
+# zoxide setup, con alias a cd
+eval "$(zoxide init --cmd cd bash)"
