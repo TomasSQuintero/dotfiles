@@ -58,6 +58,7 @@ dotdirs=(
 	~/.config/rofi
 	~/.config/gtk-3.0/
 	~/.config/gtk-4.0/
+	~/.config/scripts/
 	)
 
 dots() {
@@ -123,14 +124,20 @@ alias clip='wl-copy'
 # direcories size
 alias dirsize='du -h --max-depth=1 | sort -h'
 # restart hyprpaper
-alias restarthyprpaper='nohup hyprpaper > /dev/null 2>&1 &'
-# te tira la edad de la install, requiere cambiar manual la fecha
-alias age="echo \$(( ( \$(date +%s) - \$(date -d '2025-07-21' +%s) ) / 86400 )) days"
+restarthyprpaper() {
+    killall hyprpaper
+    nohup hyprpaper > /dev/null 2>&1 &
+}
 # zoxide setup, con alias a cd
 eval "$(zoxide init --cmd cd bash)"
 # opening pdf, cbr, cbz, etc
-open() {
+pdf() {
   local file
   file=$(fzf)
   [ -n "$file" ] && nohup evince "$file" >/dev/null 2>&1 &
 }
+
+alias changewall='sh ~/.config/scripts/change-wallpaper.sh'
+alias peli='sh ~/.config/scripts/movie.sh'
+alias show='sh ~/.config/scripts/show.sh'
+alias epi='sh ~/.config/scripts/episode.sh'

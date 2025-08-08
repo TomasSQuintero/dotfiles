@@ -43,6 +43,8 @@ vim.keymap.set("n", "<leader>O", 'O<ESC>', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-d>', '<C-d>zz', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-u>', '<C-u>zz', { noremap = true, silent = true })
 
+vim.keymap.set("n", "<leader>-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+
 -- clipboard
 vim.opt.clipboard = "unnamedplus"
 vim.g.clipboard = {

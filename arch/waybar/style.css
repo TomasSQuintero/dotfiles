@@ -1,8 +1,9 @@
 * {
-  font-family: UDEV Gothic, monospace;
-  font-size: 14px;
-  /*color: #ffffff;*/
-  color: #F1BE9B;
+  font-family: UDEV Gothic;
+  font-size: 16px;
+  font-weight: 500;
+  color: #dddddd;
+  /*color: #F1BE9B;*/
 }
 
 window#waybar {
@@ -25,11 +26,9 @@ window#waybar {
 }
 
 #workspaces button.active {
-  /*color: #ffffff;*/
   color: #f1be9b;
   background: transparent;
-  border-bottom: 2px solid #f1be9b;
-  /*border-bottom: 2px solid #dddddd;*/
+  border-bottom: 2px solid #dddddd;
   border-radius: 0;
 }
 
@@ -42,8 +41,7 @@ window#waybar {
 }
 
 #mpris {
-  /*color: #eeeeee;*/
-  color: #F1BE9B;
+  color: #eeeeee;
 }
 
 #pulseaudio {
