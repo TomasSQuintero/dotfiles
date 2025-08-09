@@ -48,6 +48,14 @@ window#waybar {
   padding: 0px 10px 0px 10px;
 }
 
+#bluetooth{
+  padding: 0px 10px 0px 0px;
+}
+
+#clock.date {
+  padding: 0px 0px 0px 0px;
+}
+
 #clock {
   padding: 0px 10px 0px 10px;
 }

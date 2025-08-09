@@ -3,7 +3,7 @@
   "position": "top",
   "modules-left": ["custom/wlogout","hyprland/workspaces"],
   "modules-center": [],
-  "modules-right": ["mpris","pulseaudio","bluetooth","clock"],
+  "modules-right": ["mpris","pulseaudio","bluetooth","clock#date","clock"],
 
   "hyprland/workspaces": {
     "format": "{icon}",
@@ -64,6 +64,11 @@
     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
     "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
+},
+
+"clock#date":{
+    "format": "[ {:%d.%m} ]",
+    "tooltip": false
 },
 
 "clock": {
