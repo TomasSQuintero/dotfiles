@@ -63,3 +63,7 @@ vim.g.clipboard = {
   },
   cache_enabled = true,
 }
+
+
+-- vim.cmd("command! Trix %s/ \\[Trix\\] //g")
+-- vim.cmd("command! Bd %s/ (BD 1080p AV1) \\[[^]]*\\]//g")

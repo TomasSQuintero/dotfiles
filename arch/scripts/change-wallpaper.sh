@@ -20,9 +20,9 @@ fi
 # This will show image files with common extensions
 selected_wallpaper=$(find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.bmp" -o -iname "*.gif" -o -iname "*.webp" \) | fzf --preview 'kitten icat --clear --transfer-mode=memory --stdin=no --place=${FZF_PREVIEW_COLUMNS}x${FZF_PREVIEW_LINES}@0x0 {} 2>/dev/null || echo "Preview not available for {}"' --height 90% --border --prompt "Select wallpaper: ")
 
-
 # Check if user selected a file (didn't cancel)
 if [ -z "$selected_wallpaper" ]; then
+    kitten icat --clear
     echo "No wallpaper selected. Exiting."
     exit 0
 fi
@@ -43,9 +43,10 @@ tail -n +2 "$CONFIG_FILE" >> "$temp_file"
 mv "$temp_file" "$CONFIG_FILE"
 
 kitten icat --clear 
+
 echo "Wallpaper updated successfully!"
-echo "New wallpaper path: $selected_wallpaper"
-echo "Config backup saved as: $CONFIG_FILE.bak"
+#echo "New wallpaper path: $selected_wallpaper"
+#echo "Config backup saved as: $CONFIG_FILE.bak"
 
 # Optional: Reload hyprpaper if it's running
 if pgrep -x "hyprpaper" > /dev/null; then
