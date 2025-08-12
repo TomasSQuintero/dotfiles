@@ -1,11 +1,11 @@
 /* padding order: top | right | bottom | left */
+/*color: #F1BE9B;*/
 
 * {
   font-family: UDEV Gothic;
   font-size: 16px;
   font-weight: 500;
   color: #dddddd;
-  /*color: #F1BE9B;*/
 }
 
 window#waybar {
@@ -28,7 +28,6 @@ window#waybar {
 }
 
 #workspaces button.active {
-  color: #f1be9b;
   background: transparent;
   border-bottom: 2px solid #dddddd;
   border-radius: 0;

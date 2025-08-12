@@ -23,11 +23,6 @@ headlessdisco() {
   [ -n "$dir" ] && mpv --audio-display=no "$dir"
 }
 
-serie() {
-  dir=$(find . -mindepth 1 -maxdepth 2 -type d | fzf)
-  [ -n "$dir" ] && mpv "$dir"
-}
-
 # rename fastfetch
 # --------------------------------------------------------------------------
 alias neofetch='fastfetch'
@@ -38,10 +33,8 @@ eval "$(fzf --bash)"
 export FZF_DEFAULT_OPTS='-m --style full --bind 'ctrl-space:accept''
 alias ffzf='fzf -m --preview "bat --style=numbers --color=always {}" --layout reverse'
 alias nv='nvim "$(fzf -m --preview "bat --style=numbers --color=always {} | head -n 100" --layout reverse)"'
-alias vvim='vim "$(fzf)"'
 alias mmpv='mpv "$(fzf --query ".mp4$ | .mkv$ " --layout reverse)"'
 alias headlessmmpv='mpv --audio-display=no "$(fzf)"'
-alias rmm='rm -rf "$(fzf -m)'
 
 # copy dotfiles to repo directory
 # --------------------------------------------------------------------------
@@ -52,6 +45,7 @@ dotdirs=(
 	~/.config/bat/
 	~/.config/nvim/
 	~/.config/kitty/
+	~/.config/yazi/
 	~/.config/hypr/
 	~/.config/waybar/
 	~/.config/fastfetch/
@@ -99,7 +93,6 @@ hypredit() {
 
 alias bedit='nvim ~/.bashrc'
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # git add, commit, push. takes input for commit message
 # --------------------------------------------------------------------------
@@ -123,21 +116,43 @@ alias clip='wl-copy'
 # --------------------------------------------------------------------------
 # direcories size
 alias dirsize='du -h --max-depth=1 | sort -h'
+
 # restart hyprpaper
 restarthyprpaper() {
     killall hyprpaper
     nohup hyprpaper > /dev/null 2>&1 &
 }
-# zoxide setup, con alias a cd
+
+# app setups
 eval "$(zoxide init --cmd cd bash)"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
 # opening pdf, cbr, cbz, etc
-pdf() {
+tlen() {
   local file
-  file=$(fzf)
+  file=$(find "$HOME/tlen" -type f -name "*.pdf" 2>/dev/null | fzf)
   [ -n "$file" ] && nohup evince "$file" >/dev/null 2>&1 &
+  kill -9 $PPID
 }
 
+# scripts
+# --------------------------------------------------------------------------
 alias changewall='sh ~/.config/scripts/change-wallpaper.sh'
 alias peli='sh ~/.config/scripts/movie.sh'
 alias show='sh ~/.config/scripts/show.sh'
-alias epi='sh ~/.config/scripts/episode.sh'
+alias episode='sh ~/.config/scripts/episode.sh'
+
+# yazi setup
+# --------------------------------------------------------------------------
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
+
+# temp
+# --------------------------------------------------------------------------
+alias stop='mpv "/mnt/hdd/00-personal-library/films/stop making sense [1984] [4k]/stop making sense [1984] [4k].mkv"'
+

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-base_dir="/mnt/hdd/videos/Series"
+base_dir="/mnt/hdd/shows"
 
 # Pick the show (show only names in fzf, keep full path)
 mapfile -t shows < <(find "$base_dir" -mindepth 1 -maxdepth 1 -type d | sort)
