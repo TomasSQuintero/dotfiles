@@ -26,6 +26,7 @@ headlessdisco() {
 # rename fastfetch
 # --------------------------------------------------------------------------
 alias neofetch='fastfetch'
+alias fastfetchimage='fastfetch --logo-type kitty-icat --logo "$(find ~/.config/fastfetch/ -type f | fzf)" --logo-width 23 --logo-height 13'
 
 # fzf
 # --------------------------------------------------------------------------
@@ -127,12 +128,22 @@ restarthyprpaper() {
 eval "$(zoxide init --cmd cd bash)"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-# opening pdf, cbr, cbz, etc
+# opening tlen
 tlen() {
   local file
   file=$(find "$HOME/tlen" -type f -name "*.pdf" 2>/dev/null | fzf)
   [ -n "$file" ] && nohup evince "$file" >/dev/null 2>&1 &
   kill -9 $PPID
+}
+
+# opening pdf, cbr, cbz, etc
+pdf() {
+    local file
+    local SEARCH_DIR="${1:-.}"
+    file=$(find "$SEARCH_DIR" -type f \( -iname "*.pdf" -o -iname "*.cbr" -o -iname "*.cbz" \) | fzf)
+    if [[ -n "$file" ]]; then
+        nohup evince "$file" >/dev/null 2>&1 &
+    fi
 }
 
 # scripts
