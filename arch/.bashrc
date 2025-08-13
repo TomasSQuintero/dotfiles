@@ -23,9 +23,10 @@ headlessdisco() {
   [ -n "$dir" ] && mpv --audio-display=no "$dir"
 }
 
-# rename fastfetch
+# rename apps
 # --------------------------------------------------------------------------
 alias neofetch='fastfetch'
+alias cmatrix='unimatrix -s 90 -f -a -l nk'
 alias fastfetchimage='fastfetch --logo-type kitty-icat --logo "$(find ~/.config/fastfetch/ -type f | fzf)" --logo-width 23 --logo-height 13'
 
 # fzf
@@ -115,9 +116,6 @@ alias clip='wl-copy'
 
 # misc
 # --------------------------------------------------------------------------
-# direcories size
-alias dirsize='du -h --max-depth=1 | sort -h'
-
 # restart hyprpaper
 restarthyprpaper() {
     killall hyprpaper
