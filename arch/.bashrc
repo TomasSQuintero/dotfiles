@@ -122,6 +122,11 @@ restarthyprpaper() {
     nohup hyprpaper > /dev/null 2>&1 &
 }
 
+restarthyprsunset() {
+    killall hyprsunset
+    nohup hyprsunset > /dev/null 2>&1 &
+}
+
 # app setups
 eval "$(zoxide init --cmd cd bash)"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
