@@ -10,33 +10,12 @@ alias ls='ls --color=auto --group-directories-first'
 alias grep='grep --color=auto'
 PS1='\w > '
 
-# abrir un directorio de profundidad 2 con mpv
+# scripts
 # --------------------------------------------------------------------------
-disco() {
-  #cd ~/Music || return
-  dir=$(find . -mindepth 2 -maxdepth 2 -type d | fzf)
-  [ -n "$dir" ] && mpv "$dir"
-}
-
-headlessdisco() {
-  dir=$(find . -mindepth 2 -maxdepth 2 -type d | fzf)
-  [ -n "$dir" ] && mpv --audio-display=no "$dir"
-}
-
-# rename apps
-# --------------------------------------------------------------------------
-alias neofetch='fastfetch'
-alias cmatrix='unimatrix -s 90 -f -a -l nk'
-alias fastfetchimage='fastfetch --logo-type kitty-icat --logo "$(find ~/.config/fastfetch/ -type f | fzf)" --logo-width 23 --logo-height 13'
-
-# fzf
-# --------------------------------------------------------------------------
-eval "$(fzf --bash)"
-export FZF_DEFAULT_OPTS='-m --style full --bind 'ctrl-space:accept''
-alias ffzf='fzf -m --preview "bat --style=numbers --color=always {}" --layout reverse'
-alias nv='nvim "$(fzf -m --preview "bat --style=numbers --color=always {} | head -n 100" --layout reverse)"'
-alias mmpv='mpv "$(fzf --query ".mp4$ | .mkv$ " --layout reverse)"'
-alias headlessmmpv='mpv --audio-display=no "$(fzf)"'
+alias changewall='sh ~/.config/scripts/change-wallpaper.sh'
+alias peli='sh ~/.config/scripts/movie.sh'
+alias show='sh ~/.config/scripts/show.sh'
+alias episode='sh ~/.config/scripts/episode.sh'
 
 # copy dotfiles to repo directory
 # --------------------------------------------------------------------------
@@ -78,23 +57,12 @@ dots() {
   done
 }
 
-# hdd
+# rename apps
 # --------------------------------------------------------------------------
-alias mounthdd='sudo mount -t ntfs-3g /dev/sda2 /mnt/hdd/; cd /mnt/hdd'
-alias hdd='cd /mnt/hdd'
-
-# ssh
-# --------------------------------------------------------------------------
-alias conectarssh='eval "$(ssh-agent -s)"; ssh-add ~/.ssh/id_ed25519'
-
-# edit with vim
-# --------------------------------------------------------------------------
-hypredit() {
-  cd ~/.config/hypr && vim "$(fzf)"
-}
-
+alias neofetch='fastfetch'
+alias cmatrix='unimatrix -s 90 -f -a -l nk'
+alias fastfetchimage='fastfetch --logo-type kitty-icat --logo "$(find ~/.config/fastfetch/ -type f | fzf)" --logo-width 23 --logo-height 13'
 alias bedit='nvim ~/.bashrc'
-
 
 # git add, commit, push. takes input for commit message
 # --------------------------------------------------------------------------
@@ -110,28 +78,47 @@ gacp() {
   git push
 }
 
+# fzf
+# --------------------------------------------------------------------------
+eval "$(fzf --bash)"
+export FZF_DEFAULT_OPTS='-m --style full --bind 'ctrl-space:accept''
+alias ffzf='fzf -m --preview "bat --style=numbers --color=always {}" --layout reverse'
+alias nv='nvim "$(fzf -m --preview "bat --style=numbers --color=always {} | head -n 100" --layout reverse)"'
+alias mmpv='mpv "$(fzf --query ".mp4$ | .mkv$ " --layout reverse)"'
+alias headlessmmpv='mpv --audio-display=no "$(fzf)"'
+
+# hdd
+# --------------------------------------------------------------------------
+alias mounthdd='sudo mount -t ntfs-3g /dev/sda2 /mnt/hdd/; cd /mnt/hdd'
+alias hdd='cd /mnt/hdd'
+
+# ssh
+# --------------------------------------------------------------------------
+alias conectarssh='eval "$(ssh-agent -s)"; ssh-add ~/.ssh/id_ed25519'
+
 # clipboard
 # --------------------------------------------------------------------------
 alias clip='wl-copy'
 
 # misc
 # --------------------------------------------------------------------------
-# restart hyprpaper
-restarthyprpaper() {
+## restart hyprpaper
+rhp() {
     killall hyprpaper
     nohup hyprpaper > /dev/null 2>&1 &
 }
 
-restarthyprsunset() {
+## restart hyprsunset
+rhs() {
     killall hyprsunset
     nohup hyprsunset > /dev/null 2>&1 &
 }
 
-# app setups
+## app setups
 eval "$(zoxide init --cmd cd bash)"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-# opening tlen
+## opening tlen
 tlen() {
   local file
   file=$(find "$HOME/tlen" -type f -name "*.pdf" 2>/dev/null | fzf)
@@ -139,7 +126,7 @@ tlen() {
   kill -9 $PPID
 }
 
-# opening pdf, cbr, cbz, etc
+## opening pdf, cbr, cbz, etc
 pdf() {
     local file
     local SEARCH_DIR="${1:-.}"
@@ -148,13 +135,6 @@ pdf() {
         nohup evince "$file" >/dev/null 2>&1 &
     fi
 }
-
-# scripts
-# --------------------------------------------------------------------------
-alias changewall='sh ~/.config/scripts/change-wallpaper.sh'
-alias peli='sh ~/.config/scripts/movie.sh'
-alias show='sh ~/.config/scripts/show.sh'
-alias episode='sh ~/.config/scripts/episode.sh'
 
 # yazi setup
 # --------------------------------------------------------------------------
@@ -169,4 +149,22 @@ function y() {
 # temp
 # --------------------------------------------------------------------------
 alias stop='mpv "/mnt/hdd/00-personal-library/films/stop making sense [1984] [4k]/stop making sense [1984] [4k].mkv"'
+
+clearyazi(){
+    yazi --clear-cache
+    sudo find /tmp/ \( -type f -o -type d \) -iname '*yazi*' -print0 | xargs -0 rm -rf
+}
+
+# [DEPRECATED] abrir un directorio de profundidad 2 con mpv
+# --------------------------------------------------------------------------
+# disco() {
+#   #cd ~/Music || return
+#   dir=$(find . -mindepth 2 -maxdepth 2 -type d | fzf)
+#   [ -n "$dir" ] && mpv "$dir"
+# }
+# 
+# headlessdisco() {
+#   dir=$(find . -mindepth 2 -maxdepth 2 -type d | fzf)
+#   [ -n "$dir" ] && mpv --audio-display=no "$dir"
+# }
 
