@@ -36,9 +36,9 @@
     
 "mpris": {
     "format": "{title} - {artist}",
-    "format-paused": "⏸ {title} - {artist}",
+    "format-paused": " {title} - {artist}",
     "format-stopped": "",
-    "max-length": 50,
+    "max-length": 150,
     "interval": 1,
     "on-click": "playerctl play-pause",
     "on-scroll-up": "playerctl next",
