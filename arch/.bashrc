@@ -20,41 +20,41 @@ alias episode='sh ~/.config/scripts/episode.sh'
 # copy dotfiles to repo directory
 # --------------------------------------------------------------------------
 dotdirs=(
-	~/.bashrc
-	~/.vimrc
-	~/.config/mpv/
-	~/.config/bat/
-	~/.config/nvim/
-	~/.config/kitty/
-	~/.config/yazi/
-	~/.config/hypr/
-	~/.config/waybar/
-	~/.config/fastfetch/
-	~/.config/rofi
-	~/.config/gtk-3.0/
-	~/.config/gtk-4.0/
-	~/.config/scripts/
-	)
+    ~/.bashrc
+    ~/.vimrc
+    ~/.config/mpv/
+    ~/.config/bat/
+    ~/.config/nvim/
+    ~/.config/kitty/
+    ~/.config/yazi/
+    ~/.config/hypr/
+    ~/.config/waybar/
+    ~/.config/fastfetch/
+    ~/.config/rofi
+    ~/.config/gtk-3.0/
+    ~/.config/gtk-4.0/
+    ~/.config/scripts/
+)
 
 dots() {
-  local target=~/dotfiles/arch/
+    local target=~/dotfiles/arch/
 
-  # Remove old directory safely
-  if [ -d "$target" ]; then
-    rm -rf "$target"
-  fi
-
-  # Recreate target directory
-  mkdir -p "$target"
-
-  # Copy each dotdir
-  for dir in "${dotdirs[@]}"; do
-    if [ -e "$dir" ]; then
-      cp -r "$dir" "$target"
-    else
-      echo "Warning: '$dir' does not exist or is not a directory"
+    # Remove old directory safely
+    if [ -d "$target" ]; then
+        rm -rf "$target"
     fi
-  done
+
+    # Recreate target directory
+    mkdir -p "$target"
+
+    # Copy each dotdir
+    for dir in "${dotdirs[@]}"; do
+        if [ -e "$dir" ]; then
+            cp -r "$dir" "$target"
+        else
+            echo "Warning: '$dir' does not exist or is not a directory"
+        fi
+    done
 }
 
 # rename apps
@@ -67,15 +67,15 @@ alias bedit='nvim ~/.bashrc'
 # git add, commit, push. takes input for commit message
 # --------------------------------------------------------------------------
 gacp() {
-  if [ -z "$1" ]; then
-    echo "❌ Commit message required."
-    echo "Usage: gacp \"your commit message\""
-    return 1
-  fi
+    if [ -z "$1" ]; then
+        echo "❌ Commit message required."
+        echo "Usage: gacp \"your commit message\""
+        return 1
+    fi
 
-  git add .
-  git commit -m "$1"
-  git push
+    git add .
+    git commit -m "$1"
+    git push
 }
 
 # fzf
@@ -120,10 +120,10 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 ## opening tlen
 tlen() {
-  local file
-  file=$(find "$HOME/tlen" -type f -name "*.pdf" 2>/dev/null | fzf)
-  [ -n "$file" ] && nohup evince "$file" >/dev/null 2>&1 &
-  kill -9 $PPID
+    local file
+    file=$(find "$HOME/tlen" -type f -name "*.pdf" 2>/dev/null | fzf)
+    [ -n "$file" ] && nohup evince "$file" >/dev/null 2>&1 &
+    kill -9 $PPID
 }
 
 ## opening pdf, cbr, cbz, etc
@@ -139,11 +139,11 @@ pdf() {
 # yazi setup
 # --------------------------------------------------------------------------
 function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	IFS= read -r -d '' cwd < "$tmp"
-	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
-	rm -f -- "$tmp"
+    local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+    yazi "$@" --cwd-file="$tmp"
+    IFS= read -r -d '' cwd < "$tmp"
+    [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+    rm -f -- "$tmp"
 }
 
 # temp
