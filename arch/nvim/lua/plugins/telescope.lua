@@ -9,13 +9,13 @@ return {
        local map = vim.keymap.set
 
        -- Keymaps
-       map('n', '<leader>fa', function()
-       builtin.find_files({ hidden = true })
-       end, { desc = '[F]ind [A]ll files including dotfiles' })
-
        map('n', '<leader>ff', builtin.find_files, { desc = '[F]ind [F]iles' })
        map('n', '<leader>fg', builtin.live_grep,  { desc = '[F]ind by [G]rep' })
        map('n', '<leader>fb', builtin.buffers,    { desc = '[F]ind [B]uffers' })
        map('n', '<leader>fh', builtin.help_tags,  { desc = '[F]ind [H]elp' })
+       map('n', '<leader>fa', function()
+       builtin.find_files({ hidden = true })
+       end, { desc = '[F]ind [A]ll files including dotfiles' })
+       map('n', '<leader>fr', builtin.oldfiles,  { desc = '[F]ind [R]ecents' })
      end,
     }
