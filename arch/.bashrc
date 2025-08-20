@@ -27,6 +27,7 @@ dotdirs=(
     ~/.config/nvim/
     ~/.config/kitty/
     ~/.config/yazi/
+    ~/.config/zathura/
     ~/.config/hypr/
     ~/.config/waybar/
     ~/.config/fastfetch/
@@ -91,6 +92,8 @@ alias headlessmmpv='mpv --audio-display=no "$(fzf)"'
 # --------------------------------------------------------------------------
 alias mounthdd='sudo mount -t ntfs-3g /dev/sda2 /mnt/hdd/; cd /mnt/hdd'
 alias hdd='cd /mnt/hdd'
+alias mountssd='sudo mount /dev/sdb3 /mnt/ssd/; cd /mnt/ssd'
+alias ssd='cd /mnt/ssd'
 
 # ssh
 # --------------------------------------------------------------------------
@@ -122,7 +125,7 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 tlen() {
     local file
     file=$(find "$HOME/tlen" -type f -name "*.pdf" 2>/dev/null | fzf)
-    [ -n "$file" ] && nohup evince "$file" >/dev/null 2>&1 &
+    [ -n "$file" ] && nohup zathura "$file" >/dev/null 2>&1 &
     kill -9 $PPID
 }
 
@@ -132,7 +135,7 @@ pdf() {
     local SEARCH_DIR="${1:-.}"
     file=$(find "$SEARCH_DIR" -type f \( -iname "*.pdf" -o -iname "*.cbr" -o -iname "*.cbz" \) | fzf)
     if [[ -n "$file" ]]; then
-        nohup evince "$file" >/dev/null 2>&1 &
+        nohup zathura "$file" >/dev/null 2>&1 &
     fi
 }
 

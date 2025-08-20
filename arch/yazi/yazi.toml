@@ -31,7 +31,9 @@ edit = [
 	{ run = '${EDITOR:-nvim} "$@"', desc = "$EDITOR", block = true, for = "unix" },
 ]
 open = [
-	{ run = 'evince "$1"',                desc = "Open", for = "linux" },
+	#{ run = 'evince "$1"',                desc = "Open", for = "linux" },
+	#{ run = 'zathura "$1"',                desc = "Open", for = "linux" },
+	{ run = 'nohup zathura "$1" >/dev/null 2>&1 &', desc = "Open", for = "linux" },
 	{ run = 'open "$@"',                    desc = "Open", for = "macos" },
 ]
 reveal = [

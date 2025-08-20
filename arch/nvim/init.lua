@@ -40,24 +40,9 @@ vim.keymap.set("n", "<leader>Q", ":q!<CR>", { desc = "Force quit" })
 vim.keymap.set("n", "<leader>o", 'o<ESC>', { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>O", 'O<ESC>', { noremap = true, silent = true })
 
-vim.keymap.set('n', '<C-d>', '<C-d>zz', { noremap = true, silent = true })
-vim.keymap.set('n', '<C-u>', '<C-u>zz', { noremap = true, silent = true })
-
 vim.keymap.set('n', '<S-u>', '<C-r>', { desc = 'Redo' })
 
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
-
--- swithcing between panes, comentado xq mucho no lo uso
--- vim.keymap.set("n", "<leader>h", '<C-w>h', { noremap = true, silent = true })
--- vim.keymap.set("v", "<leader>h", '<C-w>h', { noremap = true, silent = true })
--- vim.keymap.set("n", "<leader>l", '<C-w>l', { noremap = true, silent = true })
--- vim.keymap.set("v", "<leader>l", '<C-w>l', { noremap = true, silent = true })
--- vim.keymap.set("n", "<leader>j", '<C-w>j', { noremap = true, silent = true })
--- vim.keymap.set("v", "<leader>j", '<C-w>j', { noremap = true, silent = true })
--- vim.keymap.set("n", "<leader>k", '<C-w>k', { noremap = true, silent = true })
--- vim.keymap.set("v", "<leader>k", '<C-w>k', { noremap = true, silent = true })
--- vim.keymap.set("n", "<leader>0", '<C-w>=', { noremap = true, silent = true })
--- vim.keymap.set("v", "<leader>0", '<C-w>=', { noremap = true, silent = true })
 
 -- agregar link de markdown con control k como obsidian
 vim.keymap.set('n', '<C-k>', 'i[]()2hi', { noremap = true, silent = true })
