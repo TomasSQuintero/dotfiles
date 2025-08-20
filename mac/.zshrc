@@ -22,13 +22,15 @@ eval "$(zoxide init --cmd cd zsh)"
 # copy dotfiles
 # ------------------------------------
 dots() {
-    local target=~/dotfiles/mac/
-
+    rm -rf ~/dotfiles/mac/
+    mkdir ~/dotfiles/mac/
+    
     cp  ~/.zshrc ~/dotfiles/mac/
     cp -r ~/.config/mpv ~/dotfiles/mac/
     cp -r ~/.config/nvim ~/dotfiles/mac/
     cp -r ~/.config/kitty ~/dotfiles/mac/
     cp -r ~/.config/yazi ~/dotfiles/mac/
+    cp -r ~/.config/zathura ~/dotfiles/mac/
 }
 
 # yazi
