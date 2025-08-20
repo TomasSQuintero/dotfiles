@@ -1,4 +1,4 @@
-set adjust-open "best-fit"
+set adjust-open "height"
 
 set pages-per-row 1
 
@@ -66,8 +66,10 @@ set recolor-keephue "true"
 
 #set render-loading "false"
 set scroll-step 25
+
 unmap f
 map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
 
 unmap i
 map i recolor
@@ -85,3 +87,14 @@ map j navigate next
 map k navigate previous
 map J scroll down
 map K scroll up
+map [fullscreen] j navigate next
+map [fullscreen] k navigate previous
+map [fullscreen] J scroll down
+map [fullscreen] K scroll up
+
+unmap <Right>
+unmap <Left>
+map <Right> navigate next
+map <Left> navigate previous
+map [fullscreen] <Right> navigate next
+map [fullscreen] <Left> navigate previous

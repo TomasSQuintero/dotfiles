@@ -46,6 +46,8 @@ vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
 -- agregar link de markdown con control k como obsidian
 vim.keymap.set('n', '<C-k>', 'i[]()2hi', { noremap = true, silent = true })
+vim.keymap.set('v', '<C-k>', 'i[]()2hi', { noremap = true, silent = true })
+vim.keymap.set('i', '<C-k>', '[]()2hi', { noremap = true, silent = true })
 
 -- clipboard
 vim.opt.clipboard = "unnamedplus"

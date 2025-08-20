@@ -1,0 +1,10 @@
+- bitwarden
+- blocktube
+- dark reader
+- image video block
+- leechblock
+- obsidian web clipper
+- skip redirect
+- sponsorblock
+- unhook
+- vimium browser
