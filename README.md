@@ -10,13 +10,13 @@
 
 | empty deskop | mpv, neovim|
 |:---|:---------------|
-| ![](https://github.com/TomasSQuintero/dotfiles/blob/main/arch/screenshots/desktop.png) | ![](https://github.com/TomasSQuintero/dotfiles/blob/main/arch/screenshots/neovim-movie.png) |
+| ![](https://github.com/TomasSQuintero/dotfiles/blob/main/screenshots/desktop.png) | ![](https://github.com/TomasSQuintero/dotfiles/blob/main/screenshots/neovim-movie.png) |
 | browser | mpv, moviescript |
-| ![](https://github.com/TomasSQuintero/dotfiles/blob/main/arch/screenshots/browser.png) | ![](https://github.com/TomasSQuintero/dotfiles/blob/main/arch/screenshots/show-moviescript.png) |
+| ![](https://github.com/TomasSQuintero/dotfiles/blob/main/screenshots/browser.png) | ![](https://github.com/TomasSQuintero/dotfiles/blob/main/screenshots/show-moviescript.png) |
 | fastfetch, yazi | music player |
-| ![](https://github.com/TomasSQuintero/dotfiles/blob/main/arch/screenshots/neofetch-yazi.png) | ![](https://github.com/TomasSQuintero/dotfiles/blob/main/arch/screenshots/music-player.png) |
+| ![](https://github.com/TomasSQuintero/dotfiles/blob/main/screenshots/neofetch-yazi.png) | ![](https://github.com/TomasSQuintero/dotfiles/blob/main/screenshots/music-player.png) |
 | unimatrix, wallscript | layout |
-| ![](https://github.com/TomasSQuintero/dotfiles/blob/main/arch/screenshots/unimatrix-wallscript.png) | ![](https://github.com/TomasSQuintero/dotfiles/blob/main/arch/screenshots/layout.png) |
+| ![](https://github.com/TomasSQuintero/dotfiles/blob/main/screenshots/unimatrix-wallscript.png) | ![](https://github.com/TomasSQuintero/dotfiles/blob/main/screenshots/layout.png) |
 </div>
 
 <div align="center">
