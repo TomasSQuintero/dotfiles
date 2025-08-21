@@ -1,0 +1,22 @@
+return {}
+
+-- return {
+--     'MeanderingProgrammer/render-markdown.nvim',
+--     opts = {
+--         heading = { 
+--             enabled = false,
+--             position = 'inline',
+--
+--         },
+--         code = {enabled = false},
+--         bullet = {
+--             icons = { '●', '○', '◆', '◇' },
+--         },
+--         checkbox = {
+--             custom = {
+--                 todo = { raw = '[-]', rendered = '󰥔 ', highlight = 'RenderMarkdownTodo', scope_highlight = nil },
+--                 star = { raw = '[*]', rendered = ' ', highlight = 'RenderMarkdownTodo', scope_highlight = nil },
+--             },
+--         },
+--     },
+-- }
