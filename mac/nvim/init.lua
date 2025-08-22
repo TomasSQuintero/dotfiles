@@ -36,3 +36,15 @@ vim.opt.clipboard = "unnamedplus"
 
 vim.keymap.set("n", "<leader>r", ":%s//g<Left><Left>", { desc = "Global search and replace", silent = false })
 vim.keymap.set("v", "<leader>r", ":s/\\%V/g<Left><Left>", { desc = "Search and replace in selection", silent = false })
+
+vim.keymap.set('n', '<leader>a', 'm`A;<Esc>``', { noremap = true, silent = true })
+
+vim.keymap.set('x', '<leader>a', function()
+  local start_line = vim.fn.line("'<")
+  local end_line = vim.fn.line("'>")
+
+  for line = start_line, end_line do
+    local current = vim.fn.getline(line)
+    vim.fn.setline(line, current .. ';')
+  end
+end, { noremap = true, silent = true })
