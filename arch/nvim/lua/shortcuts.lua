@@ -24,10 +24,30 @@ vim.keymap.set('n', '<A-k>', 'i[]()2hi', { noremap = true, silent = true })
 vim.keymap.set('v', '<A-k>', 'i[]()2hi', { noremap = true, silent = true })
 vim.keymap.set('i', '<A-k>', '[]()2hi', { noremap = true, silent = true })
 
--- vim.keymap.set('n', '<A-c>', '0i- [ ] ', { noremap = true, silent = true })
 vim.keymap.set('v', '<A-c>', ":norm I- [ ] <CR>A", { noremap = true, silent = true })
 vim.keymap.set('i', '<A-c>', 'I- [ ] ', { noremap = true, silent = true })
 
 -- toggle word wrap, on by default
 -- vim.keymap.set('n', '<leader>z', ':set wrap!<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<A-z>', ':set wrap!<CR>', { noremap = true, silent = true })
+
+--para cerrar el buffer, para ir cambiando esta leader fb de telescope
+vim.keymap.set('n', '<leader>bd', ':bd<CR>', { noremap = true, silent = true })
+
+-- find and replace (normal mode for entire file, visual only within selection)
+vim.keymap.set("n", "<leader>r", ":%s//g<Left><Left>", { desc = "Global search and replace", silent = false })
+vim.keymap.set("v", "<leader>r", ":s/\\%V/g<Left><Left>", { desc = "Search and replace in selection", silent = false })
+
+--RE UTIL: agregar ; al final de una linea en modo normal y volver a la pos. original
+vim.keymap.set('n', '<leader>a', 'm`A;<Esc>``', { noremap = true, silent = true })
+
+-- igual al anterior, pero utilizando visual block mode
+vim.keymap.set('x', '<leader>a', function()
+  local start_line = vim.fn.line("'<")
+  local end_line = vim.fn.line("'>")
+
+  for line = start_line, end_line do
+    local current = vim.fn.getline(line)
+    vim.fn.setline(line, current .. ';')
+  end
+end, { noremap = true, silent = true })
