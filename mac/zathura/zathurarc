@@ -1,3 +1,5 @@
+#set page-padding 50
+
 set selection-clipboard clipboard
 set adjust-open "best-fit"
 
@@ -62,3 +64,10 @@ map [fullscreen] j navigate next
 map [fullscreen] k navigate previous
 map [fullscreen] J scroll down
 map [fullscreen] K scroll up
+
+unmap <Right>
+unmap <Left>
+map <Right> navigate next
+map <Left> navigate previous
+map [fullscreen] <Right> navigate next
+map [fullscreen] <Left> navigate previous
