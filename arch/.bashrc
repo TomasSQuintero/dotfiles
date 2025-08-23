@@ -134,7 +134,7 @@ tlen() {
 pdf() {
     local file
     local SEARCH_DIR="${1:-.}"
-    file=$(find "$SEARCH_DIR" -type f \( -iname "*.pdf" -o -iname "*.cbr" -o -iname "*.cbz" \) | fzf)
+    file=$(find "$SEARCH_DIR" -type f \( -iname "*.pdf" -o -iname "*.cbr" -o -iname "*.cbz" -o -iname "*.epub" \) | fzf)
     if [[ -n "$file" ]]; then
         nohup zathura "$file" >/dev/null 2>&1 &
     fi
@@ -159,16 +159,4 @@ clearyazi(){
     sudo find /tmp/ \( -type f -o -type d \) -iname '*yazi*' -print0 | xargs -0 rm -rf
 }
 
-# [DEPRECATED] abrir un directorio de profundidad 2 con mpv
-# --------------------------------------------------------------------------
-# disco() {
-#   #cd ~/Music || return
-#   dir=$(find . -mindepth 2 -maxdepth 2 -type d | fzf)
-#   [ -n "$dir" ] && mpv "$dir"
-# }
-# 
-# headlessdisco() {
-#   dir=$(find . -mindepth 2 -maxdepth 2 -type d | fzf)
-#   [ -n "$dir" ] && mpv --audio-display=no "$dir"
-# }
-
+alias notes='cd ~/Documents/notes && nvim'
