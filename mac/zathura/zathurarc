@@ -8,7 +8,7 @@ set pages-per-row 1
 #stop at page boundries
 set scroll-page-aware "true"
 set scroll-full-overlap 0.01
-set scroll-step 100
+set scroll-step 5
 
 set zoom-min 10
 #set guioptions ""
@@ -40,7 +40,6 @@ set recolor-darkcolor "#E0E0E0" #06
 set recolor-reverse-video "true"
 set recolor-keephue "true"
 
-set scroll-step 25
 unmap f
 map f toggle_fullscreen
 
