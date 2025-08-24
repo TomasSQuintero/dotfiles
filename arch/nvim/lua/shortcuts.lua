@@ -1,6 +1,6 @@
 -- leader y to copy to clipboard
-vim.keymap.set("n", "<leader>y", '"+y', { noremap = true, silent = true })
-vim.keymap.set("v", "<leader>y", '"+y', { noremap = true, silent = true })
+-- vim.keymap.set("n", "<leader>y", '"+y', { noremap = true, silent = true })
+-- vim.keymap.set("v", "<leader>y", '"+y', { noremap = true, silent = true })
 
 -- write, quit, and quit without saving
 vim.keymap.set("n", "<leader>w", ":w<CR>", { desc = "Write file" })

@@ -80,6 +80,12 @@ gacp() {
     git push
 }
 
+syncnotes() {
+    git add .
+    git commit -m "$(date '+%Y-%m-%d %H:%M:%S')"
+    git push
+}
+
 # fzf
 # --------------------------------------------------------------------------
 eval "$(fzf --bash)"
