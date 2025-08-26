@@ -66,3 +66,4 @@ ytmd() {
     echo "Exported playlist to ${filename}.md"
 }
 
+alias notes='cd ~/Documents/notes && nvim'

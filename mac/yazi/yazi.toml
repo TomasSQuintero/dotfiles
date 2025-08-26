@@ -51,6 +51,7 @@ play = [
 rules = [
 	# Folder
 	{ name = "*/", use = [ "edit", "open", "reveal" ] },
+	{ mime = "m3u/*", use = [ "open"] },
 	# Text
 	{ mime = "text/*", use = [ "edit", "reveal" ] },
 	# Image
