@@ -1,6 +1,7 @@
 # Set colors: folders cyan, files white
 # export LS_COLORS='di=36:fi=0:ln=0:pi=0:so=0:do=0:bd=0:cd=0:or=0:mi=0:su=0:sg=0:tw=0:ow=0:st=0:ex=0'
 export LS_COLORS='di=96:fi=97'
+setopt HIST_IGNORE_DUPS
 alias ls='ls --color=auto'
 #PROMPT='tom@mac %~ %# '
 PROMPT='%~ > '
@@ -67,3 +68,8 @@ ytmd() {
 }
 
 alias notes='cd ~/Documents/notes && nvim'
+
+# temp 
+alias links='nvim ~/Documents/notes/01-resources/bookmarks/yt-playlist/links.md'
+#compile and run
+alias cr='clang++ convert.cpp -o run && ./run'
