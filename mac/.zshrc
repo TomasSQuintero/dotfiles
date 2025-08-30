@@ -73,3 +73,9 @@ alias notes='cd ~/Documents/notes && nvim'
 alias links='nvim ~/Documents/notes/01-resources/bookmarks/yt-playlist/links.md'
 #compile and run
 alias cr='clang++ convert.cpp -o run && ./run'
+
+comp() {
+    clang++ -g "$1" -o run
+    echo "compiled it =)"
+}
+compdef "_files -g '*.cpp'" comp
