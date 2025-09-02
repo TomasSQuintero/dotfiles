@@ -59,7 +59,13 @@ vim.keymap.set('n', '<leader>k', 'i[]()2hi', { noremap = true, silent = true })
 vim.keymap.set('v', '<leader>k', 'i[]()2hi', { noremap = true, silent = true })
 vim.keymap.set('i', '<C-k>', '[]()2hi', { noremap = true, silent = true })
 
+vim.keymap.set('i', '<C-c>', '- [ ] ', { noremap = true, silent = true })
+
 
 vim.keymap.set('n', '<leader>p', 'llpo[]()2hi', { noremap = true, silent = true })
+
+vim.keymap.set("n", "<C-y>", 'f"a<CR>', { noremap = true, silent = true })
+vim.keymap.set("n", "<C-l>", 'v4600l', { noremap = true, silent = true })
+
 -- vim.keymap.set('v', '<leader>p', 'i[]()2hi', { noremap = true, silent = true })
 -- vim.keymap.set('i', '<leader>p', 'llpo[]()2hi', { noremap = true, silent = true })
