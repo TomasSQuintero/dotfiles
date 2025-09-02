@@ -1,5 +1,6 @@
 set adjust-open "height"
 
+set selection-clipboard clipboard
 set pages-per-row 1
 
 #stop at page boundries

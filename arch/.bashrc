@@ -99,7 +99,7 @@ alias headlessmmpv='mpv --audio-display=no "$(fzf)"'
 # --------------------------------------------------------------------------
 alias mounthdd='sudo mount -t ntfs-3g /dev/sda2 /mnt/hdd/; cd /mnt/hdd'
 alias hdd='cd /mnt/hdd'
-alias mountssd='sudo mount /dev/sdb3 /mnt/ssd/; cd /mnt/ssd'
+alias mountssd='sudo mount /dev/sdb2 /mnt/ssd/; cd /mnt/ssd'
 alias ssd='cd /mnt/ssd'
 
 # ssh
@@ -128,14 +128,6 @@ rhs() {
 eval "$(zoxide init --cmd cd bash)"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-## opening tlen
-tlen() {
-    local file
-    file=$(find "$HOME/tlen" -type f -name "*.pdf" 2>/dev/null | fzf)
-    [ -n "$file" ] && nohup zathura "$file" >/dev/null 2>&1 &
-    kill -9 $PPID
-}
-
 ## opening pdf, cbr, cbz, etc
 pdf() {
     local file
@@ -159,10 +151,4 @@ function y() {
 # temp
 # --------------------------------------------------------------------------
 alias stop='mpv "/mnt/hdd/00-personal-library/films/stop making sense [1984] [4k]/stop making sense [1984] [4k].mkv"'
-
-clearyazi(){
-    yazi --clear-cache
-    sudo find /tmp/ \( -type f -o -type d \) -iname '*yazi*' -print0 | xargs -0 rm -rf
-}
-
 alias notes='cd ~/Documents/notes && nvim'

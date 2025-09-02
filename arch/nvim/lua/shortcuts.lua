@@ -41,14 +41,17 @@ vim.keymap.set('n', '<leader>a', 'm`A;<Esc>``', { noremap = true, silent = true 
 
 -- igual al anterior, pero utilizando visual block mode, dudoso
 vim.keymap.set('x', '<leader>a', function()
-  local start_line = vim.fn.line("'<")
-  local end_line = vim.fn.line("'>")
+local start_line = vim.fn.line("'<")
+local end_line = vim.fn.line("'>")
 
-  for line = start_line, end_line do
-    local current = vim.fn.getline(line)
-    vim.fn.setline(line, current .. ';')
-  end
+for line = start_line, end_line do
+local current = vim.fn.getline(line)
+vim.fn.setline(line, current .. ';')
+end
 end, { noremap = true, silent = true })
 
 -- identar todo el archivo
 vim.keymap.set('n', '<leader>0', 'm`gg=G<Esc>``', { noremap = true, silent = true })
+
+-- toggle markdown rendering
+vim.keymap.set('n', '<leader>e', ':RenderMarkdown toggle<CR>', { noremap = true, silent = true })
