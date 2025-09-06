@@ -102,7 +102,10 @@ alias hdd='cd /mnt/hdd'
 alias mountssd='sudo mount /dev/sdb2 /mnt/ssd/; cd /mnt/ssd'
 alias ssd='cd /mnt/ssd'
 
-    alias mountssdstorage='sudo mount /dev/sdb4 /mnt/ssd-storage; cd /mnt/ssd-storage'
+alias mountssdstorage='sudo mount /dev/sdb4 /mnt/ssd-storage; cd /mnt/ssd-storage'
+
+alias mountgames='sudo mount /dev/sdb4 /home/tom/games/steamLibrary'
+alias umountgames='sudo umount /home/tom/games/steamLibrary'
 
 # ssh
 # --------------------------------------------------------------------------
