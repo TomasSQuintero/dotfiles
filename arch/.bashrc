@@ -102,6 +102,8 @@ alias hdd='cd /mnt/hdd'
 alias mountssd='sudo mount /dev/sdb2 /mnt/ssd/; cd /mnt/ssd'
 alias ssd='cd /mnt/ssd'
 
+    alias mountssdstorage='sudo mount /dev/sdb4 /mnt/ssd-storage; cd /mnt/ssd-storage'
+
 # ssh
 # --------------------------------------------------------------------------
 alias conectarssh='eval "$(ssh-agent -s)"; ssh-add ~/.ssh/id_ed25519'
