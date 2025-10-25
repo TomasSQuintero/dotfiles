@@ -55,3 +55,4 @@ vim.keymap.set('n', '<leader>0', 'm`gg=G<Esc>``', { noremap = true, silent = tru
 
 -- toggle markdown rendering
 vim.keymap.set('n', '<leader>e', ':RenderMarkdown toggle<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', 'yl', 'yi(', { noremap = true, silent = true })
