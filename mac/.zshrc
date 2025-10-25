@@ -71,6 +71,8 @@ alias notes='cd ~/Documents/notes && nvim'
 
 # temp 
 alias links='nvim ~/Documents/notes/01-resources/bookmarks/yt-playlist/links.md'
+alias record='mpv --audio-display=no'
+
 #compile and run
 alias cr='clang++ convert.cpp -o run && ./run'
 

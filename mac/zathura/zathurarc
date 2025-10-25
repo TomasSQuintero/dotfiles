@@ -1,7 +1,7 @@
 #set page-padding 50
 
-# set selection-clipboard clipboard
-set selection-clipboard none
+set selection-clipboard clipboard
+# set selection-clipboard none
 set adjust-open "best-fit"
 
 set pages-per-row 1
@@ -48,6 +48,7 @@ set default-fg "#AEC6CFAA"
 
 unmap f
 map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
 
 unmap i
 map i recolor

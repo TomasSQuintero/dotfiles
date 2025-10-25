@@ -7,6 +7,7 @@ vim.opt.termguicolors = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
+vim.opt.linebreak = true
 
 -- tabs and indentation
 vim.opt.tabstop = 4
@@ -50,7 +51,7 @@ vim.keymap.set('x', '<leader>a', function()
 end, { noremap = true, silent = true })
 
 
-vim.keymap.set('n', '<leader>t', ':set wrap!<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>z', ':set wrap!<CR>', { noremap = true, silent = true })
 
 vim.keymap.set("n", "<leader>r", ":%s//g<Left><Left>", { desc = "Global search and replace", silent = false })
 vim.keymap.set("v", "<leader>r", ":s/\\%V/g<Left><Left>", { desc = "Search and replace in selection", silent = false })
@@ -66,6 +67,8 @@ vim.keymap.set('n', '<leader>p', 'llpo[]()2hi', { noremap = true, silent = tru
 
 vim.keymap.set("n", "<C-y>", 'f"a<CR>', { noremap = true, silent = true })
 vim.keymap.set("n", "<C-l>", 'v4600l', { noremap = true, silent = true })
+
+vim.keymap.set('n', 'yl', 'yi(', { noremap = true, silent = true })
 
 -- vim.keymap.set('v', '<leader>p', 'i[]()2hi', { noremap = true, silent = true })
 -- vim.keymap.set('i', '<leader>p', 'llpo[]()2hi', { noremap = true, silent = true })
