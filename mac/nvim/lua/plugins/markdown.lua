@@ -1,9 +1,10 @@
-return {
-    'MeanderingProgrammer/render-markdown.nvim',
-    opts = {
-        code = {enabled = false},
-        bullet = {
-            icons = { '', '', '', '' },
-        },
-    },
-}
+return {}
+-- return {
+--     'MeanderingProgrammer/render-markdown.nvim',
+--     opts = {
+--         code = {enabled = false},
+--         bullet = {
+--             icons = { '', '', '', '' },
+--         },
+--     },
+-- }

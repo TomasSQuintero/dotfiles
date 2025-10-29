@@ -78,6 +78,7 @@ alias cr='clang++ convert.cpp -o run && ./run'
 
 comp() {
     clang++ -g "$1" -o run
+    # clang++ -g "$1"
     echo "compiled it =)"
 }
 compdef "_files -g '*.cpp'" comp
