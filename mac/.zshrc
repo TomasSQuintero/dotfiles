@@ -71,7 +71,6 @@ alias notes='cd ~/Documents/notes && nvim'
 
 # temp 
 alias links='nvim ~/Documents/notes/01-resources/bookmarks/yt-playlist/links.md'
-alias record='mpv --audio-display=no'
 
 #compile and run
 alias cr='clang++ convert.cpp -o run && ./run'
@@ -82,3 +81,15 @@ comp() {
     echo "compiled it =)"
 }
 compdef "_files -g '*.cpp'" comp
+
+gacp() {
+    if [ -z "$1" ]; then
+        echo "❌ Commit message required."
+        echo "Usage: gacp \"your commit message\""
+        return 1
+    fi
+
+    git add .
+    git commit -m "$1"
+    git push
+}
