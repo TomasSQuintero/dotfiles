@@ -3,9 +3,10 @@
 
 * {
   font-family: UDEV Gothic;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
-  color: #dddddd;
+  color: #cccccc;
+  /* border-radius: 3px; */
 }
 
 window#waybar {
@@ -29,7 +30,7 @@ window#waybar {
 
 #workspaces button.active {
   background: transparent;
-  border-bottom: 2px solid #dddddd;
+  border-bottom: 2px solid #cccccc;
   border-radius: 0;
 }
 
@@ -41,9 +42,9 @@ window#waybar {
   background: rgb(65, 69, 89);
 }
 
-#mpris {
-  color: #eeeeee;
-}
+/* #mpris { */
+/*   color: #eeeeee; */
+/* } */
 
 #pulseaudio {
   padding: 0px 10px 0px 10px;

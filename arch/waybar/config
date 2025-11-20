@@ -1,6 +1,7 @@
 {
   "layer": "top",
   "position": "top",
+  // "margin": 10,
   "modules-left": ["custom/wlogout","hyprland/workspaces"],
   "modules-center": [],
   "modules-right": ["mpris","pulseaudio","bluetooth","clock#date","clock"],

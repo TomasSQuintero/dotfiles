@@ -155,10 +155,4 @@ function y() {
 
 # temp
 # --------------------------------------------------------------------------
-alias stop='mpv "/mnt/hdd/00-personal-library/films/stop making sense [1984] [4k]/stop making sense [1984] [4k].mkv"'
 alias notes='cd ~/Documents/notes && nvim'
-
-comp() {
-    clang++ -g "$1" -o run
-    echo "compiled it =)"
-}
