@@ -4,13 +4,14 @@
 * {
   font-family: UDEV Gothic;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 900;
   color: #cccccc;
-  /* border-radius: 3px; */
+  /* color: #cccccc; */
+  border-radius: 5px;
 }
 
 window#waybar {
-  background-color: rgba(30, 30, 30, 0.3);
+  background-color: rgba(30, 30, 30, 0.2);
 }
 
 #custom-wlogout {
@@ -30,8 +31,13 @@ window#waybar {
 
 #workspaces button.active {
   background: transparent;
-  border-bottom: 2px solid #cccccc;
+  /* border-bottom: 2px solid #cccccc; */
   border-radius: 0;
+}
+
+#workspaces button.active label {
+  color: #7daea3;
+  /* color: #e1d4ab; */
 }
 
 #workspaces button:hover {
@@ -39,12 +45,8 @@ window#waybar {
   text-shadow: none;
   background: inherit;
   border-top: none;
-  background: rgb(65, 69, 89);
+  background: rgba(60, 58, 57, 0.8);
 }
-
-/* #mpris { */
-/*   color: #eeeeee; */
-/* } */
 
 #pulseaudio {
   padding: 0px 10px 0px 10px;
