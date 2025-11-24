@@ -2,6 +2,7 @@ configuration {
   modes: "window,drun,run,ssh";
   font: "JetBrainsMono NF 18";
   display-drun:"";
+  display-window:"window";
   drun-display-format: "{name}";
 }
 
