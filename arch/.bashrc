@@ -21,9 +21,10 @@ alias episode='sh ~/.config/scripts/episode.sh'
 # --------------------------------------------------------------------------
 dotdirs=(
     ~/.bashrc
-    ~/.vimrc
+    ~/.inputrc
+    # ~/.vimrc
     ~/.config/mpv/
-    ~/.config/bat/
+    # ~/.config/bat/
     ~/.config/nvim/
     ~/.config/kitty/
     ~/.config/yazi/

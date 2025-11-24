@@ -9,7 +9,7 @@ configuration {
 * {
   // general
   bg: #282828;
-  bgt: #28282895;
+  bgt: #282828d0;
   t: transparent;
   fg: #d4be98;
 
