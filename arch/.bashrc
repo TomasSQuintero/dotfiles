@@ -91,6 +91,8 @@ syncnotes() {
 # --------------------------------------------------------------------------
 eval "$(fzf --bash)"
 export FZF_DEFAULT_OPTS='-m --style full --bind 'ctrl-space:accept''
+bind -r '"\C-t"'
+
 alias ffzf='fzf -m --preview "bat --style=numbers --color=always {}" --layout reverse'
 alias nv='nvim "$(fzf -m --preview "bat --style=numbers --color=always {} | head -n 100" --layout reverse)"'
 alias mmpv='mpv "$(fzf --query ".mp4$ | .mkv$ " --layout reverse)"'
