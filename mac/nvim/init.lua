@@ -51,24 +51,28 @@ vim.keymap.set('x', '<leader>a', function()
 end, { noremap = true, silent = true })
 
 
+-- word wrap toggle
 vim.keymap.set('n', '<leader>z', ':set wrap!<CR>', { noremap = true, silent = true })
 
+-- search and replace
 vim.keymap.set("n", "<leader>r", ":%s//g<Left><Left>", { desc = "Global search and replace", silent = false })
 vim.keymap.set("v", "<leader>r", ":s/\\%V/g<Left><Left>", { desc = "Search and replace in selection", silent = false })
 
+-- markdown link formatting
 vim.keymap.set('n', '<leader>k', 'i[]()2hi', { noremap = true, silent = true })
 vim.keymap.set('v', '<leader>k', 'i[]()2hi', { noremap = true, silent = true })
 vim.keymap.set('i', '<C-k>', '[]()2hi', { noremap = true, silent = true })
 
+-- markdown checkbox formatting
 vim.keymap.set('i', '<C-c>', '- [ ] ', { noremap = true, silent = true })
 
+--vim.keymap.set('n', '<leader>p', 'llpo[]()2hi', { noremap = true, silent = true })
 
-vim.keymap.set('n', '<leader>p', 'llpo[]()2hi', { noremap = true, silent = true })
-
-vim.keymap.set("n", "<C-y>", 'f"a<CR>', { noremap = true, silent = true })
-vim.keymap.set("n", "<C-l>", 'v4600l', { noremap = true, silent = true })
-
+-- yank link inside ()
 vim.keymap.set('n', 'yl', 'yi(', { noremap = true, silent = true })
 
--- vim.keymap.set('v', '<leader>p', 'i[]()2hi', { noremap = true, silent = true })
--- vim.keymap.set('i', '<leader>p', 'llpo[]()2hi', { noremap = true, silent = true })
+-- Switch to the next split using 'gs'
+vim.keymap.set('n', 'gs', '<C-w>w', { noremap = true, silent = true })
+
+-- paste to end
+vim.keymap.set('n', '<leader>m', "ddGp''", { noremap = true })
