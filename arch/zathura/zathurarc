@@ -8,7 +8,7 @@ set scroll-page-aware "true"
 set scroll-step 15
 
 set zoom-min 10
-#set guioptions ""
+set guioptions none
 
 # zathurarc-dark
 
@@ -79,15 +79,34 @@ map } navigate next
 
 unmap j
 unmap k
-unmap J
-unmap K
+unmap h
+unmap l
 
+# jk for next/prev
 map j navigate next
 map k navigate previous
-map J scroll down
-map K scroll up
+map h scroll down
+map l scroll up
+
 map [fullscreen] j navigate next
 map [fullscreen] k navigate previous
+map [fullscreen] h scroll down
+map [fullscreen] l scroll up
+
+# # jk to scroll
+# map l navigate next
+# map h navigate previous
+# map j scroll down
+# map k scroll up
+# map [fullscreen] l navigate next
+# map [fullscreen] h navigate previous
+# map [fullscreen] j scroll down
+# map [fullscreen] k scroll up
+
+unmap J
+unmap K
+map J scroll down
+map K scroll up
 map [fullscreen] J scroll down
 map [fullscreen] K scroll up
 
