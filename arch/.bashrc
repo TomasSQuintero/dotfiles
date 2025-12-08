@@ -21,9 +21,10 @@ alias episode='sh ~/.config/scripts/episode.sh'
 # --------------------------------------------------------------------------
 dotdirs=(
     ~/.bashrc
-    ~/.vimrc
+    ~/.inputrc
+    # ~/.vimrc
     ~/.config/mpv/
-    ~/.config/bat/
+    # ~/.config/bat/
     ~/.config/nvim/
     ~/.config/kitty/
     ~/.config/yazi/
@@ -90,6 +91,8 @@ syncnotes() {
 # --------------------------------------------------------------------------
 eval "$(fzf --bash)"
 export FZF_DEFAULT_OPTS='-m --style full --bind 'ctrl-space:accept''
+bind -r '"\C-t"'
+
 alias ffzf='fzf -m --preview "bat --style=numbers --color=always {}" --layout reverse'
 alias nv='nvim "$(fzf -m --preview "bat --style=numbers --color=always {} | head -n 100" --layout reverse)"'
 alias mmpv='mpv "$(fzf --query ".mp4$ | .mkv$ " --layout reverse)"'
@@ -155,10 +158,4 @@ function y() {
 
 # temp
 # --------------------------------------------------------------------------
-alias stop='mpv "/mnt/hdd/00-personal-library/films/stop making sense [1984] [4k]/stop making sense [1984] [4k].mkv"'
 alias notes='cd ~/Documents/notes && nvim'
-
-comp() {
-    clang++ -g "$1" -o run
-    echo "compiled it =)"
-}
