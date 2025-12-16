@@ -16,6 +16,7 @@ alias changewall='sh ~/.config/scripts/change-wallpaper.sh'
 alias peli='sh ~/.config/scripts/movie.sh'
 alias show='sh ~/.config/scripts/show.sh'
 alias episode='sh ~/.config/scripts/episode.sh'
+alias ytdl='sh ~/.config/scripts/yt-dl.sh'
 
 # copy dotfiles to repo directory
 # --------------------------------------------------------------------------
