@@ -54,5 +54,7 @@ end, { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>0', 'm`gg=G<Esc>``', { noremap = true, silent = true })
 
 -- toggle markdown rendering
-vim.keymap.set('n', '<leader>e', ':RenderMarkdown toggle<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>m', ':RenderMarkdown toggle<CR>', { noremap = true, silent = true })
+
+-- copy link inside parenthesis
 vim.keymap.set('n', 'yl', 'yi(', { noremap = true, silent = true })
