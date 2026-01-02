@@ -159,4 +159,5 @@ function y() {
 
 # temp
 # --------------------------------------------------------------------------
-alias notes='cd ~/Documents/notes && nvim'
+alias notes='cd ~/notes && nvim'
+alias links='cd ~/notes && nvim links.md'
