@@ -1,6 +1,0 @@
-$wallpath = /home/tom/.config/hypr/wallpapers/447.png
-#$wallpath = $HOME/.config/hypr/wallpapers/cote.jpg
-#$wallpath = $HOME/.config/hypr/wallpapers/kan.jpg
-
-preload = $wallpath
-wallpaper = ,$wallpath
