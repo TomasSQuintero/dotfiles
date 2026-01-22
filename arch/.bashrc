@@ -161,3 +161,6 @@ function y() {
 # --------------------------------------------------------------------------
 alias notes='cd ~/notes && nvim'
 alias links='cd ~/notes && nvim links.md'
+
+# Created by `pipx` on 2026-01-17 21:57:56
+export PATH="$PATH:/home/tom/.local/bin"

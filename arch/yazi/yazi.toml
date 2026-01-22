@@ -58,6 +58,9 @@ download = [
 	{ run = "ya emit download --open %S", desc = "Download and open" },
 	{ run = "ya emit download %S",        desc = "Download" },
 ]
+qimgv = [
+	{ run = "qimgv %s", desc = "qimgv", orphan = true },
+]
 
 [open]
 rules = [
@@ -67,6 +70,8 @@ rules = [
 	{ url = "*.{srt,sub,ass,ssa,vtt}", use = [ "edit", "reveal" ] },
 	# Text
 	{ mime = "text/*", use = [ "edit", "reveal" ] },
+    # PNG images
+    { mime = "image/png", use = [ "qimgv", "reveal" ] },
 	# Image
 	{ mime = "image/*", use = [ "open", "reveal" ] },
 	# Media - Video files now open with mpv
