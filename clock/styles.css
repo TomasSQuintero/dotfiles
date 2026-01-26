@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 200vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  transition: background 0.3s, color 0.3s;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+#clock {
+  font-size: clamp(4rem, 12vw, 10rem);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+}
+
+select,
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* ===== Themes ===== */
+
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --font: 'Inter', monospace;
+}
+
+body.theme-mono {
+  --bg: #ede0d4;
+  --text: #7f5539;
+  --font: monospace;
+}
+
+body.theme-neon {
+  --bg: #000000;
+  --text: #00ffcc;
+  --font: 'Orbitron', monospace;
+}
+
+body.theme-misc {
+  --bg: #ede0d4;
+  --text: #7f5539;
+  --font: 'Inter', monospace;
+}
+
+/* ===== Dark mode ===== */
+
+body.dark {
+  --bg: #7f5539;
+  --text: #ede0d4;
+}
+
+.controls {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.controls.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
