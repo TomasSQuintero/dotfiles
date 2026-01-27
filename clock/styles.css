@@ -50,19 +50,15 @@ button {
 body.theme-mono {
   --bg: #ede0d4;
   --text: #7f5539;
-  --font: monospace;
-}
-
-body.theme-neon {
-  --bg: #000000;
-  --text: #00ffcc;
-  --font: 'Orbitron', monospace;
+  /* --font: monospace; */
+  font-family: "EB Garamond", serif;
+  /* font-family: "JetBrains Mono", monospace; */
 }
 
 body.theme-misc {
   --bg: #ede0d4;
   --text: #7f5539;
-  --font: 'Inter', monospace;
+  font-family: "JetBrains Mono", monospace;
 }
 
 /* ===== Dark mode ===== */
