@@ -20,26 +20,28 @@ read choice
 echo -n "Enter URL: "
 read url
 
+# yt-dlp --quiet --progress
+
 case $choice in
     1)
         echo "Downloading best quality to $DOWNLOAD_DIR..."
-        yt-dlp -f "bv*+ba/b" --no-warnings --merge-output-format mkv -o "$DOWNLOAD_DIR/%(title)s.%(ext)s" "$url"
+        yt-dlp --quiet --progress -f "bv*+ba/b" --no-warnings --merge-output-format mkv -o "$DOWNLOAD_DIR/%(title)s.%(ext)s" "$url"
         ;;
     2)
         echo "Downloading 1080p to $DOWNLOAD_DIR..."
-        yt-dlp -f "bv*[height<=1080]+ba/b[height<=1080]" --no-warnings --merge-output-format mkv -o "$DOWNLOAD_DIR/%(title)s.%(ext)s" "$url"
+        yt-dlp --quiet --progress -f "bv*[height<=1080]+ba/b[height<=1080]" --no-warnings --merge-output-format mkv -o "$DOWNLOAD_DIR/%(title)s.%(ext)s" "$url"
         ;;
     3)
         echo "Downloading 720p to $DOWNLOAD_DIR..."
-        yt-dlp -f "bv*[height<=720]+ba/b[height<=720]" --no-warnings --merge-output-format mkv -o "$DOWNLOAD_DIR/%(title)s.%(ext)s" "$url"
+        yt-dlp --quiet --progress -f "bv*[height<=720]+ba/b[height<=720]" --no-warnings --merge-output-format mkv -o "$DOWNLOAD_DIR/%(title)s.%(ext)s" "$url"
         ;;
     4)
         echo "Downloading audio only to $DOWNLOAD_DIR..."
-        yt-dlp -x --audio-format mp3 --audio-quality 0 --no-warnings -o "$DOWNLOAD_DIR/%(title)s.%(ext)s" "$url"
+        yt-dlp --quiet --progress -x --audio-format mp3 --audio-quality 0 --no-warnings -o "$DOWNLOAD_DIR/%(title)s.%(ext)s" "$url"
         ;;
     5)
         echo "Downloading playlist to $DOWNLOAD_DIR..."
-        yt-dlp -f "bv*+ba/b" --no-warnings --merge-output-format mkv -o "$DOWNLOAD_DIR/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s" "$url"
+        yt-dlp --quiet --progress -f "bv*+ba/b" --no-warnings --merge-output-format mkv -o "$DOWNLOAD_DIR/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s" "$url"
         ;;
     *)
         echo "Invalid option. Please choose 1-5."
