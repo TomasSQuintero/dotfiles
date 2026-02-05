@@ -28,6 +28,8 @@ dotdirs=(
     # ~/.config/bat/
     ~/.config/nvim/
     ~/.config/kitty/
+    ~/.config/mpd/
+    ~/.config/rmpc/
     ~/.config/yazi/
     ~/.config/zathura/
     ~/.config/hypr/
@@ -165,3 +167,4 @@ alias later='cd ~/notes && nvim later.md'
 
 # Created by `pipx` on 2026-01-17 21:57:56
 export PATH="$PATH:/home/tom/.local/bin"
+export PATH="$PATH:/usr/bin/cava"
