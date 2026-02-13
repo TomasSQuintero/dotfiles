@@ -75,15 +75,17 @@
 },
 
 "clock#date":{
+    "timezone": "America/Argentina/Buenos_Aires",
     "format": "[ {:%d.%m} ]",
     "tooltip": false
 },
 
 "clock": {
     "timezone": "America/Argentina/Buenos_Aires",
-    "format": "[ {:%H:%M} ]",
+    "format": "[ {:%H:%M:%S} ]",
     "tooltip-format": "{:%A, %d %B %Y}",
-    "interval": 60
+    "interval": 1
+    //"interval": 60
 }
 
 }
