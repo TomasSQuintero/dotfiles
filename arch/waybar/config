@@ -46,7 +46,8 @@
     "interval": 1,
     "on-click": "playerctl play-pause",
     "on-scroll-up": "playerctl next",
-    "on-scroll-down": "playerctl previous"
+    "on-scroll-down": "playerctl previous",
+    "ignored-players": ["firefox"]
 },
 
 "pulseaudio": {
@@ -77,14 +78,16 @@
 "clock#date":{
     "timezone": "America/Argentina/Buenos_Aires",
     "format": "[ {:%d.%m} ]",
-    "tooltip": false
+    //"tooltip": false
+    "tooltip-format": "{:%A, %d %B %Y}",
 },
 
 "clock": {
     "timezone": "America/Argentina/Buenos_Aires",
-    "format": "[ {:%H:%M:%S} ]",
-    "tooltip-format": "{:%A, %d %B %Y}",
+    "format": "[ {:%H:%M} ]",
+    "tooltip-format": "{:%H:%M:%S}",
     "interval": 1
+    //"tooltip-format": "{:%A, %d %B %Y - %H:%M:%S}",
     //"interval": 60
 }
 
