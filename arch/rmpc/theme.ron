@@ -41,7 +41,8 @@
         use_track_when_empty: true,
     ),
     scrollbar: (
-        symbols: ["│", "█", "▲", "▼"],
+        //symbols: ["│", "█", "▲", "▼"],
+        symbols: ["|", "│", "∧", "∨"],
         track_style: (),
         ends_style: (),
         thumb_style: (fg: "blue"),
