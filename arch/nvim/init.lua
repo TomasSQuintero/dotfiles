@@ -56,3 +56,7 @@ vim.opt.fillchars:append({ eob = " " })
 -- vim.cmd("command! Trix %s/ \\[Trix\\] //g")
 -- vim.cmd("command! Bd %s/ (BD 1080p AV1) \\[[^]]*\\]//g")
 -- vim.cmd("command! Corchetes %s/ \[[^]]*\]//g")
+
+vim.api.nvim_create_user_command("Book", function()
+  vim.cmd("0r ~/notes/96-templates/book.md")
+end, {})
