@@ -29,6 +29,7 @@ dots() {
     cp  ~/.zshrc ~/dotfiles/mac/
     cp -r ~/.config/mpv ~/dotfiles/mac/
     cp -r ~/.config/nvim ~/dotfiles/mac/
+    cp -r ~/.config/sioyek ~/dotfiles/mac/
     cp -r ~/.config/kitty ~/dotfiles/mac/
     cp -r ~/.config/yazi ~/dotfiles/mac/
     cp -r ~/.config/zathura ~/dotfiles/mac/
