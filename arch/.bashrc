@@ -21,24 +21,25 @@ alias ytdl='sh ~/.config/scripts/yt-dl.sh'
 # copy dotfiles to repo directory
 # --------------------------------------------------------------------------
 dotdirs=(
-    ~/.bashrc
-    ~/.inputrc
-    # ~/.vimrc
-    ~/.config/mpv/
     # ~/.config/bat/
-    ~/.config/nvim/
-    ~/.config/kitty/
-    ~/.config/mpd/
-    ~/.config/rmpc/
-    ~/.config/yazi/
-    ~/.config/zathura/
-    ~/.config/hypr/
-    ~/.config/waybar/
+    # ~/.vimrc
+    ~/.bashrc
     ~/.config/fastfetch/
-    ~/.config/rofi
     ~/.config/gtk-3.0/
     ~/.config/gtk-4.0/
+    ~/.config/hypr/
+    ~/.config/kitty/
+    ~/.config/mpd/
+    ~/.config/mpv/
+    ~/.config/nvim/
+    ~/.config/rmpc/
+    ~/.config/rofi
     ~/.config/scripts/
+    ~/.config/sioyek/
+    ~/.config/waybar/
+    ~/.config/yazi/
+    ~/.config/zathura/
+    ~/.inputrc
 )
 
 dots() {
