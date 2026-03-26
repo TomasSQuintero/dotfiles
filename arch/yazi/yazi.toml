@@ -33,7 +33,8 @@ edit = [
 	{ run = "nvim %s", desc = "nvim", block = true },
 ]
 pdf = [
-	{ run = "zathura %s", desc = "zathura", orphan = true },
+	# { run = "zathura %s", desc = "zathura", orphan = true },
+	{ run = "sioyek %s", desc = "sioyek", orphan = true },
 ]
 play = [
 	{ run = "mpv %s", desc = "mpv", orphan = true },
