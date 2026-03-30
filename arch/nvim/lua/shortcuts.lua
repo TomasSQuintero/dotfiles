@@ -58,3 +58,6 @@ vim.keymap.set('n', '<leader>m', ':RenderMarkdown toggle<CR>', { noremap = true,
 
 -- copy link inside parenthesis
 vim.keymap.set('n', 'yl', 'yi(', { noremap = true, silent = true })
+
+-- Control + a para seleccionar todo el archivo
+vim.keymap.set('n', '<C-a>', 'ggVG', { noremap = true, silent = true })
