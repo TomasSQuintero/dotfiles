@@ -31,7 +31,7 @@
   | music | RMPC (and soulseek)|
   | text editor | neovim |
   | media playback | mpv |
-  | pdf reader (+cbr/cbz)| sioyek|
+  | pdf reader (+cbr/cbz)| sioyek/qimgv|
   | info| fastfetch |
   | file browser| yazi|
   | menubar | waybar |
