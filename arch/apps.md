@@ -4,8 +4,8 @@ bibata-cursor-theme-bin <br>
 bluetui <br>
 btop <br>
 cliphist <br>
-dosfstools <br>
 cmus <br>
+dosfstools <br>
 fastfetch <br>
 fd <br>
 fzf <br>
@@ -14,10 +14,10 @@ grim <br>
 hyprpaper <br>
 kid3 <br>
 localsend <br>
+mpc <br>
 mpd <br>
 mpd-mpris <br>
 mpv <br>
-mpc <br>
 mupdf <br>
 ncdu <br>
 neovim <br>

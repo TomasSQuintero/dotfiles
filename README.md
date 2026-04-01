@@ -28,10 +28,10 @@
   | wm | hyprland |
   | browser | zen browser |
   | terminal | kitty |
-  | music | cmus (and soulseek)|
+  | music | RMPC (and soulseek)|
   | text editor | neovim |
   | media playback | mpv |
-  | pdf reader (+cbr/cbz)| zathura|
+  | pdf reader (+cbr/cbz)| sioyek|
   | info| fastfetch |
   | file browser| yazi|
   | menubar | waybar |
