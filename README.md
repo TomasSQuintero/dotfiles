@@ -16,7 +16,7 @@
 | fastfetch, yazi | music player |
 | ![](https://github.com/TomasSQuintero/dotfiles/blob/main/screenshots/neofetch-yazi.png) | ![](https://github.com/TomasSQuintero/dotfiles/blob/main/screenshots/music.png) |
 | unimatrix, wallscript | layout |
-| ![](https://github.com/TomasSQuintero/dotfiles/blob/main/screenshots/unimatrix-wallscript.png) | ![](https://github.com/TomasSQuintero/dotfiles/blob/main/screenshots/layout.png) |
+| ![](https://github.com/TomasSQuintero/dotfiles/blob/main/screenshots/uni-pdf.png) | ![](https://github.com/TomasSQuintero/dotfiles/blob/main/screenshots/layout.png) |
 </div>
 
 <div align="center">
