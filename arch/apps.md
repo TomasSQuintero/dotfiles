@@ -1,50 +1,48 @@
-7zip
-bat
-bibata-cursor-theme-bin
-bluetui
-btop
-cliphist
-dosfstools
-cmus
-fastfetch
-fd
-fzf
-git
-grim
-hyprpaper
-kid3
-localsend
-mpd
-mpd-mpris
-mpv
-mpc
-mupdf
-ncdu
-neovim
-neovim
-ntfs-3g
-nwg-look
-openssh
-pavucontrol
-qbittorrent
-qimgv
-ripgrep
-rmpc
-rofi
-slurp
-spotify-launcher
-swaybg
-swaync
-tree
-ttf-jetbrains-mono-nerd
-waybar
-wl-clipboard
-wlogout
-yazi
-zathura
-zathura-cb
-zathura-pdf-mupdf
-zen-browser-bin
-zoxide
-
-7zip bat bibata-cursor-theme-bin btop cliphist cmus fastfetch fd fzf git grim hyprpaper kid3 localsend mpv mupdf ncdu neovim neovim ntfs-3g nwg-look openssh pavucontrol qbittorrent qimgv ripgrep rofi rofi slurp spotify-launcher swaync tree ttf-jetbrains-mono-nerd waybar wl-clipboard wlogout yazi zathura zathura-cb zathura-pdf-mupdf zen-browser-bin zoxide
+7zip <\br>
+bat <\br>
+bibata-cursor-theme-bin <\br>
+bluetui <\br>
+btop <\br>
+cliphist <\br>
+dosfstools <\br>
+cmus <\br>
+fastfetch <\br>
+fd <\br>
+fzf <\br>
+git <\br>
+grim <\br>
+hyprpaper <\br>
+kid3 <\br>
+localsend <\br>
+mpd <\br>
+mpd-mpris <\br>
+mpv <\br>
+mpc <\br>
+mupdf <\br>
+ncdu <\br>
+neovim <\br>
+neovim <\br>
+ntfs-3g <\br>
+nwg-look <\br>
+openssh <\br>
+pavucontrol <\br>
+qbittorrent <\br>
+qimgv <\br>
+ripgrep <\br>
+rmpc <\br>
+rofi <\br>
+slurp <\br>
+spotify-launcher <\br>
+swaybg <\br>
+swaync <\br>
+tree <\br>
+ttf-jetbrains-mono-nerd <\br>
+waybar <\br>
+wl-clipboard <\br>
+wlogout <\br>
+yazi <\br>
+zathura <\br>
+zathura-cb <\br>
+zathura-pdf-mupdf <\br>
+zen-browser-bin <\br>
+zoxide <\br>
