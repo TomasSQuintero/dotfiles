@@ -39,7 +39,7 @@
 
 </div>
 
-<p>note: for lots of other useful software, check [here](arch/apps.md).</p>
+note: for lots of other useful software, check [here](arch/apps.md).
 <details> 
   <summary>bonus: debian screenshots</summary>
  
