@@ -39,7 +39,7 @@
 
 </div>
 
-<p>note: para mas info revisar las notas de obsidian, más que nada la de shortcuts</p>
+<p>note: for lots of other useful software, check [here](arch/apps.md).</p>
 <details> 
   <summary>bonus: debian screenshots</summary>
  
