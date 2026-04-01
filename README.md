@@ -14,7 +14,7 @@
 | browser | mpv, moviescript |
 | ![](https://github.com/TomasSQuintero/dotfiles/blob/main/screenshots/browser.png) | ![](https://github.com/TomasSQuintero/dotfiles/blob/main/screenshots/show-moviescript.png) |
 | fastfetch, yazi | music player |
-| ![](https://github.com/TomasSQuintero/dotfiles/blob/main/screenshots/neofetch-yazi.png) | ![](https://github.com/TomasSQuintero/dotfiles/blob/main/screenshots/music-player.png) |
+| ![](https://github.com/TomasSQuintero/dotfiles/blob/main/screenshots/neofetch-yazi.png) | ![](https://github.com/TomasSQuintero/dotfiles/blob/main/screenshots/music.png) |
 | unimatrix, wallscript | layout |
 | ![](https://github.com/TomasSQuintero/dotfiles/blob/main/screenshots/unimatrix-wallscript.png) | ![](https://github.com/TomasSQuintero/dotfiles/blob/main/screenshots/layout.png) |
 </div>
