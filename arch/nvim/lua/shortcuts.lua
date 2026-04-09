@@ -61,3 +61,9 @@ vim.keymap.set('n', 'yl', 'yi(', { noremap = true, silent = true })
 
 -- Control + a para seleccionar todo el archivo
 vim.keymap.set('n', '<C-a>', 'ggVG', { noremap = true, silent = true })
+
+-- vim.keymap.set('n', '<leader>d', function()
+--   vim.api.nvim_put({ os.date('%Y-%m-%d') }, 'c', true, true)
+-- end, { noremap = true, silent = true })
+
+vim.keymap.set('n', '<leader>d', "i<C-R>= strftime('%Y-%m-%d')<CR> - ", { noremap = true, silent = true })
