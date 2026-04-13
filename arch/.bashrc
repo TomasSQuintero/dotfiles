@@ -29,6 +29,7 @@ dotdirs=(
     ~/.config/gtk-4.0/
     ~/.config/hypr/
     ~/.config/kitty/
+    ~/.config/qimgv/
     ~/.config/mpd/
     ~/.config/mpv/
     ~/.config/nvim/
