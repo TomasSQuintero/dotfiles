@@ -1,6 +1,8 @@
-return {
-    'MeanderingProgrammer/render-markdown.nvim',
-    opts = {
+vim.pack.add({
+	{ src = "https://github.com/MeanderingProgrammer/render-markdown.nvim" },
+})
+
+require("render-markdown").setup({
         code = {enabled = false},
         bullet = { icons = { '', '', '', '' }, },
         link = { enabled = true, },
@@ -8,5 +10,4 @@ return {
         paragraph = {enabled = false},
         sign = {enabled = false},
         indent = {enabled = false},
-    }
-}
+})

@@ -1,9 +1,8 @@
--- require("config.lazy") = require(lua/config/lazy.lua)
-require("config.lazy")
-require("shortcuts")
+require("keybinds")
+require("plugins")
 
-vim.o.termguicolors = false
 -- Make background transparent
+vim.o.termguicolors = false
 vim.cmd [[highlight Normal ctermbg=none guibg=none]]
 vim.cmd [[highlight NonText ctermbg=none guibg=none]]
 vim.cmd [[highlight NormalNC ctermbg=none guibg=none]]
@@ -12,26 +11,28 @@ vim.cmd [[highlight TelescopeNormal ctermbg=none guibg=none]]
 vim.cmd [[highlight FloatBorder ctermbg=none guibg=none]]
 vim.cmd [[highlight Pmenu ctermbg=none guibg=none]]
 vim.cmd [[highlight StatusLine ctermbg=none guibg=none]]
+
 vim.cmd("syntax on")
 
 -- line numbers
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
+vim.opt.linebreak = true
 
 -- tabs and indentation
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.linebreak = true
+-- vim.opt.showtabline = 2
 
 -- search
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.incsearch = true
 vim.opt.hlsearch = false
-
 
 -- clipboard
 vim.opt.clipboard = "unnamedplus"
@@ -52,12 +53,26 @@ vim.g.clipboard = {
     cache_enabled = true,
 }
 
-vim.opt.fillchars:append({ eob = " " })
+-- others
+vim.opt.signcolumn = "yes"
+vim.opt.cursorcolumn = false
+vim.opt.undofile = true
+vim.opt.winborder = "rounded"
+vim.opt.wrap = false
 
--- vim.cmd("command! Trix %s/ \\[Trix\\] //g")
--- vim.cmd("command! Bd %s/ (BD 1080p AV1) \\[[^]]*\\]//g")
--- vim.cmd("command! Corchetes %s/ \[[^]]*\]//g")
+vim.opt.fillchars:append({ eob = " " })
 
 vim.api.nvim_create_user_command("Book", function()
   vim.cmd("0r ~/notes/96-templates/book.md")
+end, {})
+
+vim.cmd([[set mouse=]])
+vim.cmd([[set noswapfile]])
+vim.cmd([[hi @lsp.type.number gui=italic]])
+
+-- corremos :PackUpdate para actualizar los plugins
+-- aparece un buffer con los cambios a instalar
+-- confirmamos con :w/:write
+vim.api.nvim_create_user_command('PackUpdate', function()
+  vim.pack.update()
 end, {})
