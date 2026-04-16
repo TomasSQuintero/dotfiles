@@ -1,10 +1,13 @@
-return {
-  'dkarter/bullets.vim',
-  ft = { 'markdown', 'text', 'gitcommit', 'scratch' },
-  keys = {
-     { '<M-c>', '<Plug>(bullets-toggle-checkbox)', mode = { 'n', 'v' }, desc = 'Toggle checkbox' },
-     { '<CR>', '<Plug>(bullets-newline)', mode = 'i', desc = 'New bullet point' },
-     -- { '<Tab>', '<Plug>(bullets-demote)', mode = 'i', desc = 'Indent bullet' },
-     { '<S-Tab>', '<Plug>(bullets-promote)', mode = 'i', desc = 'Outdent bullet' },
-   },
-}
+vim.pack.add({
+  { src = "https://github.com/dkarter/bullets.vim" },
+}, { load = true })
+
+vim.g.bullets_enabled_file_types = { 'markdown', 'text', 'gitcommit', 'scratch', 'lua' }
+vim.g.bullets_set_mappings = 0
+
+local map = vim.keymap.set
+
+map({'n', 'v'}, '<M-c>', '<Plug>(bullets-toggle-checkbox)', { desc = 'Toggle checkbox', remap = true })
+map('i', '<CR>', '<Plug>(bullets-newline)', { desc = 'New bullet point', remap = true })
+map('i', '<S-Tab>', '<Plug>(bullets-promote)', { desc = 'Outdent Bullet', remap = true })
+map('i', '<Tab>', '<Plug>(bullets-demote)', { desc = 'Indent Bullet', remap = true })

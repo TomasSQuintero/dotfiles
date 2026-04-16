@@ -1,11 +1,19 @@
-return {
-  'stevearc/oil.nvim',
-  ---@module 'oil'
-  ---@type oil.SetupOpts
-  opts = {},
-  -- Optional dependencies
-  dependencies = { { "echasnovski/mini.icons", opts = {} } },
-  -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if you prefer nvim-web-devicons
-  -- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
-  lazy = false,
-}
+vim.pack.add({
+	{ src = "https://github.com/stevearc/oil.nvim" },
+})
+
+require("oil").setup({
+	lsp_file_methods = {
+		enabled = true,
+		timeout_ms = 1000,
+		autosave_changes = true,
+	},
+	columns = {
+		"icon",
+	},
+	float = {
+		max_width = 0.3,
+		max_height = 0.6,
+		border = "rounded",
+	},
+})
