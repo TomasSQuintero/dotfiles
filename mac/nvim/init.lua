@@ -17,6 +17,7 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 -- vim.opt.showtabline = 2
 
+
 -- search
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
@@ -36,3 +37,10 @@ vim.opt.wrap = false
 vim.cmd([[set mouse=]])
 vim.cmd([[set noswapfile]])
 vim.cmd([[hi @lsp.type.number gui=italic]])
+
+-- corremos :PackUpdate para actualizar los plugins
+-- aparece un buffer con los cambios a instalar
+-- confirmamos con :w/:write
+vim.api.nvim_create_user_command('PackUpdate', function()
+  vim.pack.update()
+end, {})

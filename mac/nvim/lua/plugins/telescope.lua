@@ -6,7 +6,6 @@ vim.pack.add({
 local builtin = require('telescope.builtin')
 local map = vim.keymap.set
 
--- Keymaps
 map('n', '<leader>fa', function()
   builtin.find_files({ hidden = true })
 end, { desc = '[F]ind [A]ll files including dotfiles' })

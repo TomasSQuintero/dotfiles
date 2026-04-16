@@ -94,3 +94,12 @@ gacp() {
     git commit -m "$1"
     git push
 }
+
+compare() {
+    if [ "$#" -ne 2 ]; then
+        echo "Uso: compare archivo1 archivo2"
+        return 1
+    fi
+    
+    diff -u "$1" "$2" | bat -l diff
+}

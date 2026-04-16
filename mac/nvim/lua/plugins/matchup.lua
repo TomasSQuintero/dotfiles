@@ -1,5 +1,0 @@
--- vim.pack.add({
--- 	{ src = "https://github.com/jugarpeupv/visual-match-paren.nvim" },
--- })
---
--- require("visual-match-paren").setup()

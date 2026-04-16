@@ -12,6 +12,9 @@ vim.keymap.set("n", "<leader>-", "<CMD>Oil<CR>", { desc = "Open parent directory
 -- leader a to add ; to the end of the line, keep cursor in place
 vim.keymap.set('n', '<leader>a', 'm`A;<Esc>``', { noremap = true, silent = true })
 
+-- yazi
+vim.keymap.set('n', '<leader>y', ':Yazi<CR>', { noremap = true, silent = true })
+
 vim.keymap.set('x', '<leader>a', function()
   local start_line = vim.fn.line("'<")
   local end_line = vim.fn.line("'>")
