@@ -2,6 +2,7 @@ require("keybinds")
 require("plugins")
 
 vim.cmd("syntax on")
+vim.opt.termguicolors = true
 
 -- line numbers
 vim.opt.number = true
@@ -50,8 +51,9 @@ vim.opt.winborder = "rounded"
 vim.opt.wrap = false
 vim.opt.title = true
 vim.opt.titlestring = "%F"
-vim.opt.showmode = false
 vim.opt.fillchars:append({ eob = " " })
+vim.opt.showmode = false
+vim.opt.showcmd = false
 
 vim.api.nvim_create_user_command("Book", function()
   vim.cmd("0r ~/notes/96-templates/book.md")

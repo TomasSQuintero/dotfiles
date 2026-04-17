@@ -174,3 +174,11 @@ export PATH="$PATH:/home/tom/.local/bin"
 export PATH="$PATH:/usr/bin/cava"
 export PATH="$PATH:/usr/bin/ffmpeg"
 
+compare() {
+    if [ "$#" -ne 2 ]; then
+        echo "Uso: compare archivo1 archivo2"
+        return 1
+    fi
+    
+    diff -u "$1" "$2" | bat -l diff
+}

@@ -56,7 +56,6 @@ require('lualine').setup {
     --   'datetime',
     --   style = ("%A %d.%m - %H:%M:%S")
     -- }},
-    -- lualine_z = {},
   },
   inactive_sections = {
     lualine_a = {},
