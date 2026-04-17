@@ -12,11 +12,10 @@ vim.opt.linebreak = true
 
 -- tabs and indentation
 vim.opt.tabstop = 2
--- vim.opt.shiftwidth = 2
+vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 -- vim.opt.showtabline = 2
-
 
 -- search
 vim.opt.ignorecase = true
@@ -33,6 +32,11 @@ vim.opt.cursorcolumn = false
 vim.opt.undofile = true
 vim.opt.winborder = "rounded"
 vim.opt.wrap = false
+vim.opt.title = true
+vim.opt.titlestring = "%F"
+vim.opt.fillchars:append({ eob = " " })
+vim.opt.showmode = false
+vim.opt.showcmd = false
 
 vim.cmd([[set mouse=]])
 vim.cmd([[set noswapfile]])

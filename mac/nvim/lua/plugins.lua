@@ -9,7 +9,11 @@ require("plugins.markdown")
 require("plugins.neoscroll")
 require("plugins.oil")
 require("plugins.telescope")
-require("plugins.vague")
 require("plugins.yazi")
 require("plugins.surround")
 require("plugins.gitsigns")
+require("plugins.lualine")
+
+-- themes
+-- require("plugins.vague")
+require("plugins.rose-pine")
