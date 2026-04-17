@@ -12,7 +12,7 @@ PS1='\w > '
 
 # scripts
 # --------------------------------------------------------------------------
-alias changewall='sh ~/.config/scripts/change-wallpaper.sh'
+alias wall='sh ~/.config/scripts/change-wallpaper-swaybg.sh'
 alias peli='sh ~/.config/scripts/movie.sh'
 alias show='sh ~/.config/scripts/show.sh'
 alias episode='sh ~/.config/scripts/episode.sh'

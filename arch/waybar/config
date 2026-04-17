@@ -5,8 +5,8 @@
   "margin-top": 6,
   "margin-left": 6,
   "margin-right": 6,
-  "modules-left": ["custom/wlogout","hyprland/workspaces"],
-  //"modules-left": ["custom/wlogout","hyprland/workspaces", "hyprland/window"],
+  // "modules-left": ["custom/wlogout","hyprland/workspaces"],
+  "modules-left": ["custom/wlogout","hyprland/workspaces", "hyprland/window"],
   "modules-center": [],
   "modules-right": ["mpris","pulseaudio","bluetooth","clock#date","clock"],
 
@@ -33,11 +33,19 @@
 //  }
   },
 
-// "hyprland/window": {
-//     "format": "{}",
-//     "max-length": 50,
-//     "separate-outputs": true
-// },
+  "hyprland/window": {
+    "format": " {}",
+    "max-length": 75,
+    "separate-outputs": true,
+    "rewrite": {
+        "(.*) — Zen Browser": "$1"
+      //"(.*)nvim": "neovim",
+      //"kitty": " Terminal"
+      //"(.*) - Visual Studio Code": "󰨞 Code",
+      // Matches any window when none are focused
+      //"^$": "󰇄 Desktop"
+    }
+  },
 
 "custom/wlogout": {
     "format": "[ 󰣇 ]",

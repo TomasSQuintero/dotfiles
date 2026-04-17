@@ -3,7 +3,8 @@
 
 * {
   font-family: UDEV Gothic;
-  font-size: 18px;
+  /* font-size: 18px; */
+  font-size: 21px;
   font-weight: 900;
   color: #cccccc;
   /* color: #cccccc; */
@@ -11,7 +12,7 @@
 }
 
 window#waybar {
-  background-color: rgba(30, 30, 30, 0.3);
+  background-color: rgba(30, 30, 30, 0.4);
 }
 
 #custom-wlogout {
@@ -36,7 +37,8 @@ window#waybar {
 }
 
 #workspaces button.active label {
-  color: #6E9CA5;
+  color: #ebbcba;
+  /* color: #6E9CA5; */
   /* color: #e1d4ab; */
 }
 

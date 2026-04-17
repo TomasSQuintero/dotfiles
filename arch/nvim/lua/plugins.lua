@@ -12,3 +12,11 @@ require("plugins.telescope")
 require("plugins.yazi")
 require("plugins.surround")
 require("plugins.gitsigns")
+require("plugins.lualine")
+
+-- themes
+-- require("plugins.gruvbox")
+require("plugins.rose-pine")
+
+-- unused
+-- require("plugins.cmdpalette")

@@ -23,7 +23,12 @@ vim.keymap.set('x', '<leader>a', function()
 end, { noremap = true, silent = true })
 
 -- yazi
-vim.keymap.set('n', '<leader>y', ':yazi<cr>', { noremap = true, silent = true });
+vim.keymap.set('n', '<leader>y', ':yazi<cr>', { noremap = true, silent = true })
+
+-- Sorting
+vim.keymap.set('v', '<leader>s', ":'<,'>sort<CR>", { noremap = true, silent = true })
+vim.keymap.set('v', '<leader>S', ":'<,'>sort!<CR>", { noremap = true, silent = true })
+vim.keymap.set('v', '<leader>m', ":'<,'>!shuf<CR>", { noremap = true, silent = true })
 
 -- word wrap toggle
 vim.keymap.set('n', '<leader>z', ':set wrap!<CR>', { noremap = true, silent = true })

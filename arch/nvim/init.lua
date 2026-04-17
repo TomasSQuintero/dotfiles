@@ -1,17 +1,6 @@
 require("keybinds")
 require("plugins")
 
--- Make background transparent
-vim.o.termguicolors = false
-vim.cmd [[highlight Normal ctermbg=none guibg=none]]
-vim.cmd [[highlight NonText ctermbg=none guibg=none]]
-vim.cmd [[highlight NormalNC ctermbg=none guibg=none]]
-vim.cmd [[highlight MsgArea ctermbg=none guibg=none]]
-vim.cmd [[highlight TelescopeNormal ctermbg=none guibg=none]]
-vim.cmd [[highlight FloatBorder ctermbg=none guibg=none]]
-vim.cmd [[highlight Pmenu ctermbg=none guibg=none]]
-vim.cmd [[highlight StatusLine ctermbg=none guibg=none]]
-
 vim.cmd("syntax on")
 
 -- line numbers
@@ -59,7 +48,9 @@ vim.opt.cursorcolumn = false
 vim.opt.undofile = true
 vim.opt.winborder = "rounded"
 vim.opt.wrap = false
-
+vim.opt.title = true
+vim.opt.titlestring = "%F"
+vim.opt.showmode = false
 vim.opt.fillchars:append({ eob = " " })
 
 vim.api.nvim_create_user_command("Book", function()
@@ -76,3 +67,4 @@ vim.cmd([[hi @lsp.type.number gui=italic]])
 vim.api.nvim_create_user_command('PackUpdate', function()
   vim.pack.update()
 end, {})
+

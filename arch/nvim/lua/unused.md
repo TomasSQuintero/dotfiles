@@ -37,3 +37,17 @@ vim.keymap.set('n', '<leader>d', "i<C-R>= strftime('%Y-%m-%d')<CR> - ", { norema
 
 -- inserting checkboxes with control + c
 -- vim.keymap.set('i', '<C-c>', '- [ ] ', { noremap = true, silent = true })
+
+init.lua
+___
+
+-- Make background transparent
+-- vim.o.termguicolors = false
+-- vim.cmd [[highlight Normal ctermbg=none guibg=none]]
+-- vim.cmd [[highlight NonText ctermbg=none guibg=none]]
+-- vim.cmd [[highlight NormalNC ctermbg=none guibg=none]]
+-- vim.cmd [[highlight MsgArea ctermbg=none guibg=none]]
+-- vim.cmd [[highlight TelescopeNormal ctermbg=none guibg=none]]
+-- vim.cmd [[highlight FloatBorder ctermbg=none guibg=none]]
+-- vim.cmd [[highlight Pmenu ctermbg=none guibg=none]]
+-- vim.cmd [[highlight StatusLine ctermbg=none guibg=none]]
