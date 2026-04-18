@@ -13,6 +13,7 @@ require("plugins.yazi")
 require("plugins.surround")
 require("plugins.gitsigns")
 require("plugins.lualine")
+require("plugins.mini-move")
 
 -- themes
 -- require("plugins.gruvbox")

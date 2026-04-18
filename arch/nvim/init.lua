@@ -69,4 +69,3 @@ vim.cmd([[hi @lsp.type.number gui=italic]])
 vim.api.nvim_create_user_command('PackUpdate', function()
   vim.pack.update()
 end, {})
-

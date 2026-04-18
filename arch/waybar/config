@@ -2,10 +2,10 @@
   "layer": "top",
   "position": "top",
   // "margin": 10,
-  "margin-top": 6,
-  "margin-left": 6,
-  "margin-right": 6,
-  // "modules-left": ["custom/wlogout","hyprland/workspaces"],
+  "margin-top": 8,
+  "margin-left": 8,
+  "margin-right": 8,
+  "margin-bottom": 0,
   "modules-left": ["custom/wlogout","hyprland/workspaces", "hyprland/window"],
   "modules-center": [],
   "modules-right": ["mpris","pulseaudio","bluetooth","clock#date","clock"],
@@ -27,7 +27,6 @@
     },
     "sort-by-number": true,
     "active-only": false
-//    "active-only": false, // this one has a comma at the end
 //    "persistent-workspaces": {
 //    "*": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 //  }
@@ -82,7 +81,7 @@
     "format-disabled": "[ 󰂲 ]",
     "format-off": "[ 󰂲 ]",
     "format-no-controller": "[ 0 ]",
-    "on-click": "blueman-manager",
+    "on-click": "kitty -e bluetui",
     "on-click-right": "rfkill toggle bluetooth",
     "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
