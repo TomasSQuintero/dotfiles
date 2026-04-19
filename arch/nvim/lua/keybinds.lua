@@ -23,7 +23,7 @@ vim.keymap.set('x', '<leader>a', function()
 end, { noremap = true, silent = true })
 
 -- yazi
-vim.keymap.set('n', '<leader>y', ':yazi<cr>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>y', ':Yazi<cr>', { noremap = true, silent = true })
 
 -- Sorting
 vim.keymap.set('v', '<leader>s', ":'<,'>sort<CR>", { noremap = true, silent = true })

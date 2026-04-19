@@ -5,7 +5,7 @@
       "src": "https://github.com/L3MON4D3/LuaSnip"
     },
     "alpha-nvim": {
-      "rev": "7563da4a861ee6b3ed674d0ee5c5c0bd19383a38",
+      "rev": "6c6a89d5b068b5251c8bdf0dd57bb921bcfeeb09",
       "src": "https://github.com/goolord/alpha-nvim"
     },
     "base16-nvim": {
@@ -78,7 +78,19 @@
     },
     "neovim": {
       "rev": "9504524e5ed0e326534698f637f9d038ba4cd0ee",
-      "src": "https://github.com/rose-pine/neovim"
+      "src": "https://github.com/ember-theme/neovim"
+    },
+    "noice.nvim": {
+      "rev": "7bfd942445fb63089b59f97ca487d605e715f155",
+      "src": "https://github.com/folke/noice.nvim"
+    },
+    "nui.nvim": {
+      "rev": "de740991c12411b663994b2860f1a4fd0937c130",
+      "src": "https://github.com/MunifTanjim/nui.nvim"
+    },
+    "nvim": {
+      "rev": "4736d0362cdb621bed4189d789b5ba00a66d33c7",
+      "src": "https://github.com/ember-theme/nvim"
     },
     "nvim-autopairs": {
       "rev": "59bce2eef357189c3305e25bc6dd2d138c1683f5",
@@ -91,6 +103,10 @@
     "nvim-lspconfig": {
       "rev": "4b7fbaa239c5db6b36f424a4521ca9f1a401be33",
       "src": "https://github.com/neovim/nvim-lspconfig"
+    },
+    "nvim-notify": {
+      "rev": "8701bece920b38ea289b457f902e2ad184131a5d",
+      "src": "https://github.com/rcarriga/nvim-notify"
     },
     "nvim-treesitter": {
       "rev": "4916d6592ede8c07973490d9322f187e07dfefac",
@@ -133,7 +149,7 @@
       "src": "https://github.com/folke/which-key.nvim"
     },
     "yazi.nvim": {
-      "rev": "39a5b880ab5158d8cf83c723e86687d0d0f6bd2d",
+      "rev": "e7094dcfd897600e02a23e8334cdfeb9ee07dc17",
       "src": "https://github.com/mikavilpas/yazi.nvim"
     }
   }

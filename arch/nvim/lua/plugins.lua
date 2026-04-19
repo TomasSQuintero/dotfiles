@@ -13,11 +13,8 @@ require("plugins.yazi")
 require("plugins.surround")
 require("plugins.gitsigns")
 require("plugins.lualine")
-require("plugins.mini-move")
 
 -- themes
--- require("plugins.gruvbox")
-require("plugins.rose-pine")
-
--- unused
--- require("plugins.cmdpalette")
+require("plugins.themes.rose-pine")
+-- require("plugins.themes.gruvbox")
+-- require("plugins.themes.ember")

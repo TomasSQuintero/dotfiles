@@ -51,3 +51,81 @@ ___
 -- vim.cmd [[highlight FloatBorder ctermbg=none guibg=none]]
 -- vim.cmd [[highlight Pmenu ctermbg=none guibg=none]]
 -- vim.cmd [[highlight StatusLine ctermbg=none guibg=none]]
+
+plugins/mini.move.lua
+___
+
+vim.pack.add({
+	{ src = "https://github.com/nvim-mini/mini.move" },
+})
+
+require('mini.move').setup()
+
+plugins/cmd-palette.lua
+___
+
+vim.pack.add({
+	{ src = "https://github.com/hachy/cmdpalette.nvim" },
+})
+
+require("cmdpalette").setup({
+  win = {
+    height = 0.3,
+    width = 0.3,
+    max_width = 120,
+    border = "rounded",
+    row_off = -2,
+    title = "",
+    title_pos = "center",
+  },
+  sign = {
+    text = ":",
+  },
+  buf = {
+    filetype = "vim",
+    syntax = "vim",
+  },
+  delete_confirm = true,
+  show_title = true,
+})
+
+vim.keymap.set("n", ":", "<Plug>(cmdpalette)")
+
+lua/plugins/themes/ember.lua
+___
+vim.pack.add({
+	{ src = "https://github.com/ember-theme/nvim" },
+})
+
+require("ember").setup({
+  variant = "ember-soft", -- "ember" | "ember-soft" | "ember-light"
+})
+
+vim.cmd("colorscheme ember")
+
+lua/plugins/noice.lua
+___
+vim.pack.add({
+	{ src = "https://github.com/folke/noice.nvim" },
+	{ src = "https://github.com/MunifTanjim/nui.nvim" },
+	{ src = "https://github.com/rcarriga/nvim-notify" },
+})
+
+require("noice").setup({
+  lsp = {
+    -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
+    override = {
+      ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+      ["vim.lsp.util.stylize_markdown"] = true,
+      ["cmp.entry.get_documentation"] = true, -- requires hrsh7th/nvim-cmp
+    },
+  },
+  -- you can enable a preset for easier configuration
+  presets = {
+    bottom_search = true, -- use a classic bottom cmdline for search
+    command_palette = true, -- position the cmdline and popupmenu together
+    long_message_to_split = true, -- long messages will be sent to a split
+    inc_rename = false, -- enables an input dialog for inc-rename.nvim
+    lsp_doc_border = false, -- add a border to hover docs and signature help
+  },
+})

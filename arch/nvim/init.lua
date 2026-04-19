@@ -8,6 +8,7 @@ vim.opt.termguicolors = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
+vim.opt.cursorcolumn = true
 vim.opt.linebreak = true
 
 -- tabs and indentation
@@ -45,7 +46,6 @@ vim.g.clipboard = {
 
 -- others
 vim.opt.signcolumn = "yes"
-vim.opt.cursorcolumn = false
 vim.opt.undofile = true
 vim.opt.winborder = "rounded"
 vim.opt.wrap = false
@@ -53,7 +53,7 @@ vim.opt.title = true
 vim.opt.titlestring = "%F"
 vim.opt.fillchars:append({ eob = " " })
 vim.opt.showmode = false
-vim.opt.showcmd = false
+vim.opt.showcmd = true
 
 vim.api.nvim_create_user_command("Book", function()
   vim.cmd("0r ~/notes/96-templates/book.md")
