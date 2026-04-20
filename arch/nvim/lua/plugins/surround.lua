@@ -1,6 +1,8 @@
 -- 1. seleccionar palabra
 -- 2. sa + )]} o cualquier otro simbolo (pero tiene que ser el de cierre, sino deja un espacio)
 
+-- para reemplazar:
+-- sr<existing><new>
 vim.pack.add({
   { src = "https://github.com/echasnovski/mini.surround" },
 })
