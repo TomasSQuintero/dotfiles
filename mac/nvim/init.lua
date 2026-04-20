@@ -8,13 +8,14 @@ vim.opt.termguicolors = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
-vim.opt.linebreak = true
+vim.opt.cursorcolumn = true
 
 -- tabs and indentation
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.smartindent = true
+vim.opt.linebreak = true
 -- vim.opt.showtabline = 2
 
 -- search
@@ -28,7 +29,6 @@ vim.opt.clipboard = "unnamedplus"
 
 -- others
 vim.opt.signcolumn = "yes"
-vim.opt.cursorcolumn = true
 vim.opt.undofile = true
 vim.opt.winborder = "rounded"
 vim.opt.wrap = false

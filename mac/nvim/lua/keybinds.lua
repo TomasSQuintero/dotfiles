@@ -25,6 +25,11 @@ end, { noremap = true, silent = true })
 -- yazi
 vim.keymap.set('n', '<leader>y', ':Yazi<CR>', { noremap = true, silent = true })
 
+-- Sorting
+vim.keymap.set('v', '<leader>s', ":'<,'>sort<CR>", { noremap = true, silent = true })
+vim.keymap.set('v', '<leader>S', ":'<,'>sort!<CR>", { noremap = true, silent = true })
+vim.keymap.set('v', '<leader>m', ":'<,'>!shuf<CR>", { noremap = true, silent = true })
+
 -- word wrap toggle
 vim.keymap.set('n', '<leader>z', ':set wrap!<CR>', { noremap = true, silent = true })
 
@@ -32,12 +37,16 @@ vim.keymap.set('n', '<leader>z', ':set wrap!<CR>', { noremap = true, silent = tr
 vim.keymap.set("n", "<leader>r", ":%s//g<Left><Left>", { desc = "Global search and replace", silent = false })
 vim.keymap.set("v", "<leader>r", ":s/\\%V/g<Left><Left>", { desc = "Search and replace in selection", silent = false })
 
+--para cerrar el buffer, para ir cambiando esta leader fb de telescope
+vim.keymap.set('n', '<leader>bd', ':bd<CR>', { noremap = true, silent = true })
+
 -- markdown link formatting
 vim.keymap.set('n', '<leader>k', 'i[]()2hi', { noremap = true, silent = true })
 vim.keymap.set('i', '<C-k>', '[]()2hi', { noremap = true, silent = true })
 
 -- markdown checkbox formatting
-vim.keymap.set('i', '<C-c>', '- [ ] ', { noremap = true, silent = true })
+vim.keymap.set('i', '<C-c>', 'I- [ ] ', { noremap= true, silent = true })
+vim.keymap.set('v', '<C-c>', ":norm I- [ ] <CR>A", { noremap = true, silent = true })
 
 -- yank link inside ()
 -- vim.keymap.set('n', 'yl', 'yi(', { noremap = true, silent = true })
