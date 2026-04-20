@@ -40,7 +40,9 @@ vim.keymap.set('i', '<C-k>', '[]()2hi', { noremap = true, silent = true })
 vim.keymap.set('i', '<C-c>', '- [ ] ', { noremap = true, silent = true })
 
 -- yank link inside ()
-vim.keymap.set('n', 'yl', 'yi(', { noremap = true, silent = true })
+-- vim.keymap.set('n', 'yl', 'yi(', { noremap = true, silent = true })
+vim.keymap.set('n', 'yl', ':norm $hyi(0<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', 'yL', 'yi(', { noremap = true, silent = true })
 
 -- Control + a para seleccionar todo el archivo
 vim.keymap.set('n', '<C-a>', 'ggVG', { noremap = true, silent = true })

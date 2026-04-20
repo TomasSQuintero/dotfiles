@@ -3,6 +3,8 @@ vim.pack.add({
     'https://github.com/nvim-lualine/lualine.nvim'
 })
 
+vim.o.showcmdloc = "statusline"
+
 require('lualine').setup {
   options = {
     icons_enabled = true,
@@ -46,7 +48,7 @@ require('lualine').setup {
       path = 2,
     }},
     --option 1, w/o date and time
-    lualine_x = {},
+    lualine_x = {'%S'},
     lualine_y = {'progress'},
     lualine_z = {'location', 'selectioncount'},
     --option 2, w/ date and time

@@ -28,7 +28,7 @@ vim.opt.clipboard = "unnamedplus"
 
 -- others
 vim.opt.signcolumn = "yes"
-vim.opt.cursorcolumn = false
+vim.opt.cursorcolumn = true
 vim.opt.undofile = true
 vim.opt.winborder = "rounded"
 vim.opt.wrap = false
@@ -36,7 +36,7 @@ vim.opt.title = true
 vim.opt.titlestring = "%F"
 vim.opt.fillchars:append({ eob = " " })
 vim.opt.showmode = false
-vim.opt.showcmd = false
+vim.opt.showcmd = true
 
 vim.cmd([[set mouse=]])
 vim.cmd([[set noswapfile]])
@@ -48,3 +48,5 @@ vim.cmd([[hi @lsp.type.number gui=italic]])
 vim.api.nvim_create_user_command('PackUpdate', function()
   vim.pack.update()
 end, {})
+
+vim.cmd"packadd nvim.undotree"
