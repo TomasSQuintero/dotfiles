@@ -38,7 +38,7 @@ vim.opt.fillchars:append({ eob = " " })
 vim.opt.showmode = false
 vim.opt.showcmd = true
 
-vim.cmd([[set mouse=]])
+-- vim.cmd([[set mouse=]])
 vim.cmd([[set noswapfile]])
 vim.cmd([[hi @lsp.type.number gui=italic]])
 
@@ -50,3 +50,5 @@ vim.api.nvim_create_user_command('PackUpdate', function()
 end, {})
 
 vim.cmd"packadd nvim.undotree"
+
+vim.cmd('autocmd FileType python setlocal formatoptions+=ro')

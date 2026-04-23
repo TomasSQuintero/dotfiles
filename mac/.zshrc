@@ -27,10 +27,11 @@ dots() {
     mkdir ~/dotfiles/mac/
     
     cp  ~/.zshrc ~/dotfiles/mac/
+    cp -r ~/.config/kitty ~/dotfiles/mac/
     cp -r ~/.config/mpv ~/dotfiles/mac/
     cp -r ~/.config/nvim ~/dotfiles/mac/
     cp -r ~/.config/sioyek ~/dotfiles/mac/
-    cp -r ~/.config/kitty ~/dotfiles/mac/
+    cp -r ~/.config/tmux ~/dotfiles/mac/
     cp -r ~/.config/yazi ~/dotfiles/mac/
     cp -r ~/.config/zathura ~/dotfiles/mac/
 }
@@ -103,3 +104,5 @@ compare() {
     
     diff -u "$1" "$2" | bat -l diff
 }
+
+export PATH="/opt/homebrew/bin:$PATH"
