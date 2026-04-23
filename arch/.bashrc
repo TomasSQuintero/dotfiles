@@ -37,6 +37,7 @@ dotdirs=(
     ~/.config/rofi
     ~/.config/scripts/
     ~/.config/sioyek/
+    ~/.config/tmux/
     ~/.config/waybar/
     ~/.config/yazi/
     ~/.config/zathura/
