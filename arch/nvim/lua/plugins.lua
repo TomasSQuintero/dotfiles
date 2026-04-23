@@ -16,5 +16,6 @@ require("plugins.lualine")
 
 -- themes
 require("plugins.themes.rose-pine")
+-- require("plugins.vague")
 -- require("plugins.themes.gruvbox")
 -- require("plugins.themes.ember")
