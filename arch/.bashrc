@@ -106,6 +106,7 @@ alias headlessmmpv='mpv --audio-display=no "$(fzf)"'
 # hdd
 # --------------------------------------------------------------------------
 alias mounthdd='sudo mount -t ntfs-3g /dev/sda2 /mnt/hdd/; cd /mnt/hdd'
+alias umounthdd='cd && sudo umount /mnt/hdd/'
 alias hdd='cd /mnt/hdd'
 alias mountssd='sudo mount /dev/sdb2 /mnt/ssd/; cd /mnt/ssd'
 alias ssd='cd /mnt/ssd'
@@ -182,3 +183,5 @@ compare() {
     
     diff -u "$1" "$2" | bat -l diff
 }
+#sudo pacman -S bash-completion
+[[ -r /usr/share/bash-completion/bash_completion ]] && . /usr/share/bash-completion/bash_completion

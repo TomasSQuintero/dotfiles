@@ -128,7 +128,7 @@
             "n":          NextResult,
             "N":          PreviousResult,
             "a":          Add,
-            "A":          AddAll,
+            "A": AddOptions(position: AfterCurrent, autoplay: None, all: false),
             "D":          Delete,
             "<C-r>":      Rename,
             "i":          FocusInput,

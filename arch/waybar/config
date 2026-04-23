@@ -37,7 +37,8 @@
     "max-length": 75,
     "separate-outputs": true,
     "rewrite": {
-        "(.*) — Zen Browser": "$1"
+        "(.*) — Zen Browser": "$1",
+        "(.*) — Zen Browser Private Browsing": "$1"
       //"(.*)nvim": "neovim",
       //"kitty": " Terminal"
       //"(.*) - Visual Studio Code": "󰨞 Code",

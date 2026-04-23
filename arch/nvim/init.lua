@@ -71,3 +71,5 @@ vim.api.nvim_create_user_command('PackUpdate', function()
 end, {})
 
 vim.cmd"packadd nvim.undotree"
+
+vim.cmd('autocmd FileType python setlocal formatoptions+=ro')
