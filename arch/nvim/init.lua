@@ -59,7 +59,7 @@ vim.api.nvim_create_user_command("Book", function()
   vim.cmd("0r ~/notes/96-templates/book.md")
 end, {})
 
-vim.cmd([[set mouse=]])
+-- vim.cmd([[set mouse=]])
 vim.cmd([[set noswapfile]])
 vim.cmd([[hi @lsp.type.number gui=italic]])
 

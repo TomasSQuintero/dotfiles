@@ -33,7 +33,7 @@
   },
 
   "hyprland/window": {
-    "format": " {}",
+    "format": " [ {} ]",
     "max-length": 75,
     "separate-outputs": true,
     "rewrite": {
@@ -48,13 +48,14 @@
   },
 
 "custom/wlogout": {
-    "format": "[ 󰣇 ]",
+    "format": " 󰣇 ",
     "tooltip": "Logout",
     "on-click": "wlogout"
 },
     
 "mpris": {
-    "format": "{title} - {artist}",
+    //"format": "{title} - {artist}",
+    "format": "[ {title} - {artist} ]",
     "format-paused": " {title} - {artist}",
     "format-stopped": "",
     "max-length": 150,

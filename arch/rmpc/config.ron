@@ -86,8 +86,8 @@
             "1":          SwitchToTab("Queue"),
             "2":          SwitchToTab("Directories"),
             "3":          SwitchToTab("Playlists"),
-            "4":          SwitchToTab("Search"),
-            "5":          SwitchToTab("Art"),
+            "4":          SwitchToTab("Art"),
+            "5":          SwitchToTab("Search"),
             "u":      Update,
             "U":      Rescan,
             "R":          AddRandom,
@@ -260,6 +260,17 @@
             )
         ),
         (
+            name: "Art",
+            borders: "ALL",
+            border_symbols: Rounded,
+            pane: Split(
+                size: "100%",
+                direction: Vertical,
+                panes: [(pane: Pane(AlbumArt), size: "100%", borders: "ALL", border_symbols: Rounded)],
+            )
+        ),
+///*
+        (
             name: "Search",
             borders: "ALL",
             border_symbols: Rounded,
@@ -269,15 +280,6 @@
                 panes: [(pane: Pane(Search), size: "100%", borders: "ALL", border_symbols: Rounded)],
             )
         ),
-        (
-            name: "Art",
-            borders: "ALL",
-            border_symbols: Rounded,
-            pane: Split(
-                size: "100%",
-                direction: Vertical,
-                panes: [(pane: Pane(AlbumArt), size: "100%", borders: "ALL", border_symbols: Rounded)],
-            )
-            ),
+//*/
     ],
 )

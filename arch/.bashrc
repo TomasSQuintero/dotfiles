@@ -165,6 +165,7 @@ function y() {
 
 # temp
 # --------------------------------------------------------------------------
+alias cn='cd ~/notes && y'
 alias notes='cd ~/notes && nvim'
 alias links='cd ~/notes && nvim links.md'
 alias later='cd ~/notes && nvim later.md'
