@@ -8,7 +8,7 @@ vim.opt.termguicolors = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
-vim.opt.cursorcolumn = true
+-- vim.opt.cursorcolumn = true
 vim.opt.linebreak = true
 
 -- tabs and indentation
@@ -66,6 +66,8 @@ vim.cmd([[hi @lsp.type.number gui=italic]])
 -- corremos :PackUpdate para actualizar los plugins
 -- aparece un buffer con los cambios a instalar
 -- confirmamos con :w/:write
+-- para borrar un plugin, sobre el titulo, en el buffer luego de hacer
+-- pack update, hacemos gra, y sale un prompt para borrarlo
 vim.api.nvim_create_user_command('PackUpdate', function()
   vim.pack.update()
 end, {})

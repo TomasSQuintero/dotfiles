@@ -3,7 +3,7 @@ vim.pack.add({
 })
 
 require("render-markdown").setup({
-        code = {enabled = false},
+        -- code = {enabled = false},
         bullet = { icons = { '', '', '', '' }, },
         link = { enabled = true, },
         heading = {enabled = false},

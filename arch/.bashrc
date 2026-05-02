@@ -115,6 +115,7 @@ alias ssd='cd /mnt/ssd'
 alias mountssdstorage='sudo mount /dev/sdb4 /mnt/ssd-storage; cd /mnt/ssd-storage'
 
 alias mountgames='sudo mount /dev/sdb4 /home/tom/games/steamLibrary'
+# alias mountgames='sudo mount /dev/sdb4 /mnt/ssd'
 alias umountgames='sudo umount /home/tom/games/steamLibrary'
 
 # ssh
@@ -169,6 +170,7 @@ alias cn='cd ~/notes && y'
 alias notes='cd ~/notes && nvim'
 alias links='cd ~/notes && nvim links.md'
 alias later='cd ~/notes && nvim later.md'
+alias empty='rm -rf ~/.local/share/Trash/*'
 
 alias s='sioyek'
 
