@@ -76,6 +76,10 @@
       "rev": "c8d29979cb0cb3a2437a8e0ae683fd82f340d3b8",
       "src": "https://github.com/karb94/neoscroll.nvim"
     },
+    "neovim": {
+      "rev": "6a961effd67f6130d36df6d1c05c48c739796dd2",
+      "src": "https://github.com/rose-pine/neovim"
+    },
     "noice.nvim": {
       "rev": "7bfd942445fb63089b59f97ca487d605e715f155",
       "src": "git@github.com:folke/noice.nvim"
@@ -129,7 +133,7 @@
       "src": "git@github.com:jonarrien/telescope-cmdline.nvim"
     },
     "telescope.nvim": {
-      "rev": "506338434fec5ad19cb1f8d45bf92d66c4917393",
+      "rev": "ec009610d5d259ec59a6edf0219ef3f7ee4732e5",
       "src": "https://github.com/nvim-telescope/telescope.nvim"
     },
     "tiny-cmdline.nvim": {
@@ -141,7 +145,7 @@
       "src": "git@github.com:folke/which-key.nvim"
     },
     "yazi.nvim": {
-      "rev": "ec07130c3e7f0eb503fce931732f2aed9b7e8a58",
+      "rev": "ad672fc3ba99920bc5db408ff25c0cb2e8201a8e",
       "src": "https://github.com/mikavilpas/yazi.nvim"
     }
   }
