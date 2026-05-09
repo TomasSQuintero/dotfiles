@@ -13,7 +13,7 @@ vim.pack.add({
 })
 
 require("nvim-treesitter").setup ({
-  ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline", "python" },
+  ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "python" },
   auto_install = true,
   ignore_install = { "javascript" },
   highlight = {
