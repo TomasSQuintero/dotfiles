@@ -33,7 +33,7 @@ edit = [
 	{ run = "nvim %s", desc = "$EDITOR",      for = "unix", block = true },
 ]
 play = [
-	{ run = "open %s",         desc = "Play", for = "macos" },
+	{ run = "mpv %s",         desc = "Play", for = "macos" },
 	{ run = "mediainfo %s1; echo 'Press enter to exit'; read _", block = true, desc = "Show media info", for = "unix" },
 	{ run = "mediainfo %s1 & pause", block = true, desc = "Show media info", for = "windows" },
 ]
