@@ -36,6 +36,10 @@ pdf = [
 	# { run = "zathura %s", desc = "zathura", orphan = true },
 	{ run = "sioyek %s", desc = "sioyek", orphan = true },
 ]
+webp = [
+	# { run = "zathura %s", desc = "zathura", orphan = true },
+	{ run = "qimgv %s", desc = "qimgv", orphan = true },
+]
 play = [
 	{ run = "mpv %s", desc = "mpv", orphan = true },
 ]
@@ -73,6 +77,8 @@ rules = [
 	{ mime = "text/*", use = [ "edit", "reveal" ] },
     # PNG images
     { mime = "image/png", use = [ "qimgv", "reveal" ] },
+    # webp
+    { mime = "image/webp", use = [ "webp", "reveal" ] },
 	# Image
 	{ mime = "image/*", use = [ "open", "reveal" ] },
 	# Media - Video files now open with mpv
