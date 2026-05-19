@@ -3,7 +3,7 @@ vim.g.maplocalleader = "\\"
 
 -- save, quit and force quit
 vim.keymap.set("n", "<leader>w", ":w<CR>", { desc = "Write file" })
-vim.keymap.set("n", "<leader>q", ":wq<CR>", { desc = "Write and quit" })
+vim.keymap.set({'n', 'v'}, "<leader>q", ":wq!<CR>", { desc = "Write and quit" })
 vim.keymap.set("n", "<leader>x", ":q!<CR>", { desc = "Force quit" })
 
 -- launch Oil.nvim
