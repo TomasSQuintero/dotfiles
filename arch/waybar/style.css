@@ -33,7 +33,8 @@ window#waybar {
 }
 
 #workspaces button.active label {
-  color: #ebbcba;
+  /* color: #ebbcba; */
+  color: #DBBC7F;
 }
 
 #workspaces button:hover {
