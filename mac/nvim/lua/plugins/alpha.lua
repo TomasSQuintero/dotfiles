@@ -43,7 +43,7 @@ dashboard.section.header.opts.hl = "header"
 dashboard.section.buttons.opts.hl = "Keyword"
 dashboard.section.footer.opts.hl = "Comment"
 
-vim.api.nvim_set_hl(0, "header", { fg = "#565f89", bold = true })
+-- vim.api.nvim_set_hl(0, "header", { fg = "#565f89", bold = true })
 
 -- Disable scrolling on the alpha buffer
 vim.api.nvim_create_autocmd("User", {
