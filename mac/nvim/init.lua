@@ -37,6 +37,7 @@ vim.opt.titlestring = "%F"
 vim.opt.fillchars:append({ eob = " " })
 vim.opt.showmode = false
 vim.opt.showcmd = true
+vim.opt.mousescroll = "ver:3,hor:0"
 
 -- vim.cmd([[set mouse=]])
 vim.cmd([[set noswapfile]])

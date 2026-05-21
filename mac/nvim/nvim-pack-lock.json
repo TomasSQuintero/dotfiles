@@ -12,6 +12,10 @@
       "rev": "28c22791153a90bb61a86fbeeae0f812e048ade7",
       "src": "https://github.com/dkarter/bullets.vim"
     },
+    "calculator.nvim": {
+      "rev": "1e417c69606318575082ffc283b501523c2ba4ab",
+      "src": "https://github.com/vzze/calculator.nvim"
+    },
     "cmp-buffer": {
       "rev": "b74fab3656eea9de20a9b8116afa3cfc4ec09657",
       "src": "https://github.com/hrsh7th/cmp-buffer"
