@@ -169,7 +169,7 @@ function y() {
 alias cn='cd ~/notes && y'
 alias notes='cd ~/notes && nvim'
 alias links='cd ~/notes && nvim links.md'
-alias later='cd ~/notes && nvim later.md'
+alias later='cd ~/notes/later/ && yazi'
 alias empty='rm -rf ~/.local/share/Trash/*'
 
 alias s='sioyek'
