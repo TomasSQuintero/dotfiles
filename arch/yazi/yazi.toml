@@ -57,9 +57,9 @@ download = [
 	{ run = "ya emit download --open %S", desc = "Download and open" },
 	{ run = "ya emit download %S",        desc = "Download" },
 ]
-sioyek = [
-    { run = "sioyek %s1", desc = "Sioyek", for = "linux" },
-    { run = "sioyek %s1", desc = "Sioyek", for = "macos" },
+zathura = [
+    { run = 'setsid zathura "$@"', detach = true, desc = "zathura", for = "linux" },
+    { run = 'setsid zathura "$@"', detach = true, desc = "zathura", for = "macos" },
 ]
 qimgv = [
     { run = "qimgv %s1", desc = "qimgv", for = "linux" },
@@ -84,7 +84,7 @@ rules = [
 	# Virtual file system
 	{ mime = "vfs/{absent,stale}", use = "download" },
   # PDF
-  { mime = "application/pdf", use = [ "sioyek", "reveal" ] },
+  { mime = "application/pdf", use = [ "zathura", "reveal" ] },
 	# Fallback
 	{ url = "*", use = [ "open", "reveal" ] },
 ]
@@ -120,7 +120,7 @@ spotters = [
 	{ mime = "image/svg+xml", run = "svg" },
 	{ mime = "image/*", run = "image" },
 	# Video
-	{ mime = "video/*", run = "video" },
+	# { mime = "video/*", run = "video" },
 	# Virtual file system
 	{ mime = "vfs/*", run = "vfs" },
 	# Error
@@ -134,7 +134,7 @@ preloaders = [
 	{ mime = "image/svg+xml", run = "svg" },
 	{ mime = "image/*", run = "image" },
 	# Video
-	{ mime = "video/*", run = "video" },
+	# { mime = "video/*", run = "video" },
 	# PDF
 	{ mime = "application/pdf", run = "pdf" },
 	# Font
@@ -153,7 +153,7 @@ previewers = [
 	{ mime = "image/svg+xml", run = "svg" },
 	{ mime = "image/*", run = "image" },
 	# Video
-	{ mime = "video/*", run = "video" },
+	# { mime = "video/*", run = "video" },
 	# PDF
 	{ mime = "application/pdf", run = "pdf" },
 	# Archive

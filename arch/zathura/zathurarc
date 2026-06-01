@@ -1,17 +1,13 @@
+set font "JetBrains Mono 15"
 set adjust-open "height"
-
-set selection-clipboard clipboard
+set selection-clipboard none
 set pages-per-row 1
-
 #stop at page boundries
 set scroll-page-aware "true"
-set scroll-step 15
-
+set scroll-step 200
 set zoom-min 10
 set guioptions none
-
 # zathurarc-dark
-
 #set font "inconsolata 15"
 set default-bg "#000000" #00
 set default-fg "#F7F7F6" #01
@@ -23,12 +19,16 @@ set notification-error-bg "#AC4142" #08
 set notification-error-fg "#151515" #00
 set notification-warning-bg "#AC4142" #08
 set notification-warning-fg "#151515" #00
-set highlight-color "#F4BF75" #0A
-set highlight-active-color "#6A9FB5" #0D
-set completion-highlight-fg "#151515" #02
-set completion-highlight-bg "#90A959" #0C
-set completion-bg "#303030" #02
-set completion-fg "#E0E0E0" #0C
+set highlight-color "#4A90D9"
+set highlight-active-color "#6A9FB5"
+set completion-highlight-fg "#ebdbb2"
+set completion-highlight-bg "#458588"
+set completion-bg "#303030"
+set completion-fg "#E0E0E0"
+set index-bg "#1d2021"
+set index-fg "#ebdbb2"
+set index-active-bg "#458588"
+set index-active-fg "#ebdbb2"
 set notification-bg "#90A959" #0B
 set notification-fg "#151515" #00
 #set recolor "true"
@@ -36,7 +36,6 @@ set recolor-lightcolor "#000000" #00
 set recolor-darkcolor "#E0E0E0" #06
 set recolor-reverse-video "true"
 set recolor-keephue "true"
-
 # gruvbox rice
 # set completion-group-bg         "#282828"
 # set completion-group-fg         "#ebdbb2"
@@ -65,34 +64,27 @@ set recolor-keephue "true"
 # set recolor-darkcolor           "#ebdbb2"
 #
 set render-loading "false"
-
 unmap f
 map f toggle_fullscreen
 map [fullscreen] f toggle_fullscreen
-
 unmap i
 map i recolor
 map [fullscreen] i recolor
-
 map { navigate previous
 map } navigate next
-
 unmap j
 unmap k
 unmap h
 unmap l
-
 # jk for next/prev
 map j navigate next
 map k navigate previous
 map h scroll down
 map l scroll up
-
 map [fullscreen] j navigate next
 map [fullscreen] k navigate previous
 map [fullscreen] h scroll down
 map [fullscreen] l scroll up
-
 # # jk to scroll
 # map l navigate next
 # map h navigate previous
@@ -102,14 +94,12 @@ map [fullscreen] l scroll up
 # map [fullscreen] h navigate previous
 # map [fullscreen] j scroll down
 # map [fullscreen] k scroll up
-
 unmap J
 unmap K
 map J scroll down
 map K scroll up
 map [fullscreen] J scroll down
 map [fullscreen] K scroll up
-
 unmap <Right>
 unmap <Left>
 map <Right> navigate next

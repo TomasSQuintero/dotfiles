@@ -57,3 +57,21 @@ vim.keymap.set('n', '<C-a>', 'ggVG', { noremap = true, silent = true })
 
 -- leader d to insert the date, already formatted
 vim.keymap.set('n', '<leader>d', "i<C-R>= strftime('%Y-%m-%d')<CR> - ", { noremap = true, silent = true })
+
+-- paste over selected text without losing what you yanked
+-- vim.keymap.set('x', '<leader>p', [["_dP]], { noremap = true, silent = true })
+vim.keymap.set('x', 'p', [["_dP]], { noremap = true, silent = true })
+
+-- delete without yanking
+vim.keymap.set('x', '<leader>d', [["_d]], { noremap = true, silent = true })
+
+-- move lines with J and K
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
+
+-- indent while keeping selection
+vim.keymap.set('v', '<', "<gv", { noremap = true, silent = true })
+vim.keymap.set('v', '>', ">gv", { noremap = true, silent = true })
+
+-- clear keybinds with ctrl c
+vim.keymap.set({ "n", "v" }, "<C-h>", "<cmd>nohlsearch<CR>", { silent = true, desc = "Clear search highlight" })

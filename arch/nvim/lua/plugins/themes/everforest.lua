@@ -1,11 +1,17 @@
 vim.pack.add({
-	{ src = "https://github.com/neanias/everforest-nvim" },
+  { src = "https://github.com/neanias/everforest-nvim" },
 })
 
 require("everforest").setup({
   background = "medium",
   colours_override = function(palette)
     palette.bg_visual = "#3a515d"
+
+    -- swap green → yellow
+    palette.green = palette.yellow
+
+    -- swap red → blue
+    palette.red = palette.blue
   end,
 })
 

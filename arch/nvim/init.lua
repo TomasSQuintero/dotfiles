@@ -12,8 +12,9 @@ vim.opt.cursorline = true
 vim.opt.linebreak = true
 
 -- tabs and indentation
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.linebreak = true
@@ -23,7 +24,7 @@ vim.opt.linebreak = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.incsearch = true
-vim.opt.hlsearch = false
+-- vim.opt.hlsearch = false
 
 -- clipboard
 vim.opt.clipboard = "unnamedplus"
@@ -54,6 +55,7 @@ vim.opt.titlestring = "%F"
 vim.opt.fillchars:append({ eob = " " })
 vim.opt.showmode = false
 vim.opt.showcmd = true
+vim.opt.inccommand = "split"
 
 vim.api.nvim_create_user_command("Book", function()
   vim.cmd("0r ~/notes/96-templates/book.md")
@@ -75,3 +77,10 @@ end, {})
 vim.cmd"packadd nvim.undotree"
 
 vim.cmd('autocmd FileType python setlocal formatoptions+=ro')
+
+vim.api.nvim_create_autocmd("TextYankPost", {
+  desc = "Highlight when yanking text",
+  callback = function()
+    vim.hl.on_yank()
+  end,
+})
