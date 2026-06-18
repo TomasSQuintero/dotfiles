@@ -67,9 +67,9 @@ zathura = [
     { run = 'setsid zathura "$@"', detach = true, desc = "zathura", for = "linux" },
     { run = 'setsid zathura "$@"', detach = true, desc = "zathura", for = "macos" },
 ]
-qimgv = [
-    { run = 'setsid qimgv "$@"', detach = true, desc = "qimgv", for = "linux" },
-    { run = 'setsid qimgv "$@"', detach = true, desc = "qimgv", for = "macos" },
+mpv = [
+    { run = 'setsid mpv "$@"', detach = true, desc = "mpv", for = "linux" },
+    { run = 'mpv "$@"',        detach = true, desc = "mpv", for = "macos" },
 ]
 [open]
 rules = [
@@ -78,9 +78,9 @@ rules = [
 	# Text
 	{ mime = "text/*", use = [ "edit", "reveal" ] },
 	# Image
-	{ mime = "image/*", use = ["qimgv", "open", "reveal" ] },
+	{ mime = "image/*", use = ["open", "reveal" ] },
 	# Media
-	{ mime = "{audio,video}/*", use = [ "play", "reveal" ] },
+	{ mime = "{audio,video}/*", use = ["mpv", "play", "reveal" ] },
 	# Code
 	{ mime = "application/{json,ndjson,javascript,wine-extension-ini}", use = [ "edit", "reveal" ] },
 	# Archive
