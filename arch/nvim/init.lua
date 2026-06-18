@@ -5,11 +5,15 @@ vim.cmd("syntax on")
 vim.opt.termguicolors = true
 
 -- line numbers
+-- vim.opt.cursorcolumn = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
--- vim.opt.cursorcolumn = true
 vim.opt.linebreak = true
+vim.opt.numberwidth = 1
+vim.opt.signcolumn = "number"
+vim.opt.foldcolumn = "0"
+
 
 -- tabs and indentation
 vim.opt.tabstop = 4
@@ -46,7 +50,6 @@ vim.g.clipboard = {
 }
 
 -- others
-vim.opt.signcolumn = "yes"
 vim.opt.undofile = true
 vim.opt.winborder = "rounded"
 vim.opt.wrap = false

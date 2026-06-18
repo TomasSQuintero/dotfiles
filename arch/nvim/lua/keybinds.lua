@@ -56,7 +56,8 @@ vim.keymap.set('n', 'yL', 'yi(', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-a>', 'ggVG', { noremap = true, silent = true })
 
 -- leader d to insert the date, already formatted
-vim.keymap.set('n', '<leader>d', "i<C-R>= strftime('%Y-%m-%d')<CR> - ", { noremap = true, silent = true })
+-- vim.keymap.set('n', '<leader>d', "i<C-R>= strftime('%Y-%m-%d')<CR> - ", { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>d', "i<C-R>= strftime('%Y-%m-%d')<CR> ", { noremap = true, silent = true })
 
 -- paste over selected text without losing what you yanked
 -- vim.keymap.set('x', '<leader>p', [["_dP]], { noremap = true, silent = true })
@@ -75,3 +76,12 @@ vim.keymap.set('v', '>', ">gv", { noremap = true, silent = true })
 
 -- clear keybinds with ctrl c
 vim.keymap.set({ "n", "v" }, "<C-h>", "<cmd>nohlsearch<CR>", { silent = true, desc = "Clear search highlight" })
+
+-- increase/decrease number with alt a and x
+vim.keymap.set('n', '<M-a>', '<C-a>', { desc = 'Increment number' })
+vim.keymap.set('v', '<M-a>', '<C-a>', { desc = 'Increment number' })
+vim.keymap.set('v', 'g<M-a>', 'g<C-a>', { desc = 'Increment numbers sequentially' })
+
+vim.keymap.set('n', '<M-x>', '<C-x>', { desc = 'Decrement number' })
+vim.keymap.set('v', '<M-x>', '<C-x>', { desc = 'Decrement number' })
+vim.keymap.set('v', 'g<M-x>', 'g<C-x>', { desc = 'Decrement numbers sequentially' })

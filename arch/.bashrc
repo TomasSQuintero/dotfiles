@@ -192,3 +192,6 @@ compare() {
 
 # to trim the path:
 # PROMPT_DIRTRIM=3
+export QT_SCALE_FACTOR=1.25
+
+export PATH=$PATH:/home/tom/.spicetify

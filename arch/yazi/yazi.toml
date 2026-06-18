@@ -16,6 +16,8 @@ show_hidden    = false
 show_symlink   = true
 scrolloff      = 5
 mouse_events   = [ "click", "scroll", "drag" ]
+# confirm_trash  = false
+# confirm_delete = false
 
 [preview]
 wrap            = "no"
@@ -30,6 +32,10 @@ ueberzug_scale  = 1
 ueberzug_offset = [ 0, 0, 0, 0 ]
 
 [opener]
+play-dir = [
+    { run = 'mpv "%s"', orphan = true, desc = "Play folder in MPV", for = "unix" },
+    { run = 'mpv "%s"', orphan = true, desc = "Play folder in MPV", for = "windows" }
+]
 edit = [
 	{ run = "${EDITOR:-nvim} %s", desc = "$EDITOR",      for = "unix", block = true },
 ]
@@ -62,8 +68,8 @@ zathura = [
     { run = 'setsid zathura "$@"', detach = true, desc = "zathura", for = "macos" },
 ]
 qimgv = [
-    { run = "qimgv %s1", desc = "qimgv", for = "linux" },
-    { run = "qimgv %s1", desc = "qimgv", for = "macos" },
+    { run = 'setsid qimgv "$@"', detach = true, desc = "qimgv", for = "linux" },
+    { run = 'setsid qimgv "$@"', detach = true, desc = "qimgv", for = "macos" },
 ]
 [open]
 rules = [
