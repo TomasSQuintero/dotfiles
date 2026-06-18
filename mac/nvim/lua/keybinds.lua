@@ -45,11 +45,10 @@ vim.keymap.set('n', '<leader>k', 'i[]()2hi', { noremap = true, silent = true })
 vim.keymap.set('i', '<C-k>', '[]()2hi', { noremap = true, silent = true })
 
 -- markdown checkbox formatting
-vim.keymap.set('i', '<C-c>', 'I- [ ] ', { noremap= true, silent = true })
-vim.keymap.set('v', '<C-c>', ":norm I- [ ] <CR>A", { noremap = true, silent = true })
+vim.keymap.set('v', '<A-c>', ":norm I- [ ] <CR>A", { noremap = true, silent = true })
+vim.keymap.set('i', '<A-c>', 'I- [ ] ', { noremap = true, silent = true })
 
 -- yank link inside ()
--- vim.keymap.set('n', 'yl', 'yi(', { noremap = true, silent = true })
 vim.keymap.set('n', 'yl', ':norm $hyi(0<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', 'yL', 'yi(', { noremap = true, silent = true })
 
@@ -57,4 +56,32 @@ vim.keymap.set('n', 'yL', 'yi(', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-a>', 'ggVG', { noremap = true, silent = true })
 
 -- leader d to insert the date, already formatted
-vim.keymap.set('n', '<leader>d', "i<C-R>= strftime('%Y-%m-%d')<CR> - ", { noremap = true, silent = true })
+-- vim.keymap.set('n', '<leader>d', "i<C-R>= strftime('%Y-%m-%d')<CR> - ", { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>d', "i<C-R>= strftime('%Y-%m-%d')<CR> ", { noremap = true, silent = true })
+
+-- paste over selected text without losing what you yanked
+-- vim.keymap.set('x', '<leader>p', [["_dP]], { noremap = true, silent = true })
+vim.keymap.set('x', 'p', [["_dP]], { noremap = true, silent = true })
+
+-- delete without yanking
+vim.keymap.set('x', '<leader>d', [["_d]], { noremap = true, silent = true })
+
+-- move lines with J and K
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
+
+-- indent while keeping selection
+vim.keymap.set('v', '<', "<gv", { noremap = true, silent = true })
+vim.keymap.set('v', '>', ">gv", { noremap = true, silent = true })
+
+-- clear keybinds with ctrl h
+vim.keymap.set({ "n", "v" }, "<C-h>", "<cmd>nohlsearch<CR>", { silent = true, desc = "Clear search highlight" })
+
+-- increase/decrease number with alt a and x
+vim.keymap.set('n', '<M-a>', '<C-a>', { desc = 'Increment number' })
+vim.keymap.set('v', '<M-a>', '<C-a>', { desc = 'Increment number' })
+vim.keymap.set('v', 'g<M-a>', 'g<C-a>', { desc = 'Increment numbers sequentially' })
+
+vim.keymap.set('n', '<M-x>', '<C-x>', { desc = 'Decrement number' })
+vim.keymap.set('v', '<M-x>', '<C-x>', { desc = 'Decrement number' })
+vim.keymap.set('v', 'g<M-x>', 'g<C-x>', { desc = 'Decrement numbers sequentially' })
