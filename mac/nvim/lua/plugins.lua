@@ -1,3 +1,4 @@
+require("plugins.highlight-colors")
 require("plugins.cmp")
 require("plugins.lsp")
 require("plugins.treesitter")
@@ -17,8 +18,8 @@ require("plugins.treesitter-ctx")
 require("plugins.calculate")
 
 -- themes
-require("plugins.themes.everforest")
+-- require("plugins.themes.everforest")
 -- require("plugins.themes.rose-pine")
 -- require("plugins.vague")
--- require("plugins.themes.gruvbox")
+require("plugins.themes.gruvbox")
 -- require("plugins.themes.ember")
