@@ -1,3 +1,4 @@
+require("plugins.highlight-colors")
 require("plugins.cmp")
 require("plugins.lsp")
 require("plugins.treesitter")

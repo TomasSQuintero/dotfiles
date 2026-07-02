@@ -4,7 +4,8 @@ set selection-clipboard none
 set pages-per-row 1
 #stop at page boundries
 set scroll-page-aware "true"
-set scroll-step 200
+# set scroll-step 200
+set scroll-step 50
 set zoom-min 10
 set guioptions none
 # zathurarc-dark

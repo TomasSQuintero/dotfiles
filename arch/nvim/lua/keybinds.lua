@@ -45,8 +45,10 @@ vim.keymap.set('n', '<leader>k', 'i[]()2hi', { noremap = true, silent = true })
 vim.keymap.set('i', '<C-k>', '[]()2hi', { noremap = true, silent = true })
 
 -- markdown checkbox formatting
-vim.keymap.set('v', '<A-c>', ":norm I- [ ] <CR>A", { noremap = true, silent = true })
-vim.keymap.set('i', '<A-c>', 'I- [ ] ', { noremap = true, silent = true })
+vim.keymap.set('n', 'ñ', function()
+  vim.api.nvim_set_current_line('- [ ] ' .. vim.api.nvim_get_current_line())
+  vim.cmd('startinsert!')
+end, { desc = 'Insert checkbox at start of line' })
 
 -- yank link inside ()
 vim.keymap.set('n', 'yl', ':norm $hyi(0<CR>', { noremap = true, silent = true })
@@ -75,7 +77,7 @@ vim.keymap.set('v', '<', "<gv", { noremap = true, silent = true })
 vim.keymap.set('v', '>', ">gv", { noremap = true, silent = true })
 
 -- clear keybinds with ctrl c
-vim.keymap.set({ "n", "v" }, "<C-h>", "<cmd>nohlsearch<CR>", { silent = true, desc = "Clear search highlight" })
+vim.keymap.set({ "n", "v" }, "<C-m>", "<cmd>nohlsearch<CR>", { silent = true, desc = "Clear search highlight" })
 
 -- increase/decrease number with alt a and x
 vim.keymap.set('n', '<M-a>', '<C-a>', { desc = 'Increment number' })
@@ -85,3 +87,7 @@ vim.keymap.set('v', 'g<M-a>', 'g<C-a>', { desc = 'Increment numbers sequentially
 vim.keymap.set('n', '<M-x>', '<C-x>', { desc = 'Decrement number' })
 vim.keymap.set('v', '<M-x>', '<C-x>', { desc = 'Decrement number' })
 vim.keymap.set('v', 'g<M-x>', 'g<C-x>', { desc = 'Decrement numbers sequentially' })
+
+-- -- insert brackets
+-- vim.keymap.set("i", "ñ", "[] <Left><Left>", { noremap = true })
+-- vim.keymap.set("n", "ñ", "I[] <Left><Left>", { noremap = true })

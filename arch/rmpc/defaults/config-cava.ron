@@ -173,21 +173,27 @@
                 direction: Horizontal,
                 panes: [
                     (
-                        size: "36%",
+                        size: "35%",
                         pane: Split(
                             direction: Vertical,
                             panes: [
                                 (
                                     size: "100%",
-                                    borders: "LEFT | RIGHT | TOP | BOTTOM",
+                                    borders: "LEFT | RIGHT | TOP",
                                     border_symbols: Rounded,
                                     pane: Pane(AlbumArt)
+                                ),
+                                (
+                                    size: "5",
+                                    borders: "ALL",
+                                    border_symbols: Inherited(parent: Rounded, top_left: "├", top_right: "┤",),
+                                    pane: Pane(Cava)
                                 ),
                             ],
                         ),
                     ), 
                     (
-                        size: "64%",
+                        size: "65%",
                         pane: Split(
                             direction: Vertical,
                             panes: [
