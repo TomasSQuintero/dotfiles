@@ -1,24 +1,18 @@
-#set page-padding 50
-
-set selection-clipboard clipboard
-# set selection-clipboard none
-set adjust-open "best-fit"
-
+set font "JetBrains Mono 15"
+set adjust-open "height"
+set selection-clipboard none
 set pages-per-row 1
 
-set guioptions none
 #stop at page boundries
 set scroll-page-aware "true"
-set scroll-full-overlap 0.01
-set scroll-step 1
-
+set scroll-step 200
 set zoom-min 10
-#set guioptions ""
+set guioptions none
 
 # zathurarc-dark
-
 #set font "inconsolata 15"
 set default-bg "#000000" #00
+set default-fg "#F7F7F6" #01
 set statusbar-fg "#B0B0B0" #04
 set statusbar-bg "#202020" #01
 set inputbar-bg "#151515" #00 currently not used
@@ -27,10 +21,16 @@ set notification-error-bg "#AC4142" #08
 set notification-error-fg "#151515" #00
 set notification-warning-bg "#AC4142" #08
 set notification-warning-fg "#151515" #00
-set completion-highlight-fg "#151515" #02
-set completion-highlight-bg "#90A959" #0C
-set completion-bg "#303030" #02
-set completion-fg "#E0E0E0" #0C
+set highlight-color "#4A90D9"
+set highlight-active-color "#6A9FB5"
+set completion-highlight-fg "#ebdbb2"
+set completion-highlight-bg "#458588"
+set completion-bg "#303030"
+set completion-fg "#E0E0E0"
+set index-bg "#1d2021"
+set index-fg "#ebdbb2"
+set index-active-bg "#458588"
+set index-active-fg "#ebdbb2"
 set notification-bg "#90A959" #0B
 set notification-fg "#151515" #00
 #set recolor "true"
@@ -39,39 +39,70 @@ set recolor-darkcolor "#E0E0E0" #06
 set recolor-reverse-video "true"
 set recolor-keephue "true"
 
-# set highlight-color "#F4BF75" #0A
-# set highlight-active-color "#6A9FB5" #0D
-# set default-fg "#F7F7F6" #01
-
-set highlight-color "#4361EEAA"        # pastel blue, ~53% opacity
-set highlight-active-color "#4361EEAA" # pastel blue, ~67% opacity
-set default-fg "#AEC6CFAA"
-
+# gruvbox rice
+# set completion-group-bg         "#282828"
+# set completion-group-fg         "#ebdbb2"
+# set completion-bg               "#282828"
+# set completion-fg               "#ebdbb2"
+# set completion-highlight-bg     "#458588"
+# set completion-highlight-fg     "#ebdbb2"
+# set notification-error-bg       "#3c3836"
+# set notification-error-fg       "#ebdbb2"
+# set notification-warning-bg     "#3c3836"
+# set notification-warning-fg     "#ebdbb2"
+# set notification-bg             "#3c3836"
+# set notification-fg             "#ebdbb2"
+# set index-bg                    "#1d2021"
+# set index-fg                    "#ebdbb2"
+# set index-active-bg             "#282828"
+# set index-active-fg             "#ebdbb2"
+# set inputbar-bg                 "#3c3836"
+# set inputbar-fg                 "#ebdbb2"
+# set statusbar-fg                "#ebdbb2"
+# set highlight-color             "#458588"
+# set highlight-active-color      "#458588"
+# set default-bg                  "#1d2021"
+# set default-fg                  "#001512"
+# set recolor-lightcolor          "#282828"
+# set recolor-darkcolor           "#ebdbb2"
+#
+set render-loading "false"
 unmap f
 map f toggle_fullscreen
 map [fullscreen] f toggle_fullscreen
-
 unmap i
 map i recolor
 map [fullscreen] i recolor
-
 map { navigate previous
 map } navigate next
-
 unmap j
 unmap k
-unmap J
-unmap K
-
+unmap h
+unmap l
+# jk for next/prev
 map j navigate next
 map k navigate previous
-map J scroll down
-map K scroll up
+map h scroll down
+map l scroll up
 map [fullscreen] j navigate next
 map [fullscreen] k navigate previous
+map [fullscreen] h scroll down
+map [fullscreen] l scroll up
+# # jk to scroll
+# map l navigate next
+# map h navigate previous
+# map j scroll down
+# map k scroll up
+# map [fullscreen] l navigate next
+# map [fullscreen] h navigate previous
+# map [fullscreen] j scroll down
+# map [fullscreen] k scroll up
+unmap J
+unmap K
+map J scroll down
+map K scroll up
 map [fullscreen] J scroll down
 map [fullscreen] K scroll up
-
 unmap <Right>
 unmap <Left>
 map <Right> navigate next
