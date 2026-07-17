@@ -1,4 +1,7 @@
 /* top | right | bottom | left (clockwise) */
+
+/* "#DBBC7FFF" */
+
 * {
   font-family: UDEV Gothic;
   font-size: 22px;
@@ -22,14 +25,13 @@ window#waybar {
 
 #workspaces button {
   padding: 0 10px;
-  color: #888;
+  color: #dbbc7f;
   background: transparent;
   border: none;
 }
 
 #workspaces button.active {
   background: transparent;
-  border-radius: 0;
 }
 
 #workspaces button.active label {
@@ -42,8 +44,17 @@ window#waybar {
   text-shadow: none;
   background: inherit;
   border-top: none;
-  background: rgba(60, 58, 57, 0.8);
+  background: rgba(219, 188, 127, 1);
 }
+
+#workspaces button:hover label{
+  box-shadow: none;
+  text-shadow: none;
+  background: inherit;
+  border-top: none;
+  color: #374145;
+}
+
 
 #pulseaudio {
   padding: 0px 10px 0px 10px;
