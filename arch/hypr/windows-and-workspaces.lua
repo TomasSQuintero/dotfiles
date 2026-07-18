@@ -65,7 +65,7 @@ hl.window_rule({
     match   = { class = "kitty" },
     opacity = "0.80 0.80",
 })
---
+
 -- hl.window_rule ({
 --     name = "waybar-blur",
 --     match = "waybar",
