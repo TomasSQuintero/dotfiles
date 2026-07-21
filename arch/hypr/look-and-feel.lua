@@ -3,6 +3,7 @@ local yellow = "#DBBC7FFF"
 local aqua = "#83C092FF"
 local blue = "#7FBBB3FF"
 local green = "#A7C080FF"
+local red = "#E67E80FF"
 local blank = "#00000000"
 
 hl.config({
@@ -13,7 +14,7 @@ hl.config({
         border_size = 4,
         col = {
             active_border   =  yellow ,
-            -- active_border = { colors = { "rgba(33ccffee)", "rgba(00ff99ee)" }, angle = 45 },
+            -- active_border = { colors = { yellow, red }, angle = 45 },
             inactive_border =  blank ,
         },
         resize_on_border = false,
