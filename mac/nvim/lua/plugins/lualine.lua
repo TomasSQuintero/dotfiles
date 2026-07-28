@@ -40,7 +40,12 @@ require('lualine').setup {
   },
   sections = {
     lualine_a = {'mode'},
-    lualine_b = {'filesize'},
+    -- lualine_b = {'filesize'},
+    lualine_b = {
+        function()
+            return vim.fn.line('.') .. '/' .. vim.fn.line('$')
+        end
+    },
     lualine_c = {{
       'filename',
       -- 0 for filename, 1 for relative path

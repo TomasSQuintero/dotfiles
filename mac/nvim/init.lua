@@ -6,17 +6,21 @@ vim.opt.termguicolors = true
 
 -- line numbers
 vim.opt.number = true
-vim.opt.relativenumber = true
+-- vim.opt.relativenumber = true
 vim.opt.cursorline = true
 vim.opt.cursorcolumn = false
 
 -- tabs and indentation
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.linebreak = true
--- vim.opt.showtabline = 2
+
+vim.opt.numberwidth = 1
+vim.opt.signcolumn = "number"
+vim.opt.foldcolumn = "0"
+vim.opt.cmdheight = 0
 
 -- search
 vim.opt.ignorecase = true
@@ -28,7 +32,6 @@ vim.opt.hlsearch = false
 vim.opt.clipboard = "unnamedplus"
 
 -- others
-vim.opt.signcolumn = "yes"
 vim.opt.undofile = true
 vim.opt.winborder = "rounded"
 vim.opt.wrap = false
