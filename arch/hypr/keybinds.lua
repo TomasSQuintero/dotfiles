@@ -147,6 +147,21 @@ hl.bind("SUPER + F1", function ()
     })
 end)
 
+-- numpad shortcuts
+hl.bind("KP_Add",  hl.dsp.exec_cmd(terminal))
+hl.bind("KP_0",      hl.dsp.exec_cmd(browser))
+hl.bind("KP_Subtract", hl.dsp.window.close())
+
+-- hl.bind("KP_Insert", hl.dsp.exec_cmd("zen-browser --new-window https://web.whatsapp.com"))
+-- hl.bind("KP_Begin", hl.dsp.focus({ workspace = 5 }))
+-- hl.bind("KP_Begin", hl.dsp.focus({ workspace = "previous"}))
+--
+-- hl.bind("KP_Left", hl.dsp.focus({ workspace = "e-1" }))
+-- hl.bind("KP_Right", hl.dsp.focus({ workspace = "e+1" }))
+--
+-- hl.bind(mainMod .. " + SHIFT + H", hl.dsp.focus({ workspace = "e-1" }))
+-- hl.bind(mainMod .. " + SHIFT + L", hl.dsp.focus({ workspace = "e+1" }))
+
 -- hl.bind("XF86Calculator",hl.dsp.exec_cmd("zen-browser --private-window 'youtube.com'"), { locked = true, repeating = true })
 -- hl.bind("XF86Calculator",hl.dsp.exec_cmd("zen-browser 'pinterest.com'"), { locked = true, repeating = true })
 -- hl.bind("Mod5 + BackSpace",         hl.dsp.exec_cmd("zen-browser"))
