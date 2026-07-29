@@ -22,7 +22,6 @@ hl.bind(mainMod .. " + SHIFT + Return", hl.dsp.exec_cmd(terminal .. " -e yazi"))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("[float; center] kitty -e bluetui"))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("kitty -e rmpc"))
 hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("localsend"))
-hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("localsend"))
 
 -- Move focus
 hl.bind(mainMod .. " + h",  hl.dsp.focus({ direction = "left" }))

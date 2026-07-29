@@ -61,12 +61,13 @@
         {
             "key": "│ {#36} cpu     {#keys}│",
             "type": "cpu",
-            "showPeCoreCount": true
+            "format": "{name}"
         },
         {
             "key": "│ {#36} disk    {#keys}│",
             "type": "disk",
-            "folders": "/"
+            "folders": "/",
+            "format": "{1} / {2}"
         },
         {
             "key": "│ {#36} memory  {#keys}│",

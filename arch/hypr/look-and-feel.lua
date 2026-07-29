@@ -6,14 +6,22 @@ local green = "#A7C080FF"
 local red = "#E67E80FF"
 local blank = "#00000000"
 
+local gb_yellow = '#DBA657FF'
+local gb_green = '#A9B665FF'
+local gb_blue = '#7DAEA3FF'
+local gb_aqua = '#89B482FF'
+
+local nord_yellow = '#ebcb8b'
+local vague_yellow = '#f3be7c'
+
 hl.config({
     general = {
         gaps_in  = 4,
         gaps_out = 8,
 
-        border_size = 4,
+        border_size = 3,
         col = {
-            active_border   =  yellow ,
+            active_border   =  vague_yellow ,
             -- active_border = { colors = { yellow, red }, angle = 45 },
             inactive_border =  blank ,
         },
@@ -24,7 +32,7 @@ hl.config({
     },
 
     decoration = {
-        rounding       = 15,
+        rounding       = 10,
         rounding_power = 2,
 
         active_opacity   = 1.0,

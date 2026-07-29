@@ -91,3 +91,50 @@ vim.keymap.set('v', 'g<M-x>', 'g<C-x>', { desc = 'Decrement numbers sequentially
 -- -- insert brackets
 -- vim.keymap.set("i", "ñ", "[] <Left><Left>", { noremap = true })
 -- vim.keymap.set("n", "ñ", "I[] <Left><Left>", { noremap = true })
+
+-- toggle status bar
+vim.keymap.set('n', 'zs', function()
+  vim.o.laststatus = vim.o.laststatus == 0 and 3 or 0
+end, { desc = 'Toggle statusline' })
+
+-- zen mode
+local zen_enabled = false
+
+local function apply_zen()
+  if zen_enabled then
+    require('lualine').hide()
+    vim.o.laststatus = 0
+    vim.wo.number = false
+    vim.wo.relativenumber = false
+    vim.wo.signcolumn = 'no'
+  else
+    require('lualine').hide({ unhide = true })
+    vim.o.laststatus = 3
+    vim.wo.number = true
+    vim.wo.relativenumber = true
+    vim.wo.signcolumn = 'auto'
+  end
+end
+
+vim.keymap.set('n', 'ze', function()
+  zen_enabled = not zen_enabled
+  apply_zen()
+end, { desc = 'Toggle zen mode (statusline + gutter)' })
+
+vim.api.nvim_create_autocmd('VimResized', {
+  callback = function()
+    if zen_enabled then
+      apply_zen()
+    end
+  end,
+})
+
+-- toggle gutter (numbers + sign column) only
+local gutter_enabled = true
+
+vim.keymap.set('n', 'zn', function()
+  gutter_enabled = not gutter_enabled
+  vim.wo.number = gutter_enabled
+  vim.wo.relativenumber = gutter_enabled
+  vim.wo.signcolumn = gutter_enabled and 'auto' or 'no'
+end, { desc = 'Toggle gutter (numbers + signcolumn)' })

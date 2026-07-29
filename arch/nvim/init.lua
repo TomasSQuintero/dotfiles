@@ -6,14 +6,9 @@ vim.opt.termguicolors = true
 
 -- line numbers
 -- vim.opt.cursorcolumn = true
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.cursorline = true
-vim.opt.linebreak = true
-vim.opt.numberwidth = 1
+vim.opt.number = true -- vim.opt.relativenumber = true vim.opt.cursorline = true vim.opt.linebreak = true vim.opt.numberwidth = 1
 vim.opt.signcolumn = "number"
 vim.opt.foldcolumn = "0"
-
 
 -- tabs and indentation
 vim.opt.tabstop = 4
@@ -22,13 +17,12 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.linebreak = true
--- vim.opt.showtabline = 2
 
 -- search
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.incsearch = true
--- vim.opt.hlsearch = false
+vim.opt.hlsearch = false
 
 -- clipboard
 vim.opt.clipboard = "unnamedplus"
@@ -89,3 +83,4 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 vim.opt.cmdheight = 0
+-- vim.opt.showtabline = 2

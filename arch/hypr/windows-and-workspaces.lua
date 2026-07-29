@@ -60,14 +60,14 @@ hl.window_rule({
 })
 
 -- kitty transparency
-hl.window_rule({
-    name    = "opacity-kitty",
-    match   = { class = "kitty" },
-    opacity = "0.80 0.80",
-})
+-- hl.window_rule({
+--     name    = "opacity-kitty",
+--     match   = { class = "kitty" },
+--     opacity = "0.80 0.80",
+-- })
 
--- hl.window_rule ({
---     name = "waybar-blur",
---     match = "waybar",
---     ignore_alpha = 0.4,
+-- hl.window_rule({
+--     name    = "opacity-zen",
+--     match   = { class = "zen" },
+--     opacity = "0.70 0.70",
 -- })

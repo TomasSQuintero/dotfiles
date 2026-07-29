@@ -9,7 +9,9 @@ require('lualine').setup {
   options = {
     icons_enabled = true,
     -- theme = 'rosepine',
-    theme = 'everforest',
+    -- theme = 'everforest',
+    theme = 'vague',
+    -- theme = 'gb-mat-dark-soft',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {
@@ -41,7 +43,12 @@ require('lualine').setup {
   },
   sections = {
     lualine_a = {'mode'},
-    lualine_b = {'filesize'},
+    -- lualine_b = {'filesize'},
+    lualine_b = {
+        function()
+            return vim.fn.line('.') .. '/' .. vim.fn.line('$')
+        end
+    },
     lualine_c = {{
       'filename',
       -- 0 for filename, 1 for relative path
