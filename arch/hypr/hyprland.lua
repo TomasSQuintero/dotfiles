@@ -23,7 +23,8 @@ Menu = "rofi -show drun"
 Windows = "rofi -show window"
 Browser = "zen"
 BrowserPrivate = "zen -private"
-Wallpaper = "~/.config/hypr/wallpapers/forest.png"
+-- Wallpaper = "~/.config/hypr/wallpapers/forest.png"
+Wallpaper = "~/.config/hypr/wallpapers/tiger.jpg"
 
 -- autostart
 hl.on("hyprland.start", function () 

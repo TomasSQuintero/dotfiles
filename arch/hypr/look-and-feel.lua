@@ -12,6 +12,7 @@ local gb_blue = '#7DAEA3FF'
 local gb_aqua = '#89B482FF'
 
 local nord_yellow = '#ebcb8b'
+local tiger_yellow = '#BF9A65'
 local vague_yellow = '#f3be7c'
 
 hl.config({
@@ -21,7 +22,7 @@ hl.config({
 
         border_size = 3,
         col = {
-            active_border   =  vague_yellow ,
+            active_border   =  yellow ,
             -- active_border = { colors = { yellow, red }, angle = 45 },
             inactive_border =  blank ,
         },

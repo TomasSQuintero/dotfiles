@@ -10,7 +10,7 @@ require('lualine').setup {
     icons_enabled = true,
     -- theme = 'rosepine',
     -- theme = 'everforest',
-    theme = 'vague',
+    theme = 'nord',
     -- theme = 'gb-mat-dark-soft',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},

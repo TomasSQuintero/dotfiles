@@ -60,11 +60,11 @@ hl.window_rule({
 })
 
 -- kitty transparency
--- hl.window_rule({
---     name    = "opacity-kitty",
---     match   = { class = "kitty" },
---     opacity = "0.80 0.80",
--- })
+hl.window_rule({
+    name    = "opacity-kitty",
+    match   = { class = "kitty" },
+    opacity = "0.80 0.80",
+})
 
 -- hl.window_rule({
 --     name    = "opacity-zen",
