@@ -1,4 +1,5 @@
 local mainMod = "SUPER"
+local secondaryMod = "ALT"
 
 local terminal = "kitty"
 local fileManager = "thunar"

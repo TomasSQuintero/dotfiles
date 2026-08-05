@@ -72,6 +72,10 @@ window#waybar {
   padding: 0px 10px 0px 0px;
 }
 
-/* #disk.critical { */
-/*     color: #E67E80; */
-/* } */
+window#waybar.fullscreen #workspaces button.active {
+    background: #DBBC7FFF;
+}
+
+window#waybar.fullscreen #workspaces button.active label{
+    color: #272E33;
+}

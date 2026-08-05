@@ -1,3 +1,4 @@
+--everforest colors
 local lightGray = "#aaaaaaaa"
 local yellow = "#DBBC7FFF"
 local aqua = "#83C092FF"
@@ -6,11 +7,13 @@ local green = "#A7C080FF"
 local red = "#E67E80FF"
 local blank = "#00000000"
 
+--gruvbox colors
 local gb_yellow = '#DBA657FF'
 local gb_green = '#A9B665FF'
 local gb_blue = '#7DAEA3FF'
 local gb_aqua = '#89B482FF'
 
+--misc colors
 local nord_yellow = '#ebcb8b'
 local tiger_yellow = '#BF9A65'
 local vague_yellow = '#f3be7c'
