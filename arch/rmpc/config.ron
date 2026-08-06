@@ -88,6 +88,7 @@
             "3":          SwitchToTab("Playlists"),
             "4":          SwitchToTab("Art"),
             "5":          SwitchToTab("Search"),
+            "6":          SwitchToTab("Lyrics"),
             "u":      Update,
             "U":      Rescan,
             "R":          AddRandom,
@@ -275,5 +276,34 @@
             )
         ),
 //*/
+(
+            name: "Lyrics",
+            pane: Split(
+                direction: Horizontal,
+                panes: [
+                    (
+                        size: "37%",
+                        pane: Split(
+                            direction: Vertical,
+                            panes: [
+                                (
+                                    size: "100%",
+                                    borders: "LEFT | RIGHT | TOP | BOTTOM",
+                                    border_symbols: Rounded,
+                                    pane: Pane(AlbumArt)
+                                ),
+                            ],
+                        ),
+                    ), 
+                    (
+                        size: "63%",
+                        pane: Pane(Lyrics), 
+                        borders: "ALL",
+                        border_symbols: Rounded,
+                    ),
+                ],
+            ),
+        )
+
     ],
 )

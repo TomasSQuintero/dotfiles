@@ -147,11 +147,14 @@ hl.bind("SUPER + F1", function ()
     })
 end)
 
+-- testing space
 -- numpad shortcuts
-hl.bind("KP_Add",  hl.dsp.exec_cmd(terminal))
+-- hl.bind("KP_Add",  hl.dsp.exec_cmd(terminal))
 hl.bind("KP_0",      hl.dsp.exec_cmd(browser))
 hl.bind("KP_Subtract", hl.dsp.window.close())
 
+hl.bind("KP_Add", hl.dsp.window.fullscreen({ mode = 1 }))
+hl.bind("XF86Calculator",hl.dsp.exec_cmd("zen-browser 'web.whatsapp.com'"), { locked = true, repeating = true })
 -- hl.bind("KP_Insert", hl.dsp.exec_cmd("zen-browser --new-window https://web.whatsapp.com"))
 -- hl.bind("KP_Begin", hl.dsp.focus({ workspace = 5 }))
 -- hl.bind("KP_Begin", hl.dsp.focus({ workspace = "previous"}))

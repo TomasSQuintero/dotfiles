@@ -138,3 +138,8 @@ vim.keymap.set('n', 'zn', function()
   vim.wo.relativenumber = gutter_enabled
   vim.wo.signcolumn = gutter_enabled and 'auto' or 'no'
 end, { desc = 'Toggle gutter (numbers + signcolumn)' })
+
+vim.opt.scrolloff = 999
+
+vim.keymap.set({ 'n', 'v' }, '<ScrollWheelDown>', '2j', { silent = true })
+vim.keymap.set({ 'n', 'v' }, '<ScrollWheelUp>', '2k', { silent = true })
