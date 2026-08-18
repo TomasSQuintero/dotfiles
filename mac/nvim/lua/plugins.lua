@@ -16,6 +16,7 @@ require("plugins.gitsigns")
 require("plugins.lualine")
 require("plugins.treesitter-ctx")
 require("plugins.calculate")
+require("plugins.aerial")
 
 -- themes
 -- require("plugins.themes.everforest")
