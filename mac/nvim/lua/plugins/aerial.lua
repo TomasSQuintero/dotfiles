@@ -373,4 +373,4 @@ require("aerial").setup({
   },
 })
 
-vim.keymap.set('n', '<leader>t', '<cmd>AerialToggle<CR>')
+vim.keymap.set('n', '<leader>o', '<cmd>AerialToggle<CR>')
