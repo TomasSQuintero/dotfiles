@@ -2,7 +2,6 @@ vim.pack.add({
 	{ src = "https://github.com/stevearc/aerial.nvim" },
 })
 
-
 -- Call the setup function to change the default behavior
 require("aerial").setup({
   -- Priority list of preferred backends for aerial.
@@ -60,14 +59,18 @@ require("aerial").setup({
     ["c"] = "actions.tree_close_all",
     ["L"] = "actions.tree_open_recursive",
     ["H"] = "actions.tree_close_recursive",
+    ["p"] = "actions.scroll",
+    ["<CR>"] = "actions.jump",
+    ["l"] = "actions.tree_open",
+    ["h"] = "actions.tree_close",
+    ["K"] = "actions.prev",
+    ["J"] = "actions.next",
 
     ["?"] = "actions.show_help",
     ["g?"] = "actions.show_help",
-    ["<CR>"] = "actions.jump",
     ["<2-LeftMouse>"] = "actions.jump",
     ["<C-v>"] = "actions.jump_vsplit",
     ["<C-s>"] = "actions.jump_split",
-    ["p"] = "actions.scroll",
     ["<C-j>"] = "actions.down_and_scroll",
     ["<C-k>"] = "actions.up_and_scroll",
     ["{"] = "actions.prev",
@@ -79,10 +82,8 @@ require("aerial").setup({
     ["za"] = "actions.tree_toggle",
     ["O"] = "actions.tree_toggle_recursive",
     ["zA"] = "actions.tree_toggle_recursive",
-    ["l"] = "actions.tree_open",
     ["zo"] = "actions.tree_open",
     ["zO"] = "actions.tree_open_recursive",
-    ["h"] = "actions.tree_close",
     ["zc"] = "actions.tree_close",
     ["zC"] = "actions.tree_close_recursive",
     ["zr"] = "actions.tree_increase_fold_level",
@@ -374,3 +375,4 @@ require("aerial").setup({
 })
 
 vim.keymap.set('n', '<leader>o', '<cmd>AerialToggle<CR>')
+
