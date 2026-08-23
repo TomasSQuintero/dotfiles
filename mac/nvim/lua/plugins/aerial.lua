@@ -65,6 +65,8 @@ require("aerial").setup({
     ["h"] = "actions.tree_close",
     ["K"] = "actions.prev",
     ["J"] = "actions.next",
+    ["b"] = "actions.prev",
+    ["f"] = "actions.next",
 
     ["?"] = "actions.show_help",
     ["g?"] = "actions.show_help",
