@@ -12,7 +12,7 @@ local wallpaper = "~/.config/hypr/wallpapers/forest.png"
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = 1 }))
 hl.bind(mainMod .. " + ALT + F", hl.dsp.window.fullscreen({ mode = "fullscreen" }))
-hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.float({ action = "toggle" }))
+hl.bind(mainMod .. " + CTRL + F", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + P", hl.dsp.layout("togglesplit"))
 
 hl.bind(mainMod .. " + space", hl.dsp.exec_cmd(menu))
@@ -83,8 +83,8 @@ hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = tr
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
 
 -- suspend
-hl.bind("Insert", hl.dsp.exec_cmd("systemctl suspend"))
-hl.bind("SHIFT + Insert", hl.dsp.exec_cmd("wlogout"))
+hl.bind("SHIFT + Insert", hl.dsp.exec_cmd("systemctl suspend"))
+hl.bind("Insert", hl.dsp.exec_cmd("wlogout"))
 
 -- volume control
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), { locked = true, repeating = true })
@@ -106,6 +106,7 @@ hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("pgrep waybar && killall waybar || wa
 
 -- clipboard
 hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("cliphist list | rofi -dmenu | cliphist decode | wl-copy"))
+-- cliphsit wipe
 
 -- kitty, zen and yazi
 hl.bind("XF86MonBrightnessDown",hl.dsp.exec_cmd("kitty -e yazi"), { locked = true, repeating = true })
@@ -114,7 +115,7 @@ hl.bind("SHIFT + XF86MonBrightnessDown",hl.dsp.exec_cmd(FileManager), { locked =
 hl.bind(mainMod .. " + BackSpace",         hl.dsp.exec_cmd("zen-browser"))
 hl.bind(mainMod .. " + SHIFT + BackSpace", hl.dsp.exec_cmd("zen-browser --private-window"))
 
--- animation/gaps toggle
+-- animation/gaps toggle - gamemode
 local active = "#DBBC7FFF"
 local inactive = "#1E2326"
 hl.bind("SUPER + F1", function ()
