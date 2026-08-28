@@ -8,7 +8,8 @@ vim.o.showcmdloc = "statusline"
 require('lualine').setup {
   options = {
     icons_enabled = true,
-    theme = 'gb-material-soft',
+    -- theme = 'gb-material-soft',
+    theme = 'rosepine',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {

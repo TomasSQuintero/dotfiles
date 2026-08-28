@@ -20,7 +20,7 @@ require("plugins.aerial")
 
 -- themes
 -- require("plugins.themes.everforest")
--- require("plugins.themes.rose-pine")
+require("plugins.themes.rose-pine")
 -- require("plugins.vague")
-require("plugins.themes.gruvbox")
+-- require("plugins.themes.gruvbox")
 -- require("plugins.themes.ember")
