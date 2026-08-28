@@ -1,5 +1,4 @@
 --everforest colors
-local lightGray = "#aaaaaaaa"
 local yellow = "#DBBC7FFF"
 local aqua = "#83C092FF"
 local blue = "#7FBBB3FF"

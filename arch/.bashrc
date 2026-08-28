@@ -190,6 +190,6 @@ compare() {
 #sudo pacman -S bash-completion
 [[ -r /usr/share/bash-completion/bash_completion ]] && . /usr/share/bash-completion/bash_completion
 
+
 # to trim the path:
 # PROMPT_DIRTRIM=3
-# export QT_SCALE_FACTOR=1.25

@@ -59,13 +59,19 @@ hl.window_rule({
     border_size = 0,
 })
 
--- kitty transparency
 hl.window_rule({
-    name    = "opacity-kitty",
-    match   = { class = "kitty" },
-    opacity = "0.80 0.80",
+    name  = "no-border-float",
+    match = { float = true },
+    border_size = 0,
 })
+-- kitty transparency
+-- hl.window_rule({ name    = "opacity-kitty", match   = { class = "kitty" }, opacity = "0.80 0.80", })
 
+-- hl.window_rule({
+--     name    = "opacity-kitty",
+--     match   = { class = "kitty" },
+--     opacity = "0.80 0.80",
+-- })
 -- hl.window_rule({
 --     name    = "opacity-zen",
 --     match   = { class = "zen" },
