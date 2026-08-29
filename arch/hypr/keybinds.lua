@@ -5,7 +5,7 @@ local terminal = "kitty"
 local fileManager = "thunar"
 local menu = "rofi -show drun"
 local windows = "rofi -show window"
-local browser = "zen"
+local browser = "zen-browser"
 local browserPrivate = "zen -private"
 local wallpaper = "~/.config/hypr/wallpapers/forest.png"
 
@@ -151,10 +151,17 @@ end)
 -- testing space
 -- numpad shortcuts
 -- hl.bind("KP_Add",  hl.dsp.exec_cmd(terminal))
-hl.bind("KP_0",      hl.dsp.exec_cmd(browser))
+hl.bind("KP_Insert",      hl.dsp.exec_cmd(browser))
 hl.bind("KP_Subtract", hl.dsp.window.close())
+hl.bind("KP_Add", hl.dsp.exec_cmd(terminal))
 
-hl.bind("KP_Add", hl.dsp.window.fullscreen({ mode = 1 }))
+hl.bind("KP_Left",  hl.dsp.focus({ direction = "left" }))
+hl.bind("KP_Right", hl.dsp.focus({ direction = "right" }))
+hl.bind("KP_Up",    hl.dsp.focus({ direction = "up" }))
+hl.bind("KP_Down",  hl.dsp.focus({ direction = "down" }))
+
+hl.bind("KP_Begin", hl.dsp.window.fullscreen({ mode = 1 }))
+
 hl.bind("XF86Calculator",hl.dsp.exec_cmd("zen-browser 'web.whatsapp.com'"), { locked = true, repeating = true })
 -- hl.bind("KP_Insert", hl.dsp.exec_cmd("zen-browser --new-window https://web.whatsapp.com"))
 -- hl.bind("KP_Begin", hl.dsp.focus({ workspace = 5 }))

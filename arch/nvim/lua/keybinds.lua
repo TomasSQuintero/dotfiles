@@ -23,7 +23,7 @@ vim.keymap.set('x', '<leader>a', function()
 end, { noremap = true, silent = true })
 
 -- yazi
-vim.keymap.set('n', '<leader>y', ':Yazi<cr>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>y', ':Yazi<CR>', { noremap = true, silent = true })
 
 -- Sorting
 vim.keymap.set('v', '<leader>s', ":'<,'>sort<CR>", { noremap = true, silent = true })
@@ -37,28 +37,18 @@ vim.keymap.set('n', '<leader>z', ':set wrap!<CR>', { noremap = true, silent = tr
 vim.keymap.set("n", "<leader>r", ":%s//g<Left><Left>", { desc = "Global search and replace", silent = false })
 vim.keymap.set("v", "<leader>r", ":s/\\%V/g<Left><Left>", { desc = "Search and replace in selection", silent = false })
 
---para cerrar el buffer, para ir cambiando esta leader fb de telescope
-vim.keymap.set('n', '<leader>bd', ':bd<CR>', { noremap = true, silent = true })
-
 -- markdown link formatting
 vim.keymap.set('n', '<leader>k', 'i[]()2hi', { noremap = true, silent = true })
 vim.keymap.set('i', '<C-k>', '[]()2hi', { noremap = true, silent = true })
-
--- markdown checkbox formatting
-vim.keymap.set('n', 'ñ', function()
-  vim.api.nvim_set_current_line('- [ ] ' .. vim.api.nvim_get_current_line())
-  vim.cmd('startinsert!')
-end, { desc = 'Insert checkbox at start of line' })
 
 -- yank link inside ()
 vim.keymap.set('n', 'yl', ':norm $hyi(0<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', 'yL', 'yi(', { noremap = true, silent = true })
 
 -- Control + a para seleccionar todo el archivo
-vim.keymap.set('n', '<C-a>', 'ggVG', { noremap = true, silent = true })
+vim.keymap.set('n', 'va', 'ggVG', { noremap = true, silent = true })
 
 -- leader d to insert the date, already formatted
--- vim.keymap.set('n', '<leader>d', "i<C-R>= strftime('%Y-%m-%d')<CR> - ", { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>d', "i<C-R>= strftime('%Y-%m-%d')<CR> ", { noremap = true, silent = true })
 
 -- paste over selected text without losing what you yanked
@@ -76,21 +66,8 @@ vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
 vim.keymap.set('v', '<', "<gv", { noremap = true, silent = true })
 vim.keymap.set('v', '>', ">gv", { noremap = true, silent = true })
 
--- clear keybinds with ctrl c
-vim.keymap.set({ "n", "v" }, "<C-m>", "<cmd>nohlsearch<CR>", { silent = true, desc = "Clear search highlight" })
-
--- increase/decrease number with alt a and x
-vim.keymap.set('n', '<M-a>', '<C-a>', { desc = 'Increment number' })
-vim.keymap.set('v', '<M-a>', '<C-a>', { desc = 'Increment number' })
-vim.keymap.set('v', 'g<M-a>', 'g<C-a>', { desc = 'Increment numbers sequentially' })
-
-vim.keymap.set('n', '<M-x>', '<C-x>', { desc = 'Decrement number' })
-vim.keymap.set('v', '<M-x>', '<C-x>', { desc = 'Decrement number' })
-vim.keymap.set('v', 'g<M-x>', 'g<C-x>', { desc = 'Decrement numbers sequentially' })
-
--- -- insert brackets
--- vim.keymap.set("i", "ñ", "[] <Left><Left>", { noremap = true })
--- vim.keymap.set("n", "ñ", "I[] <Left><Left>", { noremap = true })
+-- clear keybinds with ctrl h
+vim.keymap.set({ "n", "v" }, "<C-h>", "<cmd>nohlsearch<CR>", { silent = true, desc = "Clear search highlight" })
 
 -- toggle status bar
 vim.keymap.set('n', 'zs', function()
@@ -143,3 +120,86 @@ vim.opt.scrolloff = 999
 
 vim.keymap.set({ 'n', 'v' }, '<ScrollWheelDown>', '2j', { silent = true })
 vim.keymap.set({ 'n', 'v' }, '<ScrollWheelUp>', '2k', { silent = true })
+-- checkbox
+local function toggle_checkbox_line(ln, force_add)
+  local line = vim.fn.getline(ln)
+  local indent, rest = line:match('^(%s*)(.*)$')
+  local content = rest:match('^[-*] %[[ xX]%] (.*)$')
+
+  if content then
+    -- already has a checkbox -> strip it
+    vim.fn.setline(ln, indent .. content)
+  elseif force_add then
+    -- no checkbox -> add one
+    vim.fn.setline(ln, indent .. '- [ ] ' .. rest)
+  end
+end
+
+local function toggle_checkboxes(start_line, end_line)
+  -- decide add-vs-remove based on the FIRST line's state
+  local first = vim.fn.getline(start_line)
+  local _, rest = first:match('^(%s*)(.*)$')
+  local has_checkbox = rest:match('^[-*] %[[ xX]%] ') ~= nil
+
+  for ln = start_line, end_line do
+    toggle_checkbox_line(ln, not has_checkbox)
+  end
+end
+
+-- Normal mode: toggle current line
+vim.keymap.set('n', '<leader>c', function()
+  local ln = vim.fn.line('.')
+  toggle_checkboxes(ln, ln)
+end, { desc = 'Toggle markdown checkbox' })
+
+-- Visual mode: toggle all selected lines
+vim.keymap.set('v', '<leader>c', function()
+  local s = vim.fn.line('v')
+  local e = vim.fn.line('.')
+  if s > e then s, e = e, s end
+  toggle_checkboxes(s, e)
+  vim.cmd('normal! \27') -- exit visual mode
+end, { desc = 'Toggle markdown checkbox' })
+
+-- bullet point
+local function toggle_bullet_line(ln, force_add)
+  local line = vim.fn.getline(ln)
+  local indent, rest = line:match('^(%s*)(.*)$')
+  local content = rest:match('^[-*] (.*)$')
+
+  if content then
+    -- already has a bullet -> strip it
+    vim.fn.setline(ln, indent .. content)
+  elseif force_add then
+    -- no bullet -> add one
+    vim.fn.setline(ln, indent .. '- ' .. rest)
+  end
+end
+
+local function toggle_bullets(start_line, end_line)
+  -- decide add-vs-remove based on the FIRST line's state
+  local first = vim.fn.getline(start_line)
+  local _, rest = first:match('^(%s*)(.*)$')
+  local has_bullet = rest:match('^[-*] ') ~= nil
+
+  for ln = start_line, end_line do
+    toggle_bullet_line(ln, not has_bullet)
+  end
+end
+
+-- Normal mode: toggle current line
+vim.keymap.set('n', '<leader>b', function()
+  local ln = vim.fn.line('.')
+  toggle_bullets(ln, ln)
+end, { desc = 'Toggle markdown bullet' })
+
+-- Visual mode: toggle all selected lines
+vim.keymap.set('v', '<leader>b', function()
+  local s = vim.fn.line('v')
+  local e = vim.fn.line('.')
+  if s > e then s, e = e, s end
+  toggle_bullets(s, e)
+  vim.cmd('normal! \27') -- exit visual mode
+end, { desc = 'Toggle markdown bullet' })
+
+-- vim.keymap.set('n', '<leader>d', "i<C-R>= strftime('%Y-%m-%d')<CR> - ", { noremap = true, silent = true })

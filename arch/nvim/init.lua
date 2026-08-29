@@ -5,18 +5,23 @@ vim.cmd("syntax on")
 vim.opt.termguicolors = true
 
 -- line numbers
--- vim.opt.cursorcolumn = true
-vim.opt.number = true -- vim.opt.relativenumber = true vim.opt.cursorline = true vim.opt.linebreak = true vim.opt.numberwidth = 1
-vim.opt.signcolumn = "number"
-vim.opt.foldcolumn = "0"
+vim.opt.number = true
+-- vim.opt.relativenumber = true
+vim.opt.cursorline = true
+vim.opt.cursorcolumn = false
 
 -- tabs and indentation
 vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.linebreak = true
+
+vim.opt.softtabstop = 4
+vim.opt.numberwidth = 1
+vim.opt.signcolumn = "number"
+vim.opt.foldcolumn = "0"
+vim.opt.cmdheight = 0
 
 -- search
 vim.opt.ignorecase = true
@@ -53,10 +58,7 @@ vim.opt.fillchars:append({ eob = " " })
 vim.opt.showmode = false
 vim.opt.showcmd = true
 vim.opt.inccommand = "split"
-
-vim.api.nvim_create_user_command("Book", function()
-  vim.cmd("0r ~/notes/96-templates/book.md")
-end, {})
+vim.opt.mousescroll = "ver:3,hor:0"
 
 -- vim.cmd([[set mouse=]])
 vim.cmd([[set noswapfile]])
@@ -82,5 +84,4 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   end,
 })
 
-vim.opt.cmdheight = 0
 -- vim.opt.showtabline = 2

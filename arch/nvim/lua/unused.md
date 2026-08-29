@@ -129,3 +129,9 @@ require("noice").setup({
     lsp_doc_border = false, -- add a border to hover docs and signature help
   },
 })
+
+-- para usar un template, en este caso para libros
+vim.api.nvim_create_user_command("Book", function()
+  vim.cmd("0r ~/notes/96-templates/book.md")
+end, {})
+

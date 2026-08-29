@@ -8,14 +8,11 @@ vim.o.showcmdloc = "statusline"
 require('lualine').setup {
   options = {
     icons_enabled = true,
-    -- theme = 'rosepine',
-    -- theme = 'everforest',
     theme = 'nord',
-    -- theme = 'gb-mat-dark-soft',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {
-      statusline = {},
+      statusline = { "aerial" },
       winbar = {},
     },
     ignore_focus = {},
@@ -56,7 +53,7 @@ require('lualine').setup {
       -- path = 2,
     }},
     --option 1, w/o date and time
-    lualine_x = { '%S' },
+    lualine_x = {'%S'},
     lualine_y = {'progress'},
     lualine_z = {'location', 'selectioncount'},
     --option 2, w/ date and time

@@ -16,12 +16,7 @@ require("plugins.gitsigns")
 require("plugins.lualine")
 require("plugins.treesitter-ctx")
 require("plugins.calculate")
--- require("plugins.auto-dark-mode")
+require("plugins.aerial")
 
--- themes
--- require("plugins.themes.gruvbox")
--- require("plugins.themes.everforest")
--- require("plugins.themes.rose-pine")
--- require("plugins.themes.vague")
+-- theme
 require("plugins.themes.nord")
--- require("plugins.themes.ember")
