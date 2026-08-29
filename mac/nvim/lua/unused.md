@@ -40,6 +40,3 @@ vim.keymap.set('n', '<M-x>', '<C-x>', { desc = 'Decrement number' })
 vim.keymap.set('v', '<M-x>', '<C-x>', { desc = 'Decrement number' })
 vim.keymap.set('v', 'g<M-x>', 'g<C-x>', { desc = 'Decrement numbers sequentially' })
 
-paste over selected text without losing what you yanked
-vim.keymap.set('x', '<leader>p', [["_dP]], { noremap = true, silent = true })
-vim.keymap.set('x', 'p', [["_dP]], { noremap = true, silent = true })

@@ -18,5 +18,5 @@ require("plugins.treesitter-ctx")
 require("plugins.calculate")
 require("plugins.aerial")
 
--- themes
+-- theme
 require("plugins.themes.nord")

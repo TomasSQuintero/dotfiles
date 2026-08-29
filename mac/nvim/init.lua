@@ -17,7 +17,7 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.linebreak = true
 
-vim.opt.softstop = 4
+vim.opt.softtabstop = 4
 vim.opt.numberwidth = 1
 vim.opt.signcolumn = "number"
 vim.opt.foldcolumn = "0"
@@ -60,3 +60,12 @@ end, {})
 vim.cmd"packadd nvim.undotree"
 
 vim.cmd('autocmd FileType python setlocal formatoptions+=ro')
+
+vim.api.nvim_create_autocmd("TextYankPost", {
+  desc = "Highlight when yanking text",
+  callback = function()
+    vim.hl.on_yank()
+  end,
+})
+
+-- vim.opt.showtabline = 2
