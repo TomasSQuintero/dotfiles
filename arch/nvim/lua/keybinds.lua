@@ -52,7 +52,6 @@ vim.keymap.set('n', 'va', 'ggVG', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>d', "i<C-R>= strftime('%Y-%m-%d')<CR> ", { noremap = true, silent = true })
 
 -- paste over selected text without losing what you yanked
--- vim.keymap.set('x', '<leader>p', [["_dP]], { noremap = true, silent = true })
 vim.keymap.set('x', 'p', [["_dP]], { noremap = true, silent = true })
 
 -- delete without yanking
@@ -201,5 +200,3 @@ vim.keymap.set('v', '<leader>b', function()
   toggle_bullets(s, e)
   vim.cmd('normal! \27') -- exit visual mode
 end, { desc = 'Toggle markdown bullet' })
-
--- vim.keymap.set('n', '<leader>d', "i<C-R>= strftime('%Y-%m-%d')<CR> - ", { noremap = true, silent = true })
