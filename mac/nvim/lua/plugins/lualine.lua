@@ -8,8 +8,7 @@ vim.o.showcmdloc = "statusline"
 require('lualine').setup {
   options = {
     icons_enabled = true,
-    -- theme = 'gb-material-soft',
-    theme = 'rosepine',
+    theme = 'nord',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {
@@ -51,7 +50,7 @@ require('lualine').setup {
       'filename',
       -- 0 for filename, 1 for relative path
       -- 2/3 for absolute, 4 for filename and parent dir
-      path = 2,
+      -- path = 2,
     }},
     --option 1, w/o date and time
     lualine_x = {'%S'},

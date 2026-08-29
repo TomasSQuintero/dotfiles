@@ -16,4 +16,6 @@ require("oil").setup({
 		max_height = 0.6,
 		border = "rounded",
 	},
+    constrain_cursor = "name",
+    skip_confirm_for_simple_edits = true,
 })

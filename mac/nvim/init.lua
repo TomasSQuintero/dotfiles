@@ -17,6 +17,7 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.linebreak = true
 
+vim.opt.softstop = 4
 vim.opt.numberwidth = 1
 vim.opt.signcolumn = "number"
 vim.opt.foldcolumn = "0"
@@ -26,7 +27,7 @@ vim.opt.cmdheight = 0
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.incsearch = true
-vim.opt.hlsearch = false
+vim.opt.hlsearch = true
 
 -- clipboard
 vim.opt.clipboard = "unnamedplus"
@@ -40,6 +41,7 @@ vim.opt.titlestring = "%F"
 vim.opt.fillchars:append({ eob = " " })
 vim.opt.showmode = false
 vim.opt.showcmd = true
+vim.opt.inccommand = "split"
 vim.opt.mousescroll = "ver:3,hor:0"
 
 -- vim.cmd([[set mouse=]])
@@ -49,6 +51,8 @@ vim.cmd([[hi @lsp.type.number gui=italic]])
 -- corremos :PackUpdate para actualizar los plugins
 -- aparece un buffer con los cambios a instalar
 -- confirmamos con :w/:write
+-- para borrar un plugin, sobre el titulo, en el buffer luego de hacer
+-- pack update, hacemos gra, y sale un prompt para borrarlo
 vim.api.nvim_create_user_command('PackUpdate', function()
   vim.pack.update()
 end, {})

@@ -3,7 +3,7 @@ vim.g.maplocalleader = "\\"
 
 -- save, quit and force quit
 vim.keymap.set("n", "<leader>w", ":w<CR>", { desc = "Write file" })
-vim.keymap.set("n", "<leader>q", ":wq<CR>", { desc = "Write and quit" })
+vim.keymap.set({'n', 'v'}, "<leader>q", ":wq!<CR>", { desc = "Write and quit" })
 vim.keymap.set("n", "<leader>x", ":q!<CR>", { desc = "Force quit" })
 
 -- launch Oil.nvim
@@ -110,6 +110,11 @@ vim.keymap.set('n', 'zn', function()
   vim.wo.relativenumber = gutter_enabled
   vim.wo.signcolumn = gutter_enabled and 'auto' or 'no'
 end, { desc = 'Toggle gutter (numbers + signcolumn)' })
+
+vim.opt.scrolloff = 999
+
+vim.keymap.set({ 'n', 'v' }, '<ScrollWheelDown>', '2j', { silent = true })
+vim.keymap.set({ 'n', 'v' }, '<ScrollWheelUp>', '2k', { silent = true })
 
 -- checkbox
 local function toggle_checkbox_line(ln, force_add)
