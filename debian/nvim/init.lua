@@ -1,5 +1,0 @@
-require("key")
-require("options")
-require("packages")
-require("autoclose").setup()
-require("tree")

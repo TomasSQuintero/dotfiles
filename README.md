@@ -38,13 +38,3 @@
   | cursor | bibata classic |
 
 </div>
-
-note: for lots of other useful software, check [here](arch/apps.md).
-<details> 
-  <summary>bonus: debian screenshots</summary>
- 
-| overview | mpv, neofetch|
-|:---|:---------------|
-| ![](https://github.com/TomasSQuintero/dotfiles/blob/main/debian/setup3.png) | ![](https://github.com/TomasSQuintero/dotfiles/blob/main/debian/setup.png) |
-
-</details>
