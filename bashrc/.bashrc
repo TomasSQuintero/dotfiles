@@ -25,19 +25,18 @@ dotdirs=(
     # ~/.vimrc
     ~/.bashrc
     ~/.config/fastfetch/
-    ~/.config/gtk-3.0/
-    ~/.config/gtk-4.0/
     ~/.config/hypr/
     ~/.config/kitty/
-    ~/.config/qimgv/
     ~/.config/mpd/
     ~/.config/mpv/
     ~/.config/nvim/
+    ~/.config/qimgv/
     ~/.config/rmpc/
     ~/.config/rofi
     ~/.config/scripts/
     ~/.config/sioyek/
     ~/.config/tmux/
+    ~/.config/wallpapers/
     ~/.config/waybar/
     ~/.config/yazi/
     ~/.config/zathura/
@@ -45,7 +44,7 @@ dotdirs=(
 )
 
 dots() {
-    local target=~/dotfiles/arch/
+    local target=~/dotfiles/
 
     # Remove old directory safely
     if [ -d "$target" ]; then

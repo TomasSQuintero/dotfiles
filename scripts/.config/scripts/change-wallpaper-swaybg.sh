@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-WALLPAPER_DIR="$HOME/.config/hypr/wallpapers"
+WALLPAPER_DIR="$HOME/.config/wallpapers"
 
 wallpaper=$(
   while IFS= read -r -d '' file; do
