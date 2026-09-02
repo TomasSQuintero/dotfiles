@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-WALLPAPER_DIR="$HOME/.config/wallpapers"
+WALLPAPER_DIR="$HOME/dotfiles/wallpapers"
 
 wallpaper=$(
   while IFS= read -r -d '' file; do
