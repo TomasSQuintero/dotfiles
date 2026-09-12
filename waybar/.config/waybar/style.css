@@ -73,7 +73,7 @@ window#waybar {
 }
 
 window#waybar.fullscreen #workspaces button.active {
-    background: #DBBC7F;
+    background: #DBBC7FFF;
 }
 
 window#waybar.fullscreen #workspaces button.active label{
