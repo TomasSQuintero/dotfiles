@@ -130,7 +130,7 @@ hl.bind("SUPER + F1", function ()
     hl.config({
         general = {
             gaps_in = 0, gaps_out = 0, -- Disable gaps  
-            -- border_size = 0,
+            border_size = 0,
             col = {
                 active_border   =  active ,
                 -- active_border = { colors = { "rgba(33ccffee)", "rgba(00ff99ee)" }, angle = 45 },
