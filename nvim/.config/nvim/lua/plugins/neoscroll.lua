@@ -3,5 +3,5 @@ vim.pack.add({
 })
 
 require("neoscroll").setup({
-    duration_multiplier = 1.0, 
+    duration_multiplier = 0.1, 
 })

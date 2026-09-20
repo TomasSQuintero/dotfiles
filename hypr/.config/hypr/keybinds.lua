@@ -129,8 +129,8 @@ hl.bind("SUPER + F1", function ()
     hl.exec_cmd("pkill waybar")
     hl.config({
         general = {
-            gaps_in = 0, gaps_out = 0, -- Disable gaps  
-            border_size = 0,
+            gaps_in = 4, gaps_out = 8, -- Disable gaps  
+            -- border_size = 0,
             col = {
                 active_border   =  active ,
                 -- active_border = { colors = { "rgba(33ccffee)", "rgba(00ff99ee)" }, angle = 45 },
@@ -151,14 +151,14 @@ end)
 -- testing space
 -- numpad shortcuts
 -- hl.bind("KP_Add",  hl.dsp.exec_cmd(terminal))
--- hl.bind("KP_Insert",      hl.dsp.exec_cmd(browser))
--- hl.bind("KP_Subtract", hl.dsp.window.close())
--- hl.bind("KP_Add", hl.dsp.exec_cmd(terminal))
---
--- hl.bind("KP_Left",  hl.dsp.focus({ direction = "left" }))
--- hl.bind("KP_Right", hl.dsp.focus({ direction = "right" }))
--- hl.bind("KP_Up",    hl.dsp.focus({ direction = "up" }))
--- hl.bind("KP_Down",  hl.dsp.focus({ direction = "down" }))
+hl.bind("KP_Insert",      hl.dsp.exec_cmd(browser))
+hl.bind("KP_Subtract", hl.dsp.window.close())
+hl.bind("KP_Add", hl.dsp.exec_cmd(terminal))
+
+hl.bind("KP_Left",  hl.dsp.focus({ direction = "left" }))
+hl.bind("KP_Right", hl.dsp.focus({ direction = "right" }))
+hl.bind("KP_Up",    hl.dsp.focus({ direction = "up" }))
+hl.bind("KP_Down",  hl.dsp.focus({ direction = "down" }))
 
 hl.bind("KP_Begin", hl.dsp.window.fullscreen({ mode = 1 }))
 
